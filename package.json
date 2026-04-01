@@ -1,0 +1,23 @@
+{
+  "name": "marcus-escalona-portfolio",
+  "version": "1.0.0",
+  "description": "Interactive 3D and EdTech portfolio for Marcus Escalona.",
+  "main": "main.js",
+  "scripts": {
+    "start": "serve"
+  },
+  "keywords": [
+    "portfolio",
+    "edtech",
+    "gsap",
+    "lenis",
+    "threejs",
+    "frontend",
+    "javascript"
+  ],
+  "author": "Marcus Escalona",
+  "license": "MIT",
+  "dependencies": {
+    "serve": "^14.2.0"
+  }
+}

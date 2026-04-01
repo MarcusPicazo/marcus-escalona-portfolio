@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Marcus Escalona" />
+    <meta name="description" content="Marcus Escalona - Product Engineer specializing in EdTech, Real-time Systems, and Interactive Web Products." />
+    <title>Marcus Escalona - Educational Web Apps</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Oswald:wght@700&display=swap" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="custom-cursor"></div>
+    <canvas id="project-particles"></canvas>
+
+    <div id="preloader">
+      <div class="preloader-name" id="pl-name">MARCUS ESCALONA</div>
+      <div class="preloader-role" id="pl-role">PRODUCT ENGINEER</div>
+    </div>
+
+    <div id="about-modal" data-lenis-prevent>
+      <div class="fluid-bg">
+        <div class="fluid-blob blob-1"></div>
+        <div class="fluid-blob blob-2"></div>
+        <div class="fluid-blob blob-3"></div>
+      </div>
+      <canvas id="about-particles"></canvas>
+      <div class="about-wrapper">
+        <div class="close-about-btn animated-underline" id="close-about-btn">
+          <div style="opacity: 0; visibility: hidden; display: flex; gap: 8px">
+            <span class="about-x-icon">✕</span><span class="about-btn-text">CLOSE</span>
+          </div>
+          <div class="layer base-layer">
+            <span class="about-x-icon">✕</span><span class="about-btn-text">CLOSE</span>
+          </div>
+          <div class="layer hover-layer">
+            <span class="about-x-icon">✕</span><span class="about-btn-text">CLOSE</span>
+          </div>
+        </div>
+        <div class="about-layout">
+          <div class="about-img-box">
+            <img src="assets/MarcusPicture.png" alt="Marcus Escalona" />
+          </div>
+          <div class="about-text-col">
+            <h2 class="about-title lang-wipe-target" id="about-title">About Me</h2>
+            <div id="about-text-container" class="about-text lang-wipe-target"></div>
+            <div class="tech-container">
+              <div class="tech-category">
+                <div class="tech-category-header">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+                  <div class="tech-category-title lang-wipe-target" id="tech-cat-1">Data & Logic</div>
+                </div>
+                <div class="tech-tags">
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">Pandas</span>
+                  <span class="tech-tag">SQL</span>
+                </div>
+              </div>
+              <div class="tech-category">
+                <div class="tech-category-header">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+                  <div class="tech-category-title lang-wipe-target" id="tech-cat-2">Interactive Interfaces</div>
+                </div>
+                <div class="tech-tags">
+                  <span class="tech-tag">React</span>
+                  <span class="tech-tag">JavaScript (ES6+)</span>
+                  <span class="tech-tag">Three.js</span>
+                  <span class="tech-tag">Tailwind CSS</span>
+                </div>
+              </div>
+              <div class="tech-category">
+                <div class="tech-category-header">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 16.2A5 5 0 0 0 18 7h-1.26A8 8 0 1 0 4 15.25"></path><polygon points="14 19 12 21 10 19"></polygon><line x1="12" y1="13" x2="12" y2="21"></line></svg>
+                  <div class="tech-category-title lang-wipe-target" id="tech-cat-3">Real-Time Architecture</div>
+                </div>
+                <div class="tech-tags">
+                  <span class="tech-tag">Firebase</span>
+                  <span class="tech-tag">Vite</span>
+                  <span class="tech-tag">Git & GitHub</span>
+                </div>
+              </div>
+            </div>
+            <h3 class="about-subtitle lang-wipe-target" id="about-title-lang" style="margin-top: 4rem;">Languages & Communication</h3>
+            <div class="skills-container">
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span class="lang-wipe-target" id="skill-1-name">English</span>
+                  <span class="skill-level lang-wipe-target" id="skill-1-lvl">Native</span>
+                </div>
+                <div class="skill-track"><div class="skill-fill" data-width="100%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span class="lang-wipe-target" id="skill-2-name">Spanish</span>
+                  <span class="skill-level lang-wipe-target" id="skill-2-lvl">Native</span>
+                </div>
+                <div class="skill-track"><div class="skill-fill" data-width="100%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span class="lang-wipe-target" id="skill-3-name">Italian</span>
+                  <span class="skill-level lang-wipe-target" id="skill-3-lvl">B2</span>
+                </div>
+                <div class="skill-track"><div class="skill-fill" data-width="70%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span class="lang-wipe-target" id="skill-4-name">Catalan</span>
+                  <span class="skill-level lang-wipe-target" id="skill-4-lvl">B2</span>
+                </div>
+                <div class="skill-track"><div class="skill-fill" data-width="70%"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-layer"></div>
+    <div class="giant-text-layer" id="giant-layer"><h1 id="dynamic-title">EBVG</h1></div>
+
+    <header id="main-header">
+      <div class="logo lang-wipe-target" id="logo-text">Marcus Escalona</div>
+      <div class="spectrum-container" id="spectrum"></div>
+      <div class="header-nav">
+        <div class="lang-dropdown-wrapper">
+          <a href="#" class="nav-info lang-current animated-underline" id="lang-display-btn">
+            <span id="lang-short">EN</span><span class="lang-long" id="lang-long">GLISH</span>
+          </a>
+          <div class="lang-options" id="lang-options-container"></div>
+        </div>
+        <a href="#" class="nav-info lang-wipe-target animated-underline" id="open-about-btn">About Me</a>
+      </div>
+    </header>
+
+    <div class="context-text lang-wipe-target" id="context-text">
+      SELECTED WORK<br>EdTech · Real-time Systems<br>Interactive Web Products
+    </div>
+
+    <div class="footer-links" id="footer-links">
+      <a href="mailto:marcuspicazo@outlook.com" class="lang-wipe-target animated-underline" id="footer-email">Email</a>
+      <a href="https://www.linkedin.com/in/marcus-escalona-a23849290/" target="_blank" class="lang-wipe-target animated-underline" id="footer-linkedin">LinkedIn</a>
+      <a href="https://github.com/MarcusPicazo" target="_blank" class="lang-wipe-target animated-underline" id="footer-github">GitHub</a>
+      <a href="Marco_Escalona_Frontend_Developer_CV.pdf" download class="lang-wipe-target animated-underline" id="footer-resume">Resume</a>
+    </div>
+
+    <div class="close-btn-wrapper" id="close-btn-wrapper" style="display: none; opacity: 0">
+      <div class="close-btn animated-underline" id="close-btn">
+        <div style="opacity: 0; visibility: hidden; display: flex; gap: 8px">
+          <span class="x-icon">✕</span><span class="btn-text lang-wipe-target">BACK TO CATALOG</span>
+        </div>
+        <div class="layer base-layer"><span class="x-icon">✕</span><span class="btn-text lang-wipe-target">BACK TO CATALOG</span></div>
+        <div class="layer hover-layer"><span class="x-icon">✕</span><span class="btn-text lang-wipe-target">BACK TO CATALOG</span></div>
+      </div>
+    </div>
+
+    <main id="gallery-view">
+      <section class="horizontal-section">
+        <div class="gallery-track"></div>
+      </section>
+    </main>
+
+    <div id="detail-view">
+      <div class="detail-layout">
+        <div class="detail-left">
+          <div class="sticky-wrapper">
+            <h1 id="det-title" class="lang-wipe-target">PROJECT</h1>
+            <p class="detail-desc lang-wipe-target" id="det-desc"></p>
+            <div class="detail-actions">
+              <a href="#" target="_blank" class="visit-link" id="det-link">
+                <div style="opacity: 0; visibility: hidden; display: flex; align-items: center; gap: 10px;">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  <span class="det-link-text-node">Visit Application</span>
+                </div>
+                <div class="layer base-layer">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  <span class="det-link-text-node lang-wipe-target">Visit Application</span>
+                </div>
+                <div class="layer hover-layer">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  <span class="det-link-text-node lang-wipe-target">Visit Application</span>
+                </div>
+              </a>
+              <a href="#" target="_blank" class="visit-link" id="det-repo" style="display: none;">
+                <div style="opacity: 0; visibility: hidden; display: flex; align-items: center; gap: 10px;">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  <span class="det-repo-text-node">Source Code</span>
+                </div>
+                <div class="layer base-layer">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  <span class="det-repo-text-node lang-wipe-target">Source Code</span>
+                </div>
+                <div class="layer hover-layer">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  <span class="det-repo-text-node lang-wipe-target">Source Code</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="detail-center" id="det-images"></div>
+        <div class="detail-right"><div class="thumbs-container" id="det-thumbs"></div></div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+    <script src="main.js" defer></script>
+  </body>
+</html>

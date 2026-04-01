@@ -1,0 +1,517 @@
+gsap.registerPlugin(ScrollTrigger);
+
+let currentLang = "en";
+let currentOpenProjectIndex = null;
+let savedScrollPosition = 0;
+
+const allLangsConfig = [
+  { id: "en", short: "EN", long: "GLISH" },
+  { id: "es", short: "ES", long: "PAÑOL" },
+  { id: "it", short: "IT", long: "ALIANO" },
+  { id: "ca", short: "CA", long: "TALÀ" },
+];
+
+const translations = {
+  en: {
+    role: "PRODUCT ENGINEER", aboutBtn: "About Me", aboutTitle: "About Me", techTitle: "Tech Stack", langTitle: "Languages & Communication",
+    techCat1: "Data & Logic (The Physics side)", techCat2: "Interactive Interfaces (The Music and Creativity side)", techCat3: "Real-Time Architecture (The Engineering side)",
+    contextText: "SELECTED WORK<br>EdTech · Real-time Systems<br>Interactive Web Products",
+    aboutText: "I am a British-Mexican Product Engineer specializing in the intersection of EdTech and interactive web systems. My background in physics and music defines my approach to software development: I tackle data architectures with scientific rigor and precision, while designing immersive interfaces with creativity and fluidity.<br><br>Through my experience teaching computer science, I have learned to reduce cognitive friction in digital environments. I am dedicated to building complete ecosystems—from real-time gamified platforms to in-browser 3D environments—transforming technical complexity into intuitive, stable, and high-impact learning tools.<br><br>To bring these platforms to life and analyze their performance, I work with the following technological ecosystem:",
+    closeBtn: "CLOSE", explore: "EXPLORE", visitLink: "Visit Application", sourceCode: "GitHub Repo", backToCatalog: "BACK TO CATALOG", email: "Email", linkedin: "LinkedIn", github: "GitHub", resume: "Resume",
+    skills: { en: { name: "English", lvl: "Native" }, es: { name: "Spanish", lvl: "Native" }, it: { name: "Italian", lvl: "B2" }, ca: { name: "Catalan", lvl: "B2" } },
+  },
+  es: {
+    role: "PRODUCT ENGINEER", aboutBtn: "Sobre Mí", aboutTitle: "Sobre Mí", techTitle: "Tecnologías", langTitle: "Idiomas y Comunicación",
+    techCat1: "Data & Logic (El lado de la Física)", techCat2: "Interactive Interfaces (El lado de la Música y la Creatividad)", techCat3: "Real-Time Architecture (El lado de la Ingeniería)",
+    contextText: "TRABAJO DESTACADO<br>EdTech · Sistemas en Tiempo Real<br>Productos Web Interactivos",
+    aboutText: "Soy un Product Engineer británico-mexicano especializado en la intersección entre EdTech y sistemas web interactivos. Mi formación academica en física, música e ingenieria en sistemas define mi enfoque hacia el desarrollo de software: abordo las arquitecturas de datos con rigor científico y precisión, mientras diseño interfaces inmersivas con creatividad y fluidez.<br><br>A través de mi experiencia enseñando ciencias de la computación, he aprendido a reducir la fricción cognitiva en entornos digitales. Me dedico a construir ecosistemas completos —desde plataformas gamificadas en tiempo real hasta entornos 3D en el navegador— transformando la complejidad técnica en herramientas de aprendizaje intuitivas, estables y de alto impacto.<br><br>Para dar vida a estas plataformas y analizar su rendimiento, trabajo con el siguiente ecosistema tecnológico:",
+    closeBtn: "CERRAR", explore: "EXPLORAR", visitLink: "Visitar Aplicación", sourceCode: "Repositorio GitHub", backToCatalog: "VOLVER AL CATÁLOGO", email: "Email", linkedin: "LinkedIn", github: "GitHub", resume: "Currículum",
+    skills: { en: { name: "Inglés", lvl: "Nativo" }, es: { name: "Español", lvl: "Nativo" }, it: { name: "Italiano", lvl: "B2" }, ca: { name: "Catalán", lvl: "B2" } },
+  },
+  it: {
+    role: "PRODUCT ENGINEER", aboutBtn: "Su di Me", aboutTitle: "Su di Me", techTitle: "Tecnologie", langTitle: "Lingue e Comunicazione",
+    techCat1: "Data & Logic (Il lato della Fisica)", techCat2: "Interactive Interfaces (Il lato della Musica e della Creatività)", techCat3: "Real-Time Architecture (Il lato dell'Ingegneria)",
+    contextText: "LAVORI IN EVIDENZA<br>EdTech · Sistemi in Tempo Reale<br>Prodotti Web Interattivi",
+    aboutText: "Sono un Product Engineer britannico-messicano specializzato nell'intersezione tra EdTech e sistemi web interattivi. La mia formazione in fisica e musica definisce il mio approccio allo sviluppo di software: affronto le architetture dei dati con rigore e precisione scientifica, mentre progetto interfacce immersive con creatività e fluidità.<br><br>Attraverso la mia esperienza nell'insegnamento dell'informatica, ho imparato a ridurre l'attrito cognitivo negli ambienti digitali. Mi dedico alla costruzione di ecosistemi completi — dalle piattaforme gamificate in tempo reale agli ambienti 3D nel browser — trasformando la complessità tecnica in strumenti di apprendimento intuitivi, stabili e di grande impatto.<br><br>Per dare vita a queste piattaforme e analizzare le loro prestazioni, lavoro con il seguente ecosistema tecnologico:",
+    closeBtn: "CHIUDI", explore: "ESPLORA", visitLink: "Visita l'App", sourceCode: "Repo GitHub", backToCatalog: "TORNA AL CATALOGO", email: "Email", linkedin: "LinkedIn", github: "GitHub", resume: "Curriculum",
+    skills: { en: { name: "Inglese", lvl: "Madrelingua" }, es: { name: "Spagnolo", lvl: "Madrelingua" }, it: { name: "Italiano", lvl: "B2" }, ca: { name: "Catalano", lvl: "B2" } },
+  },
+  ca: {
+    role: "PRODUCT ENGINEER", aboutBtn: "Sobre Mi", aboutTitle: "Sobre Mi", techTitle: "Tecnologies", langTitle: "Idiomes i Comunicació",
+    techCat1: "Data & Logic (El costat de la Física)", techCat2: "Interactive Interfaces (El costat de la Música i la Creativitat)", techCat3: "Real-Time Architecture (El costat de l'Enginyeria)",
+    contextText: "TREBALL DESTACAT<br>EdTech · Sistemes en Temps Real<br>Productes Web Interactius",
+    aboutText: "Sóc un Product Engineer britànic-mexicà especialitzat en la intersecció entre EdTech i sistemes web interactius. La meva formació en física i música defineix el meu enfocament cap al desenvolupament de programari: abordo les arquitectures de dades amb rigor i precisió científica, mentre dissenyo interfícies immersives amb creativitat i fluïdesa.<br><br>A través de la meva experiència ensenyant ciències de la computació, he après a reduir la fricció cognitiva en entorns digitals. Em dedico a construir ecosistemi complets —des de plataformes gamificades en temps real fins a entorns 3D al navegador— transformant la complexitat tècnica en eines d'aprenentatge intuïtives, estables i d'alt impacte.<br><br>Per donar vida a aquestes plataformes i analitzar el seu rendiment, treballo amb el següent ecosistema tecnològic:",
+    closeBtn: "TANCAR", explore: "EXPLORAR", visitLink: "Visitar Aplicació", sourceCode: "Repositori GitHub", backToCatalog: "TORNAR AL CATÀLEG", email: "Correu", linkedin: "LinkedIn", github: "GitHub", resume: "Currículum",
+    skills: { en: { name: "Anglès", lvl: "Natiu" }, es: { name: "Espanyol", lvl: "Natiu" }, it: { name: "Italià", lvl: "B2" }, ca: { name: "Català", lvl: "B2" } },
+  },
+};
+
+const projectsData = [
+  {
+    id: "solar",
+    title: { en: "SOLAR SYSTEM", es: "SISTEMA SOLAR", it: "SISTEMA SOLARE", ca: "SISTEMA SOLAR" },
+    color: "#1e1b4b", category: { en: "Science / Physics", es: "Ciencias / Física", it: "Scienza / Fisica", ca: "Ciències / Física" },
+    desc: {
+      en: 'An interactive 3D web experience developed to explore our stellar neighborhood. This educational project allows users to navigate through the solar system, learn fun facts about planets, and visualize procedurally generated textures in the browser.<br><br><strong>Key Features:</strong><br>• Interactive 3D Environment: Real-time rendering using Three.js.<br>• Procedural Textures: Planets and stars are generated using the Canvas 2D API, eliminating the need to load heavy image assets.<br>• Bilingual Support: Dynamic interface in English and Spanish.<br><br><strong>Technologies:</strong><br>HTML5, CSS3, Vanilla JavaScript, Three.js',
+      es: 'Una experiencia web 3D interactiva desarrollada para explorar nuestro vecindario estelar. Este proyecto educativo permite a los usuarios navegar por el sistema solar, aprender datos curiosos sobre los planetas y visualizar texturas generadas procedimentalmente en el navegador.<br><br><strong>Características Clave:</strong><br>• Entorno 3D Interactivo: Renderizado en tiempo real usando Three.js.<br>• Texturas Procedimentales: Planetas y estrellas generados con la API Canvas 2D, eliminando la necesidad de cargar imágenes pesadas.<br>• Soporte Bilingüe: Interfaz dinámica en inglés y español.<br><br><strong>Tecnologías:</strong><br>HTML5, CSS3, Vanilla JavaScript, Three.js',
+      it: 'Un\'esperienza web 3D interattiva sviluppata per esplorare il nostro vicinato stellare.', ca: 'Una experiència web 3D interactiva desenvolupada per explorar el nostre veïnatge estel·lar.'
+    },
+    link: "https://marcuspicazo.github.io/solar-system-ebvg/", repo: "https://github.com/MarcusPicazo/solar-system-ebvg",
+    mainImg: "assets/SOLAR SYSTEM/SOLAREBVG.mp4", 
+    previewImg: "assets/PREVIMG/solar sistem preview.jpg",
+    detailImgs: ["assets/SOLAR SYSTEM/SOLAREBVG.mp4", "assets/SOLAR SYSTEM/S1.png", "assets/SOLAR SYSTEM/S2.png"]
+  },
+  {
+    id: "ebvghoot",
+    title: { en: "EBVG HOOT", es: "EBVG HOOT", it: "EBVG HOOT", ca: "EBVG HOOT" },
+    color: "#3b0764", category: { en: "Tools / Education", es: "Herramientas / Educación", it: "Strumenti / Educazione", ca: "Eines / Educació" },
+    desc: {
+      en: "ebvg-hoot is a real-time interactive learning platform (Kahoot clone), developed exclusively to transform computer science education at the Berta Von Glumer School.<br><br><strong>Architecture and Refactoring:</strong><br>The project was migrated from a monolithic prototype to a professional, scalable modular structure using Vite:<br>• Separation of Concerns (SoC): UI, business logic, and backend services are strictly separated.<br>• Custom Hooks: Complex Firebase logic (WebSockets, Auth, Storage) extracted into reusable hooks.<br>• Modular Components: UI broken down into clean presentational components.<br>• Asset Optimization: Implementation of Three.js via NPM for high-performance background animations.<br><br><strong>Tech Stack:</strong><br>Frontend: React.js, Tailwind CSS, Three.js, Lucide React.<br>Backend as a Service: Firebase (Anonymous Auth, Firestore, Cloud Storage).<br>Build Tool: Vite.",
+      es: "ebvg-hoot es una plataforma de aprendizaje interactivo en tiempo real (clon de Kahoot), desarrollada exclusivamente para transformar la educación informática en la Escuela Berta Von Glumer.<br><br><strong>Arquitectura y Refactorización:</strong><br>El proyecto migró de un prototipo monolítico a una estructura modular profesional usando Vite:<br>• Separación de Responsabilidades (SoC): UI, lógica de negocio y backend están estrictamente separados.<br>• Custom Hooks: Lógica compleja de Firebase extraída en hooks reutilizables.<br>• Componentes Modulares: UI dividida en componentes presentacionales limpios.<br>• Optimización de Assets: Implementación de Three.js para animaciones de alto rendimiento.<br><br><strong>Tecnologías:</strong><br>Frontend: React.js, Tailwind CSS, Three.js, Lucide React.<br>Backend: Firebase (Auth Anónimo, Firestore, Cloud Storage).<br>Build Tool: Vite.",
+      it: "Piattaforma di apprendimento interattivo in tempo reale (clone di Kahoot).", ca: "Plataforma d'aprenentatge interactiu en temps real (clon de Kahoot)."
+    },
+    link: "https://marcuspicazo.github.io/ebvg-hoot/", repo: "https://github.com/MarcusPicazo/ebvg-hoot",
+    mainImg: "assets/EBVGKAHOOT/EBVGHOOTPRODUCTVIDEO.mp4",
+    previewImg: "assets/PREVIMG/EBVG HOOT PREVIEW.jpg",
+    detailImgs: ["assets/EBVGKAHOOT/EBVGHOOTPRODUCTVIDEO.mp4", "assets/EBVGKAHOOT/K1.jpg", "assets/EBVGKAHOOT/K2.jpg", "assets/EBVGKAHOOT/K3.jpg", "assets/EBVGKAHOOT/K4.jpg", "assets/EBVGKAHOOT/K5.jpg", "assets/EBVGKAHOOT/EBVGKAHOOT DEMO.mp4"]
+  },
+  {
+    id: "citsync",
+    title: { en: "CIT SYNC", es: "CIT SYNC", it: "CIT SYNC", ca: "CIT SYNC" },
+    color: "#0f766e", category: { en: "Tools", es: "Herramientas", it: "Strumenti", ca: "Eines" },
+    desc: {
+      en: "A Serverless Single Page Application (SPA) designed to manage resources, laboratories, and software requests at the Berta von Glümer IT Center. The platform operates with minimal latency, providing a robust and secure ecosystem for educational administration.<br><br><strong>Key Features:</strong><br>• Lab Management: Reservation system with availability validation.<br>• App Factory: Module for educational software requests using strict data validation.<br>• Equipment Loans: Real-time hardware inventory control.<br>• Admin Dashboard: Centralized interface with role-based access.<br><br><strong>Tech Stack:</strong><br>React, Tailwind CSS, Vite, Firebase (Auth & Firestore).",
+      es: "Una Single Page Application (SPA) Serverless diseñada para gestionar recursos, laboratorios y solicitudes de software en el Centro de Informática Berta von Glümer. La plataforma opera con latencia mínima, ofreciendo un ecosistema robusto y seguro para la administración educativa.<br><br><strong>Características Clave:</strong><br>• Gestión de Laboratorios: Sistema de reservas con validación de disponibilidad.<br>• Fábrica de Apps: Módulo de solicitudes de software con validación estricta de datos.<br>• Préstamos de Equipo: Control de inventario de hardware en tiempo real.<br>• Dashboard de Administración: Interfaz centralizada con separación de roles.<br><br><strong>Tecnologías:</strong><br>React, Tailwind CSS, Vite, Firebase (Auth & Firestore).",
+      it: "Una Single Page Application (SPA) Serverless progettata per gestire risorse.", ca: "Una Single Page Application (SPA) Serverless dissenyada per gestionar recursos."
+    },
+    link: "https://marcuspicazo.github.io/cit-sync/", repo: "https://github.com/MarcusPicazo/cit-sync",
+    mainImg: "assets/CITSYNC/CitSyncVideo.mp4", 
+    previewImg: "assets/PREVIMG/CITSYNCPREVIEW.PNG",
+    detailImgs: ["assets/CITSYNC/CitSyncVideo.mp4", "assets/CITSYNC/CS1.png", "assets/CITSYNC/CS2.png", "assets/CITSYNC/CS3.png", "assets/CITSYNC/CS4.png"]
+  },
+  {
+    id: "lavaebvg",
+    title: { en: "LAVA EBVG", es: "LAVA EBVG", it: "LAVA EBVG", ca: "LAVA EBVG" },
+    color: "#6b1307", category: { en: "Games / Education", es: "Juegos / Educación", it: "Giochi / Educazione", ca: "Jocs / Educació" },
+    desc: {
+      en: "An interactive 3D parkour web minigame, developed entirely with native web technologies and Three.js. Created as a gamified educational experience for the Berta Von Glümer School (2025), it allows students to learn and answer questions about sci-fi and dystopian books while jumping between platforms. This project reflects the intersection between systems engineering and educational innovation.<br><br><strong>Technologies & Skills:</strong><br>• JavaScript (ES6+): Event-driven logic, custom physics, raycasting collision detection, and real-time i18n.<br>• Three.js / WebGL: Custom meshes, procedurally generated canvas textures, and animated lava shaders.<br>• HTML5 & CSS3: Modular architecture, UI overlays, and native CSS animations.<br>• Game Design: Advanced mechanics like Coyote Time, momentum multipliers, and dynamic death zones.",
+      es: "Un minijuego web interactivo en 3D estilo Parkour, desarrollado íntegramente con tecnologías nativas web y Three.js. Creado como una experiencia gamificada para la escuela Berta Von Glümer (2025), permite a los estudiantes responder preguntas sobre libros de ciencia ficción mientras saltan entre plataformas. Refleja la intersección entre ingeniería de sistemas e innovación educativa.<br><br><strong>Tecnologías y Habilidades:</strong><br>• JavaScript (ES6+): Lógica orientada a eventos, físicas personalizadas, colisiones por Raycasting e i18n en tiempo real.<br>• Three.js / WebGL: Mallas personalizadas, texturas procedurales (Canvas API) y shaders de lava animada.<br>• HTML5 & CSS3: Arquitectura modular, UI superpuesta y animaciones nativas.<br>• Game Design: Mecánicas avanzadas como Coyote Time, multiplicador de impulso y zonas de muerte dinámicas.",
+      it: "Un minigioco web 3D interattivo in stile Parkour.", ca: "Un minijoc web 3D interactiu d'estil Parkour."
+    },
+    link: "https://marcuspicazo.github.io/lava-parkour-game-EBVG/", repo: "https://github.com/MarcusPicazo/lava-parkour-game-EBVG",
+    mainImg: "assets/LAVA/Lava-no-questions.mp4", 
+    previewImg: "assets/PREVIMG/LAVA PREVIEW.jpg",
+    detailImgs: ["assets/LAVA/lava-questions.mp4", "assets/LAVA/LAVA1.png", "assets/LAVA/LAVA2.png", "assets/LAVA/LAVA3.png", "assets/LAVA/Lava-no-questions.mp4"]
+  },
+  {
+    id: "artstudio",
+    title: { en: "ART STUDIO", es: "ESTUDIO DE ARTE", it: "STUDIO D'ARTE", ca: "ESTUDI D'ART" },
+    color: "#831843", category: { en: "Art", es: "Arte", it: "Arte", ca: "Art" },
+    desc: {
+      en: 'An interactive 3D web experience built to help elementary school students learn how to mix colors and draw creatively. Developed entirely as a browser-native application, it combines a dynamic UI with 3D rendering to create an engaging, gamified learning environment.<br><br><strong>Features:</strong><br>• 3D Interactive Environment: Built with Three.js to render a stylized nature scene with an interactive easel and an animated 3D owl character.<br>• Dynamic Raycasting Canvas: Raycaster-based interactions allow users to paint directly onto a 3D mesh.<br>• Color Mixing Logic: Logically combine different base colors to generate new ones on the fly.<br>• Bilingual Support & Guided Tutorial.<br><br><strong>Technologies Used:</strong><br>HTML5 & CSS3, JavaScript (ES6 Modules), Three.js / WebGL, HTML Canvas API.',
+      es: 'Una experiencia web 3D interactiva construida para ayudar a estudiantes de primaria a aprender a mezclar colores y dibujar creativamente. Combina una UI dinámica con renderizado 3D para crear un entorno gamificado.<br><br><strong>Características:</strong><br>• Entorno 3D Interactivo: Construido con Three.js, incluye un caballete interactivo y un búho 3D animado.<br>• Canvas con Raycasting: Pinta directamente sobre un mesh 3D usando el ratón o toques.<br>• Lógica de Mezcla de Colores: Modo de mezcla incorporado para combinar colores base.<br>• Soporte Bilingüe y Tutorial Guiado.<br><br><strong>Tecnologías Utilizadas:</strong><br>HTML5 & CSS3, JavaScript (ES6 Modules), Three.js / WebGL, HTML Canvas API.',
+      it: "Un'esperienza web 3D interattiva creata per aiutare gli studenti.", ca: "Una experiència web 3D interactiva construïda per ajudar els estudiants."
+    },
+    link: "https://marcuspicazo.github.io/art-studio-ebvg/", repo: "https://github.com/MarcusPicazo/art-studio-ebvg",
+    mainImg: "assets/ARTSTUDIO/EBVGARTSTUDIO.mp4", 
+    previewImg: "assets/PREVIMG/ART STUDIO PREVIEW.jpg",
+    detailImgs: ["assets/ARTSTUDIO/EBVGARTSTUDIO.mp4", "assets/ARTSTUDIO/A1.png", "assets/ARTSTUDIO/K2.png", "assets/ARTSTUDIO/K3.png"]
+  },
+  {
+    id: "renaissance",
+    title: { en: "RENAISSANCE", es: "RENACIMIENTO", it: "RINASCIMENTO", ca: "RENAIXEMENT" },
+    color: "#166534", 
+    category: { en: "Art / History", es: "Arte / Historia", it: "Arte / Storia", ca: "Art / Història" },
+    desc: {
+      en: 'An immersive, interactive 3D web application developed for the art students of the Berta von Glumer School (EBVG). This educational project allows users to navigate through a virtual museum featuring iconic Renaissance masterpieces, learning about history and art techniques through an interactive owl guide.<br><br><strong>Technologies & Technical Skills:</strong><br>• Core: HTML5, CSS3, JavaScript (ES6+)<br>• 3D Library: Three.js (WebGL rendering, Lighting, Raycasting, Physics/Collisions)<br>• Controls: PointerLockControls for first-person navigation (Desktop & Mobile touch support)<br>• Architecture: Modular component-based logic, clean separation of concerns.',
+      es: 'Una aplicación web 3D inmersiva e interactiva desarrollada para estudiantes de arte de la Escuela Berta von Glumer (EBVG). Este proyecto educativo permite navegar por un museo virtual con obras maestras del Renacimiento, aprendiendo técnicas de historia y arte a través de un búho guía interactivo.<br><br><strong>Tecnologías y Habilidades:</strong><br>• Core: HTML5, CSS3, JavaScript (ES6+)<br>• Librería 3D: Three.js (Renderizado WebGL, Iluminación, Raycasting, Físicas/Colisiones)<br>• Controles: PointerLockControls para navegación en primera persona.<br>• Arquitectura: Lógica basada en componentes modulares.',
+      it: "Museo virtuale 3D interattivo con capolavori.", ca: "Museu virtual 3D interactiu amb obres mestres."
+    },
+    link: "https://marcuspicazo.github.io/ebvg-renaissance-gallery/", repo: "https://github.com/MarcusPicazo/ebvg-renaissance-gallery",
+    mainImg: "assets/RENACIMIENTO/GALLERYVIDEO.mp4", 
+    previewImg: "assets/PREVIMG/RENAISSANCE PREVIEW.jpg",
+    detailImgs: ["assets/RENACIMIENTO/GALLERYVIDEO.mp4", "assets/RENACIMIENTO/GALLERY1.png", "assets/RENACIMIENTO/GALLERY2.png", "assets/RENACIMIENTO/GALLERY3.png"]
+  },
+  {
+    id: "dna",
+    title: { en: "DNA STRUCTURE", es: "EL ADN", it: "STRUTTURA DEL DNA", ca: "L'ADN" },
+    color: "#7f1d1d", 
+    category: { en: "Science / Biology", es: "Ciencias / Biología", it: "Scienza / Biologia", ca: "Ciències / Biologia" },
+    desc: {
+      en: 'DNA Journey is an interactive 3D web application designed to explore the molecular architecture of human DNA. Developed as a high-fidelity digital documentation tool, it allows users to navigate through a meticulously constructed 3D double helix, inspecting key biological components.<br><br><strong>Technical Highlights:</strong><br>• 3D Rendering: Implementation of Three.js for complex geometry generation, dynamic lighting, and particle environments.<br>• Cinematic Animations: Utilization of GSAP to manage precise camera movements and UI interactions tied to scroll events.<br>• Modern UI: Styled with Tailwind CSS to achieve a sci-fi, scientific, and immersive interface.<br>• Modular Architecture: Clean separation of concerns (HTML, CSS, JS).',
+      es: 'DNA Journey es una aplicación web 3D interactiva diseñada para explorar la arquitectura molecular del ADN humano. Permite a los usuarios navegar a través de una doble hélice 3D construida meticulosamente para inspeccionar componentes biológicos clave.<br><br><strong>Aspectos Técnicos:</strong><br>• Renderizado 3D: Implementación de Three.js para generación de geometría compleja, iluminación dinámica y partículas.<br>• Animaciones Cinemáticas: Uso de GSAP para gestionar movimientos precisos de cámara ligados a eventos de scroll.<br>• UI Moderna: Estilizado con Tailwind CSS para lograr una interfaz de ciencia ficción inmersiva.<br>• Arquitectura Modular: Separación limpia de código (HTML, CSS, JS).',
+      it: "Applicazione web 3D interattiva progettata per esplorare il DNA.", ca: "Aplicació web 3D interactiva dissenyada per explorar l'ADN."
+    },
+    link: "https://marcuspicazo.github.io/dna-journey-ebvg/", repo: "https://github.com/MarcusPicazo/dna-journey-ebvg",
+    mainImg: "assets/DNA/DNAVIDEO.mp4", 
+    previewImg: "assets/PREVIMG/DNA PREVIEW.png",
+    detailImgs: ["assets/DNA/DNAVIDEO.mp4", "assets/DNA/DNA1.png", "assets/DNA/DNA2.png"]
+  },
+  {
+    id: "arcade",
+    title: { en: "STUDENT ARCADE", es: "STUDENT ARCADE", it: "STUDENT ARCADE", ca: "STUDENT ARCADE" },
+    color: "#4c1d95", category: { en: "Games / Gallery", es: "Juegos / Galería", it: "Giochi / Galleria", ca: "Jocs / Galeria" },
+    desc: {
+      en: "An interactive 3D virtual exhibition hall designed to showcase the amazing technical projects created by my elementary and middle school computer science students. As their teacher, I taught them how to build their games and websites from scratch. We then collaboratively built this 3D gallery together, with me leading the development, to highlight our favorite projects. Step inside and explore the creativity of the next generation of developers!<br><br><strong>Features:</strong><br>• First-Person 3D Navigation: Explore using WASD and mouse controls.<br>• Three Interactive Rooms: Dedicated spaces for Arcade Games, Web Development, and UX Design.<br>• Figma-Style UX Canvas: Infinite canvas with drag-to-scroll to explore full-scale app mockups.<br>• Bilingual UI: Real-time toggling between English and Spanish.<br><br><strong>Technologies Used:</strong><br>HTML5, CSS3, JavaScript (ES6+), Three.js (WebGL), Tailwind CSS, Panzoom.",
+      es: "Una sala de exposición virtual en 3D diseñada para mostrar los increíbles proyectos técnicos creados por mis estudiantes de primaria y secundaria. Como su profesor, les enseñé a desarrollar sus juegos y sitios web desde cero, y luego construimos colaborativamente esta galería 3D, bajo mi liderazgo técnico, para destacar nuestros proyectos favoritos. ¡Entra y explora la creatividad de la próxima generación de desarrolladores!<br><br><strong>Características:</strong><br>• Navegación 3D en Primera Persona: Controles WASD y ratón.<br>• Tres Salas Interactivas: Espacios para Juegos Arcade, Desarrollo Web y Diseño UX.<br>• Canvas UX estilo Figma: Lienzo infinito interactivo para explorar mockups a escala real.<br>• UI Bilingüe: Alternancia en tiempo real entre Inglés y Español.<br><br><strong>Tecnologías:</strong><br>HTML5, CSS3, JavaScript (ES6+), Three.js (WebGL), Tailwind CSS, Panzoom.",
+      it: "Galleria 3D interattiva costruita in collaborazione con i miei studenti.", ca: "Galeria 3D interactiva construïda en col·laboració amb els meus estudiants."
+    },
+    link: "https://marcuspicazo.github.io/3d-student-portfolio/", repo: "https://github.com/MarcusPicazo/3d-student-portfolio",
+    mainImg: "assets/ARCADE/ARCADEVIDEO.mp4", 
+    previewImg: "assets/PREVIMG/ARCADE PREVIEW.jpg",
+    detailImgs: ["assets/ARCADE/ARCADEVIDEO.mp4", "assets/ARCADE/ARC1.png", "assets/ARCADE/ARC2.png", "assets/ARCADE/ARC3.png"]
+  }
+];
+
+function renderLangOptions() {
+  const container = document.getElementById("lang-options-container");
+  if(!container) return;
+  container.innerHTML = "";
+  allLangsConfig.forEach((lang) => {
+    if (lang.id !== currentLang) container.innerHTML += `<a href="#" class="lang-opt animated-underline" data-lang="${lang.id}">${lang.short}${lang.long}</a>`;
+  });
+  document.querySelectorAll(".lang-opt").forEach((btn) => {
+    btn.addEventListener("click", (e) => { e.preventDefault(); const selectedLang = btn.getAttribute("data-lang"); if (selectedLang === currentLang) return; triggerLanguageWipe(selectedLang); });
+    btn.addEventListener("mouseover", () => { if(cursor) cursor.classList.add("hovered"); });
+    btn.addEventListener("mouseout", () => { if(cursor) cursor.classList.remove("hovered"); });
+  });
+}
+
+function updateUI_Language() {
+  const t = translations[currentLang];
+  const setEl = (id, val) => { const el = document.getElementById(id); if(el) el.innerHTML = val; };
+  setEl("pl-role", t.role); setEl("open-about-btn", t.aboutBtn); setEl("about-title", t.aboutTitle);
+  setEl("tech-cat-1", t.techCat1); setEl("tech-cat-2", t.techCat2); setEl("tech-cat-3", t.techCat3);
+  setEl("about-title-lang", t.langTitle); setEl("about-text-container", t.aboutText); setEl("context-text", t.contextText);
+  setEl("skill-1-name", t.skills.en.name); setEl("skill-1-lvl", t.skills.en.lvl); setEl("skill-2-name", t.skills.es.name); setEl("skill-2-lvl", t.skills.es.lvl);
+  setEl("skill-3-name", t.skills.it.name); setEl("skill-3-lvl", t.skills.it.lvl); setEl("skill-4-name", t.skills.ca.name); setEl("skill-4-lvl", t.skills.ca.lvl);
+
+  document.querySelectorAll(".about-btn-text").forEach((el) => el.innerText = t.closeBtn);
+  document.querySelectorAll(".btn-text").forEach((el) => el.innerText = t.backToCatalog);
+  document.querySelectorAll(".det-link-text-node").forEach(el => el.innerText = t.visitLink);
+  document.querySelectorAll(".det-repo-text-node").forEach(el => el.innerText = t.sourceCode);
+  setEl("footer-email", t.email); setEl("footer-linkedin", t.linkedin); setEl("footer-github", t.github); setEl("footer-resume", t.resume);
+
+  const activeLangConfig = allLangsConfig.find((l) => l.id === currentLang);
+  if(activeLangConfig) { setEl("lang-short", activeLangConfig.short); setEl("lang-long", activeLangConfig.long); }
+
+  document.querySelectorAll(".gallery-item").forEach((item, index) => {
+    const data = projectsData[index];
+    if(!data) return;
+    const cat = item.querySelector(".item-category"); if(cat) cat.innerText = data.category[currentLang];
+    const tit = item.querySelector(".item-title"); if(tit) tit.innerText = data.title[currentLang];
+    const exp = item.querySelector(".explore-text"); if(exp) exp.innerText = t.explore;
+  });
+
+  if (currentOpenProjectIndex !== null) {
+    const data = projectsData[currentOpenProjectIndex];
+    setEl("det-title", data.title[currentLang]); setEl("det-desc", data.desc[currentLang]);
+  }
+}
+
+function triggerLanguageWipe(newLang) {
+  const targets = document.querySelectorAll(".lang-wipe-target");
+  gsap.fromTo(targets, 
+    { clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)", webkitClipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)" },
+    { clipPath: "polygon(100% 0, 100% 0, 100% 100%, 100% 100%)", webkitClipPath: "polygon(100% 0, 100% 0, 100% 100%, 100% 100%)", duration: 0.4, ease: "power3.inOut",
+    onComplete: () => {
+      currentLang = newLang; updateUI_Language(); renderLangOptions();
+      gsap.fromTo(targets, 
+        { clipPath: "polygon(0 0, 0 0, 0 100%, 0 100%)", webkitClipPath: "polygon(0 0, 0 0, 0 100%, 0 100%)" }, 
+        { clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)", webkitClipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)", duration: 0.4, ease: "power3.inOut" }
+      );
+    },
+  });
+}
+
+const cursor = document.getElementById("custom-cursor");
+let cursorVisible = false, mouseX = window.innerWidth / 2, mouseY = window.innerHeight / 2, cursorX = mouseX, cursorY = mouseY;
+window.addEventListener("mousemove", (e) => {
+  if (cursor && !cursorVisible) { gsap.to(cursor, { opacity: 1, duration: 0.3 }); cursorVisible = true; }
+  mouseX = e.clientX; mouseY = e.clientY;
+});
+gsap.ticker.add(() => {
+  if(!cursor) return;
+  cursorX += (mouseX - cursorX) * 0.6; cursorY += (mouseY - cursorY) * 0.6;
+  cursor.style.transform = `translate(calc(${cursorX}px - 50%), calc(${cursorY}px - 50%))`;
+});
+document.addEventListener("mouseover", (e) => {
+  if (cursor && e.target.closest("a, button, .gallery-item, .thumb-item, .nav-info, .close-btn, .close-about-btn, .visit-link, .lang-opt, .tech-tag")) { cursor.classList.add("hovered"); } else if (cursor) { cursor.classList.remove("hovered"); }
+});
+const pCanvas = document.getElementById("project-particles"); const pCtx = pCanvas ? pCanvas.getContext("2d") : null;
+const aCanvas = document.getElementById("about-particles"); const aCtx = aCanvas ? aCanvas.getContext("2d") : null;
+let pWidth, pHeight, projParticles = [], aWidth, aHeight, aboutParticles = [];
+
+function initParticlesSystems() {
+  if(pCanvas) { pWidth = pCanvas.width = window.innerWidth; pHeight = pCanvas.height = window.innerHeight; projParticles = []; for (let i = 0; i < 90; i++) projParticles.push({ x: Math.random() * pWidth, y: Math.random() * pHeight, r: Math.random() * 1.5 + 0.5, vx: (Math.random() - 0.5) * 0.3, vy: -0.2 - Math.random() * 0.4, baseAlpha: Math.random() * 0.4 + 0.2 }); }
+  if(aCanvas) { aWidth = aCanvas.width = window.innerWidth; aHeight = aCanvas.height = window.innerHeight; aboutParticles = []; for (let i = 0; i < 80; i++) aboutParticles.push({ x: Math.random() * aWidth, y: Math.random() * aHeight, r: Math.random() * 1.5 + 0.5, vx: (Math.random() - 0.5) * 0.3, vy: -0.1 - Math.random() * 0.3, baseAlpha: Math.random() * 0.4 + 0.1 }); }
+}
+function drawParticles() {
+  if(pCtx) { pCtx.clearRect(0, 0, pWidth, pHeight); projParticles.forEach((p) => { p.x += p.vx; p.y += p.vy; if (p.x < 0) p.x = pWidth; if (p.x > pWidth) p.x = 0; if (p.y < 0) p.y = pHeight; if (p.y > pHeight) p.y = 0; pCtx.beginPath(); pCtx.arc(p.x, p.y, p.r, 0, Math.PI * 2); pCtx.fillStyle = `rgba(255, 255, 255, ${p.baseAlpha * Math.pow(1 - p.y / pHeight, 1.5)})`; pCtx.fill(); }); }
+  if(aCtx) { aCtx.clearRect(0, 0, aWidth, aHeight); aboutParticles.forEach((p) => { p.x += p.vx; p.y += p.vy; if (p.x < 0) p.x = aWidth; if (p.x > aWidth) p.x = 0; if (p.y < 0) p.y = aHeight; if (p.y > aHeight) p.y = 0; aCtx.beginPath(); aCtx.arc(p.x, p.y, p.r, 0, Math.PI * 2); aCtx.fillStyle = `rgba(255, 255, 255, ${p.baseAlpha})`; aCtx.fill(); }); }
+  requestAnimationFrame(drawParticles);
+}
+initParticlesSystems(); drawParticles(); window.addEventListener("resize", initParticlesSystems);
+
+const track = document.querySelector(".gallery-track");
+const bgLayer = document.querySelector(".bg-layer");
+const titleContainer = document.getElementById("dynamic-title");
+
+if (track) {
+  projectsData.forEach((proj, index) => {
+    const isVideo = proj.mainImg.match(/\.(mp4|webm)$/i);
+    const posterImg = proj.previewImg; 
+    
+    let mediaContent = `<img src="${posterImg}" alt="project img" class="gallery-poster">`;
+    if (isVideo) {
+        mediaContent += `<video src="${proj.mainImg}" loop muted playsinline preload="metadata" class="gallery-video"></video>`;
+    }
+
+    track.innerHTML += `<div class="gallery-item" data-index="${index}" data-id="${proj.id}"><div class="img-wrapper">${mediaContent}</div><div class="explore-indicator lang-wipe-target"><div class="explore-bg"></div><span class="explore-text">EXPLORE</span></div><div class="item-info"><span class="item-category lang-wipe-target">${proj.category.en}</span><h2 class="item-title lang-wipe-target">${proj.title.en}</h2></div></div>`;
+  });
+}
+
+const items = document.querySelectorAll(".gallery-item");
+
+if (titleContainer) gsap.to(titleContainer, { y: "-=15", duration: 5.5, repeat: -1, yoyo: true, ease: "sine.inOut" });
+
+let floatTweens = [];
+
+function startFloating() {
+  floatTweens.forEach(t => t.kill());
+  floatTweens = [];
+  document.querySelectorAll(".img-wrapper").forEach((wrapper, index) => {
+    const tween = gsap.to(wrapper, { y: -10, rotationZ: index % 2 === 0 ? 0.15 : -0.15, duration: 3.5 + (index % 2), repeat: -1, yoyo: true, ease: "sine.inOut", delay: index * 0.3 });
+    floatTweens.push(tween);
+  });
+}
+
+function stopFloatingAndAlign() {
+  floatTweens.forEach(t => t.kill());
+  floatTweens = [];
+  gsap.to(".img-wrapper", { y: 0, rotationZ: 0, duration: 0.6, ease: "power2.out" });
+}
+
+startFloating();
+
+const lenis = new Lenis({ duration: 1.5, easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), smooth: true });
+lenis.on("scroll", ScrollTrigger.update);
+gsap.ticker.add((time) => lenis.raf(time * 1000));
+gsap.ticker.lagSmoothing(0, 0);
+
+function initGalleryScroll() {
+  const itemsContainer = document.querySelector(".horizontal-section");
+  const spectrumContainer = document.getElementById("spectrum");
+  if(!itemsContainer || !spectrumContainer || !track) return;
+  const totalBars = 40;
+  for (let i = 0; i < totalBars; i++) {
+    const bar = document.createElement("div"); bar.className = "spectrum-bar"; bar.style.height = `${6 + Math.random() * 12}px`; spectrumContainer.appendChild(bar);
+  }
+  const spectrumBars = document.querySelectorAll(".spectrum-bar");
+  const getScrollAmount = () => -(track.scrollWidth - window.innerWidth);
+  gsap.to(track, { x: getScrollAmount, ease: "none", scrollTrigger: { trigger: itemsContainer, pin: true, scrub: 1, end: () => `+=${Math.abs(getScrollAmount()) * 2.5}`, invalidateOnRefresh: true, id: "galleryScroll", onUpdate: (self) => { const activeCount = Math.floor(self.progress * totalBars); spectrumBars.forEach((bar, index) => { if (index <= activeCount) bar.classList.add("active"); else bar.classList.remove("active"); }); } } });
+}
+initGalleryScroll();
+
+let hoverIntentTimer;
+items.forEach((item, index) => {
+  const data = projectsData[index];
+  const exploreBtn = item.querySelector(".explore-indicator");
+
+  item.addEventListener("mouseenter", () => {
+    clearTimeout(hoverIntentTimer);
+
+    hoverIntentTimer = setTimeout(() => {
+      if (currentOpenProjectIndex !== null) return;
+      
+      stopFloatingAndAlign();
+      
+      const vid = item.querySelector(".gallery-video");
+      const poster = item.querySelector(".gallery-poster");
+      if (vid) { vid.currentTime = 0; vid.style.opacity = 1; vid.play().catch(e=>console.log("Autoplay mitigado")); }
+      if (poster) poster.style.opacity = 0;
+
+      if(bgLayer) bgLayer.style.backgroundColor = data.color;
+      if(titleContainer) {
+        titleContainer.innerText = data.title[currentLang]; titleContainer.style.transform = "scale(1)"; titleContainer.style.fontSize = "100px";
+        titleContainer.style.fontSize = `${100 * ((window.innerWidth * 0.99) / titleContainer.getBoundingClientRect().width)}px`;
+        gsap.fromTo(titleContainer, { clipPath: "inset(0 50% 0 50%)", webkitClipPath: "inset(0 50% 0 50%)", opacity: 0 }, { clipPath: "inset(0 0% 0 0%)", webkitClipPath: "inset(0 0% 0 0%)", opacity: 1, duration: 0.8, ease: "power3.out", overwrite: "auto" });
+      }
+
+      gsap.to(items, { width: (i, el) => (el === item ? "36vw" : "7.2vw"), filter: (i, el) => el === item ? "grayscale(0%) brightness(1)" : "grayscale(100%) brightness(0.3)", duration: 0.8, ease: "power3.out", overwrite: "auto" });
+
+      items.forEach((other) => {
+        const imgWrap = other.querySelector(".img-wrapper");
+        const info = other.querySelector(".item-info");
+        const explore = other.querySelector(".explore-indicator");
+        
+        if (other === item) {
+          if(imgWrap) gsap.to(imgWrap, { scale: 1, duration: 0.8, ease: "power3.out", overwrite: "auto" });
+          if(info) gsap.to(info, { opacity: 1, y: 0, duration: 0.5, delay: 0.2, ease: "power3.out", overwrite: "auto" });
+          if(explore) gsap.to(explore, { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.5)", overwrite: "auto" });
+        } else {
+          if(imgWrap) gsap.to(imgWrap, { scale: 1.1, duration: 0.8, ease: "power3.out", overwrite: "auto" });
+          if(info) gsap.to(info, { opacity: 0, y: 20, duration: 0.4, ease: "power3.out", overwrite: "auto" });
+          if(explore) gsap.to(explore, { opacity: 0, scale: 0.5, duration: 0.4, ease: "power3.out", overwrite: "auto" });
+        }
+      });
+    }, 75);
+  });
+
+  item.addEventListener("mouseleave", () => {
+    clearTimeout(hoverIntentTimer); 
+    const vid = item.querySelector(".gallery-video");
+    const poster = item.querySelector(".gallery-poster");
+    if (vid) { vid.pause(); vid.currentTime = 0; vid.style.opacity = 0; }
+    if (poster) poster.style.opacity = 1;
+  });
+
+  item.addEventListener("click", () => {
+    currentOpenProjectIndex = index; history.pushState({ detail: true, projectId: data.id }, "", "#" + data.id); openDetailView(data);
+  });
+});
+
+if(track) {
+  track.addEventListener("mouseleave", () => {
+    clearTimeout(hoverIntentTimer); if (currentOpenProjectIndex !== null) return;
+    
+    startFloating();
+
+    if(bgLayer) bgLayer.style.backgroundColor = "#141414";
+    if(titleContainer) gsap.to(titleContainer, { clipPath: "inset(0 50% 0 50%)", webkitClipPath: "inset(0 50% 0 50%)", opacity: 0, duration: 0.4, ease: "power2.in", overwrite: "auto" });
+    gsap.to(items, { width: "12vw", filter: "grayscale(100%) brightness(0.6)", duration: 0.8, ease: "power3.out", overwrite: "auto" });
+    
+    items.forEach((other) => {
+      const imgWrap = other.querySelector(".img-wrapper");
+      const info = other.querySelector(".item-info"), exp = other.querySelector(".explore-indicator");
+      const vid = other.querySelector(".gallery-video"); const poster = other.querySelector(".gallery-poster");
+      if(vid) { vid.pause(); vid.currentTime = 0; vid.style.opacity = 0; }
+      if(poster) poster.style.opacity = 1;
+      
+      if(imgWrap) gsap.to(imgWrap, { scale: 1.1, duration: 0.8, ease: "power3.out", overwrite: "auto" });
+      if(info) gsap.to(info, { opacity: 0, y: 20, duration: 0.4, ease: "power3.out", overwrite: "auto" });
+      if(exp) gsap.to(exp, { opacity: 0, scale: 0.5, duration: 0.4, ease: "power3.out", overwrite: "auto" });
+    });
+  });
+}
+
+const galleryView = document.getElementById("gallery-view"), detailView = document.getElementById("detail-view"), giantLayer = document.getElementById("giant-layer"), closeBtnWrapper = document.getElementById("close-btn-wrapper"), mainHeader = document.getElementById("main-header"), contextText = document.getElementById("context-text"), footerLinks = document.getElementById("footer-links");
+let detailScrollTriggers = [];
+
+function openDetailView(data) {
+  savedScrollPosition = window.scrollY; lenis.stop();
+  document.querySelectorAll(".gallery-item video").forEach(v => { v.pause(); v.currentTime = 0; });
+  
+  const setEl = (id, val) => { const el = document.getElementById(id); if(el) el.innerHTML = val; };
+  setEl("det-title", data.title[currentLang]); setEl("det-desc", data.desc[currentLang]);
+  const link = document.getElementById("det-link"); if(link) link.href = data.link;
+  const repoBtn = document.getElementById("det-repo"); if (repoBtn) { if(data.repo) { repoBtn.href = data.repo; repoBtn.style.display = "inline-flex"; } else repoBtn.style.display = "none"; }
+  if(bgLayer) bgLayer.style.backgroundColor = "#141414";
+
+  const imgContainer = document.getElementById("det-images"), thumbsContainer = document.getElementById("det-thumbs");
+  if(imgContainer && thumbsContainer) {
+    imgContainer.innerHTML = ""; thumbsContainer.innerHTML = "";
+    data.detailImgs.forEach((src, idx) => {
+      const isVideo = src.match(/\.(mp4|webm)$/i);
+      const mediaElement = isVideo ? `<video src="${src}" autoplay loop muted playsinline></video>` : `<img src="${src}" alt="Screenshot">`;
+      const thumbElement = isVideo ? `<video src="${src}" muted></video>` : `<img src="${src}" alt="thumb">`;
+      imgContainer.innerHTML += `<div class="detail-img-box" id="img-${idx}">${mediaElement}</div>`;
+      thumbsContainer.innerHTML += `<div class="thumb-item ${idx === 0 ? "active" : ""}" data-target="img-${idx}">${thumbElement}</div>`;
+    });
+  }
+
+  // === RESTAURADA LA TRANSICIÓN CON EL BLUR ===
+  gsap.to(track, { filter: "blur(15px)", scale: 0.95, opacity: 0, duration: 1, ease: "power2.inOut" });
+  if(giantLayer) gsap.to(giantLayer, { opacity: 0, scale: 0.9, duration: 1, ease: "power2.inOut" });
+  gsap.to([mainHeader, contextText, footerLinks], { opacity: 0, duration: 0.6, pointerEvents: "none" });
+
+  setTimeout(() => {
+    const st = ScrollTrigger.getById("galleryScroll"); if(st) st.disable();
+    if(galleryView) galleryView.style.display = "none";
+    if(detailView) { detailView.style.display = "block"; window.scrollTo(0, 0); gsap.fromTo(detailView, { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 1.2, ease: "power3.out" }); }
+    if(closeBtnWrapper) { closeBtnWrapper.style.display = "flex"; closeBtnWrapper.style.opacity = "0"; gsap.to(closeBtnWrapper, { opacity: 1, duration: 1, delay: 0.5 }); }
+    if(pCanvas) gsap.to(pCanvas, { opacity: 1, duration: 1.5, delay: 0.2 });
+
+    gsap.fromTo(".detail-img-box", { y: 60, opacity: 0 }, { y: 0, opacity: 1, stagger: 0.15, duration: 1.2, ease: "power3.out", delay: 0.2, onComplete: () => gsap.to(".detail-img-box img, .detail-img-box video", { y: -8, duration: 4, repeat: -1, yoyo: true, ease: "sine.inOut", stagger: { each: 0.2, from: "start" } }) });
+    lenis.start(); setupDetailScrollSpy(); ScrollTrigger.refresh();
+
+    // === SOLUCIÓN AL BUG DE SCROLL DE EBVG HOOT ===
+    const dCenter = document.getElementById("det-images");
+    if(dCenter) { const ro = new ResizeObserver(() => ScrollTrigger.refresh()); ro.observe(dCenter); }
+  }, 800);
+}
+
+function closeDetailView() {
+  lenis.stop(); currentOpenProjectIndex = null;
+  detailScrollTriggers.forEach((st) => st.kill()); detailScrollTriggers = [];
+  if(pCanvas) gsap.to(pCanvas, { opacity: 0, duration: 0.8 });
+  if(bgLayer) gsap.to(bgLayer, { backgroundColor: "#141414", duration: 0.8, ease: "power2.inOut" });
+  gsap.to([detailView, closeBtnWrapper], { opacity: 0, y: 30, duration: 0.8, ease: "power2.inOut", onComplete: () => {
+      if(detailView) detailView.style.display = "none";
+      if(closeBtnWrapper) closeBtnWrapper.style.display = "none";
+      if(galleryView) galleryView.style.display = "block";
+      window.scrollTo(0, savedScrollPosition);
+      const st = ScrollTrigger.getById("galleryScroll"); if(st) st.enable();
+      
+      // === RESTAURADA LA TRANSICIÓN AL CERRAR CON EL BLUR ===
+      gsap.to(track, { scale: 1, filter: "blur(0px)", opacity: 1, duration: 1, ease: "power2.out" });
+      
+      gsap.to([giantLayer, mainHeader, contextText, footerLinks], { opacity: 1, duration: 1, ease: "power2.out", pointerEvents: "auto" });
+      lenis.start(); ScrollTrigger.refresh();
+    }
+  });
+}
+
+const cb = document.getElementById("close-btn"); if(cb) cb.addEventListener("click", () => { history.replaceState(null, "", window.location.pathname); closeDetailView(); });
+window.addEventListener("popstate", (event) => { if (!event.state || !event.state.detail) { if (detailView && detailView.style.display === "block") closeDetailView(); } });
+
+function setupDetailScrollSpy() {
+  const boxes = document.querySelectorAll(".detail-img-box"), thumbs = document.querySelectorAll(".thumb-item");
+  boxes.forEach((box, index) => { detailScrollTriggers.push(ScrollTrigger.create({ trigger: box, start: "top center", end: "bottom center", onToggle: (self) => { if (self.isActive && thumbs[index]) { thumbs.forEach(t => t.classList.remove("active")); thumbs[index].classList.add("active"); } } })); });
+  thumbs.forEach(thumb => { thumb.addEventListener("click", () => { const target = document.getElementById(thumb.dataset.target); if(target) lenis.scrollTo(target, { offset: -50, duration: 1.2 }); }); });
+}
+
+// === PRELOADER ORIGINAL RESTAURADO ===
+window.addEventListener("load", () => {
+  const preloader = document.getElementById("preloader");
+  const plName = document.getElementById("pl-name");
+  const plRole = document.getElementById("pl-role");
+
+  if(typeof lenis !== "undefined") lenis.stop();
+
+  const tl = gsap.timeline();
+
+  tl.to(plName, { opacity: 1, y: -10, duration: 1.5, ease: "power2.out", delay: 0.3 })
+    .to(plRole, { opacity: 1, y: -5, duration: 1.5, ease: "power2.out" }, "-=1")
+    .to(preloader, { opacity: 0, duration: 1.2, ease: "power2.inOut", delay: 0.8,
+      onComplete: () => {
+        if (preloader) preloader.style.display = "none";
+        if(typeof lenis !== "undefined") lenis.start();
+      },
+    });
+
+  renderLangOptions(); updateUI_Language();
+});
+
+const btnAbout = document.getElementById("open-about-btn"), modalAbout = document.getElementById("about-modal");
+let aboutScrollTriggers = [];
+if(btnAbout && modalAbout) {
+  btnAbout.addEventListener("click", (e) => {
+    e.preventDefault(); lenis.stop(); modalAbout.style.display = "block";
+    gsap.fromTo(modalAbout, { opacity: 0 }, { opacity: 1, duration: 0.6, ease: "power2.out" });
+    const aboutElements = modalAbout.querySelectorAll(".about-img-box, .about-title, .about-subtitle, .about-text, .tech-category-header");
+    gsap.fromTo(aboutElements, { y: 40, opacity: 0 }, { y: 0, opacity: 1, stagger: 0.1, duration: 0.8, ease: "power3.out", delay: 0.2 });
+    aboutScrollTriggers.forEach((st) => st.kill()); aboutScrollTriggers = [];
+    setTimeout(() => {
+      const techTags = document.querySelectorAll(".tech-tag"); gsap.set(techTags, { opacity: 0, y: 15 });
+      aboutScrollTriggers.push(ScrollTrigger.create({ trigger: ".tech-container", scroller: "#about-modal", start: "top 85%", onEnter: () => gsap.to(techTags, { opacity: 1, y: 0, duration: 1.2, stagger: 0.05, ease: "power2.out" }) }));
+      document.querySelectorAll(".skill-fill").forEach((fill) => {
+        const tWidth = fill.getAttribute("data-width"); gsap.set(fill, { width: "0%" });
+        aboutScrollTriggers.push(ScrollTrigger.create({ trigger: fill.closest(".skill-item"), scroller: "#about-modal", start: "top 95%", onEnter: () => gsap.to(fill, { width: tWidth, duration: 2.5, ease: "power3.out" }) }));
+      });
+    }, 100);
+  });
+}
+
+const cab = document.getElementById("close-about-btn");
+if(cab && modalAbout) { cab.addEventListener("click", () => { gsap.to(modalAbout, { opacity: 0, duration: 0.5, ease: "power2.in", onComplete: () => { modalAbout.style.display = "none"; lenis.start(); } }); }); }
