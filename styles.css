@@ -1,4 +1,13 @@
-:root {
+/*
+ * ========================================================
+ * PROJECT: Marcus Escalona Portfolio
+ * AUTHOR: Marco Escalona 
+ * DESCRIPTION: Custom UI styles, Layout, and WebGL overlays
+ * ========================================================
+ */
+ 
+ 
+ :root {
   --bg-default: #141414;
   --text-main: #bac4b8;
   --text-light: #ffffff;
@@ -38,6 +47,7 @@ a, button, .gallery-item, .thumb-item, .close-btn, .close-about-btn, .nav-info, 
   border-radius: 50%; pointer-events: none; z-index: 9999999; mix-blend-mode: difference;
   transform: translate(-50%, -50%); opacity: 0;
   transition: width 0.2s cubic-bezier(0.25, 1, 0.5, 1), height 0.2s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.2s ease, border 0.2s ease, opacity 0.3s ease;
+  will-change: transform;
 }
 
 #custom-cursor.hovered { width: 45px; height: 45px; background-color: transparent; border: 1.5px solid rgba(255, 255, 255, 0.8); }
@@ -47,8 +57,8 @@ a, button, .gallery-item, .thumb-item, .close-btn, .close-about-btn, .nav-info, 
   display: flex; justify-content: center; align-items: center; flex-direction: column; color: #fff;
 }
 
-#preloader .preloader-name { font-family: "Oswald", sans-serif; font-size: clamp(2rem, 5vw, 4rem); letter-spacing: 0.15em; text-align: center; opacity: 0; }
-#preloader .preloader-role { font-family: "Inter", sans-serif; font-weight: 400; font-size: 0.9rem; letter-spacing: 0.4em; color: rgba(255, 255, 255, 0.5); margin-top: 1.5rem; text-align: center; opacity: 0; text-transform: uppercase; }
+#preloader .preloader-name { font-family: "Oswald", sans-serif; font-size: clamp(2rem, 5vw, 4rem); letter-spacing: 0.15em; text-align: center; opacity: 0; will-change: transform, opacity; }
+#preloader .preloader-role { font-family: "Inter", sans-serif; font-weight: 400; font-size: 0.9rem; letter-spacing: 0.4em; color: rgba(255, 255, 255, 0.5); margin-top: 1.5rem; text-align: center; opacity: 0; text-transform: uppercase; will-change: transform, opacity; }
 
 #project-particles { position: fixed; inset: 0; width: 100vw; height: 100vh; z-index: -1; pointer-events: none; opacity: 0; }
 
@@ -89,16 +99,16 @@ header .logo { justify-self: start; font-family: "Inter", sans-serif; font-weigh
 .lang-dropdown-wrapper:hover .lang-options { opacity: 1; pointer-events: auto; transform: translateY(0); }
 
 .spectrum-container { justify-self: center; display: flex; align-items: center; gap: 3px; height: 20px; pointer-events: none; }
-.spectrum-bar { width: 1.5px; background-color: rgba(255, 255, 255, 0.25); border-radius: 2px; transition: background-color 0.2s ease, transform 0.2s ease; }
+.spectrum-bar { width: 1.5px; background-color: rgba(255, 255, 255, 0.25); border-radius: 2px; transition: background-color 0.2s ease, transform 0.2s ease; will-change: transform; }
 .spectrum-bar.active { background-color: #fff; transform: scaleY(1.5); }
 
 .context-text { position: fixed; bottom: 2.5rem; left: var(--page-padding); font-family: "Inter", sans-serif; font-size: 0.55rem; text-transform: uppercase; letter-spacing: 0.15em; line-height: 1.6; color: rgba(255, 255, 255, 0.3); pointer-events: none; z-index: 100; mix-blend-mode: difference; border-left: 1px solid rgba(255, 255, 255, 0.2); padding-left: 1rem; }
 .footer-links { position: fixed; bottom: 2.5rem; right: var(--page-padding); display: flex; gap: 2rem; z-index: 100; mix-blend-mode: difference; pointer-events: auto; }
 
-#about-modal { position: fixed; inset: 0; background-color: var(--bg-default); z-index: 10000; display: none; opacity: 0; padding: 10vh var(--page-padding); color: #fff; overflow-y: auto; overscroll-behavior: contain; }
+#about-modal { position: fixed; inset: 0; background-color: var(--bg-default); z-index: 10000; display: none; opacity: 0; padding: 10vh var(--page-padding); color: #fff; overflow-y: auto; overscroll-behavior: contain; transform: none !important; }
 #about-particles { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 0; pointer-events: none; }
 .fluid-bg { position: fixed; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; }
-.fluid-blob { position: absolute; border-radius: 50%; filter: blur(100px); opacity: 0.6; animation: moveBlob 25s infinite alternate cubic-bezier(0.45, 0, 0.55, 1); }
+.fluid-blob { position: absolute; border-radius: 50%; filter: blur(50px); opacity: 0.4; animation: moveBlob 25s infinite alternate cubic-bezier(0.45, 0, 0.55, 1); will-change: transform; }
 .blob-1 { width: 60vw; height: 60vw; background: rgba(255, 255, 255, 0.02); top: -10%; left: -10%; }
 .blob-2 { width: 50vw; height: 50vw; background: rgba(255, 255, 255, 0.015); bottom: -20%; right: -10%; animation-delay: -5s; animation-direction: alternate-reverse; }
 .blob-3 { width: 45vw; height: 45vw; background: rgba(255, 255, 255, 0.02); top: 40%; left: 60%; animation-delay: -10s; }
@@ -113,6 +123,7 @@ header .logo { justify-self: start; font-family: "Inter", sans-serif; font-weigh
   padding: 10px; background-color: rgba(255, 255, 255, 0.02); 
   box-shadow: inset 0 0 15px rgba(255,255,255,0.02); 
   transition: transform 0.6s var(--transition-curve), border-color 0.6s ease;
+  will-change: transform, opacity;
 }
 .about-img-box:hover { transform: translateY(-5px); border-color: rgba(255, 255, 255, 0.15); }
 .about-img-box img { width: 100%; height: auto; object-fit: cover; border-radius: 4px; }
@@ -125,14 +136,14 @@ header .logo { justify-self: start; font-family: "Inter", sans-serif; font-weigh
 .skill-header { display: flex; justify-content: space-between; font-family: "Inter", sans-serif; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.6rem; color: rgba(255, 255, 255, 0.9); }
 .skill-level { color: rgba(255, 255, 255, 0.5); }
 .skill-track { width: 100%; height: 1px; background-color: rgba(255, 255, 255, 0.15); position: relative; overflow: hidden; }
-.skill-fill { position: absolute; top: 0; left: 0; height: 100%; background-color: #fff; width: 0%; }
+.skill-fill { position: absolute; top: 0; left: 0; height: 100%; background-color: #fff; width: 100%; transform: scaleX(0); transform-origin: left; will-change: transform; }
 
 .tech-container { margin-top: 1.5rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; perspective: 1000px; }
 .tech-category-header { display: flex; align-items: center; gap: 8px; margin-bottom: 1rem; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 0.5rem; }
 .tech-category-header svg { color: rgba(255, 255, 255, 0.8); }
 .tech-category-title { font-family: "Inter", sans-serif; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1.5px; color: rgba(255, 255, 255, 0.6); }
 .tech-tags { display: flex; flex-wrap: wrap; gap: 0.6rem; }
-.tech-tag { font-family: "Inter", sans-serif; font-size: 0.85rem; padding: 0.35rem 0.8rem; border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 50px; background: rgba(255, 255, 255, 0.03); color: rgba(255, 255, 255, 0.8); transition: all 0.3s ease; }
+.tech-tag { font-family: "Inter", sans-serif; font-size: 0.85rem; padding: 0.35rem 0.8rem; border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 50px; background: rgba(255, 255, 255, 0.03); color: rgba(255, 255, 255, 0.8); transition: all 0.3s ease; will-change: transform, opacity; }
 .tech-tag:hover { background: rgba(255, 255, 255, 0.9); color: #000; border-color: rgba(255, 255, 255, 0.9); }
 
 @media (max-width: 900px) {
@@ -152,18 +163,16 @@ header .logo { justify-self: start; font-family: "Inter", sans-serif; font-weigh
 
 #gallery-view { position: relative; height: 100vh; z-index: 2; opacity: 1; transform-origin: center; }
 .horizontal-section { height: 100vh; display: flex; align-items: center; }
-.gallery-track { display: flex; align-items: center; padding: 0 50vw 0 var(--page-padding); width: max-content; height: 60vh; will-change: transform; }
-.gallery-item { position: relative; width: 12vw; height: 100%; flex-shrink: 0; margin-right: 2vw; filter: grayscale(100%) brightness(0.6); pointer-events: auto; }
+.gallery-track { display: flex; align-items: center; padding: 0 50vw 0 var(--page-padding); width: max-content; height: 60vh; will-change: transform, filter, opacity; }
+.gallery-item { position: relative; width: 12vw; height: 100%; flex-shrink: 0; margin-right: 2vw; filter: grayscale(100%) brightness(0.6); pointer-events: auto; will-change: width; }
 .gallery-item:hover { filter: grayscale(0%) brightness(1); }
 .img-wrapper { width: 100%; height: 100%; overflow: hidden; position: relative; border-radius: 4px; background-color: #0a0a0a; }
 
 .gallery-poster { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 2; transition: opacity 0.4s ease; }
 .gallery-video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; opacity: 0; transition: opacity 0.4s ease; pointer-events: none !important; }
 
-.img-wrapper img, .img-wrapper video { transform: scale(1.1); transition: transform 0.8s ease; }
+.img-wrapper img, .img-wrapper video { transform: scale(1); transition: transform 0.8s ease; will-change: transform; }
 .gallery-item:hover .img-wrapper img { transform: scale(1); }
-
-/* === LÓGICA DE ZOOM EN VIDEOS PARA OCULTAR BORDES NEGROS === */
 .gallery-item:hover .img-wrapper video { transform: scale(1.05); }
 .gallery-item[data-id="ebvghoot"]:hover .img-wrapper video { transform: scale(1); }
 
@@ -183,18 +192,25 @@ header .logo { justify-self: start; font-family: "Inter", sans-serif; font-weigh
 .explore-bg::before { content: ""; position: absolute; inset: 0; background: #ffffff; z-index: -1; transform-origin: left; transform: scaleX(0); transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1); }
 .explore-indicator:hover .explore-bg::before { transform-origin: right; transform: scaleX(1); }
 .explore-text { position: relative; z-index: 1; }
-.click-ripple { position: absolute; top: 50%; left: 50%; width: 100%; height: 100%; background: rgba(255, 255, 255, 0.6); border-radius: 50px; transform: translate(-50%, -50%); pointer-events: none; z-index: -1; filter: blur(4px); }
 
-#detail-view { position: absolute; top: 0; left: 0; width: 100%; min-height: 100vh; z-index: 50; display: none; opacity: 0; padding: 22vh var(--page-padding) 10vh; }
+#detail-view { position: absolute; top: 0; left: 0; width: 100%; min-height: 100vh; z-index: 50; display: none; opacity: 0; padding: 22vh var(--page-padding) 10vh; will-change: opacity, transform; }
 
-/* === BOTÓN BACK TO CATALOG: RESTAURADO EL EFECTO MIX-BLEND-MODE ORIGINAL === */
-.close-btn-wrapper { position: fixed; top: 3.5rem; left: 0; width: 100%; display: flex; justify-content: center; z-index: 101; pointer-events: none; mix-blend-mode: exclusion; filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.5)); }
+.close-btn-wrapper { 
+  position: fixed; 
+  top: 3.5rem; 
+  left: 0; 
+  width: 100%; 
+  display: flex; 
+  justify-content: center; 
+  z-index: 101; 
+  pointer-events: none; 
+  mix-blend-mode: difference; 
+}
 
 .close-btn { font-size: 0.75rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; pointer-events: auto; position: relative; display: inline-flex; align-items: center; justify-content: center; cursor: none; color: transparent; }
 .close-btn .layer { position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: flex; align-items: center; justify-content: center; gap: 8px; white-space: nowrap; transition: clip-path 0.5s cubic-bezier(0.77, 0, 0.175, 1); }
 .close-btn .base-layer { color: #ffffff; clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); }
 
-/* Aquí estaba el error matemático en el clip-path. Restaurado a (0 0, 0 0, 0 100%, 0% 100%) */
 .close-btn .hover-layer { color: #888888; clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%); }
 
 .close-btn:hover .base-layer { clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%); }
@@ -226,8 +242,26 @@ header .logo { justify-self: start; font-family: "Inter", sans-serif; font-weigh
 #det-repo:hover .base-layer { clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%); }
 #det-repo:hover .hover-layer { clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); }
 
+/* ESTILOS DE NOTA ELEGANTE */
+.demo-note {
+  font-size: 0.8rem; 
+  margin-top: 1.5rem; 
+  line-height: 1.6;
+  font-family: "Inter", sans-serif;
+  color: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.03);
+  border-left: 3px solid rgba(255, 255, 255, 0.3);
+  padding: 1rem 1.2rem;
+  border-radius: 0 6px 6px 0;
+  font-style: italic;
+}
+.demo-note strong {
+  color: rgba(255, 255, 255, 0.9);
+  font-style: normal;
+}
+
 .detail-center { display: flex; flex-direction: column; gap: 10vh; padding-bottom: 20vh; }
-.detail-img-box { width: 100%; border-radius: 8px; overflow: hidden; background-color: #0a0a0a; aspect-ratio: 16 / 9; }
+.detail-img-box { width: 100%; border-radius: 8px; overflow: hidden; background-color: #0a0a0a; aspect-ratio: 16 / 9; will-change: transform, opacity; }
 .detail-img-box img, .detail-img-box video { width: 100%; height: 100%; display: block; object-fit: cover; }
 
 .detail-right { position: relative; display: flex; justify-content: flex-end; }

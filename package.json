@@ -15,7 +15,7 @@
     "frontend",
     "javascript"
   ],
-  "author": "Marcus Escalona",
+  "author": "Marcus (Marco)  Escalona <marcuspicazo@outlook.com>",
   "license": "MIT",
   "dependencies": {
     "serve": "^14.2.0"

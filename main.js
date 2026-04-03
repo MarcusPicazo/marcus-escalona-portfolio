@@ -1,5 +1,8 @@
 gsap.registerPlugin(ScrollTrigger);
 
+// ACTIVACIÓN DE ACELERACIÓN POR HARDWARE GLOBAL (GPU)
+gsap.defaults({ force3D: true });
+
 let currentLang = "en";
 let currentOpenProjectIndex = null;
 let savedScrollPosition = 0;
@@ -75,14 +78,21 @@ const projectsData = [
     previewImg: "assets/PREVIMG/EBVG HOOT PREVIEW.jpg",
     detailImgs: ["assets/EBVGKAHOOT/EBVGHOOTPRODUCTVIDEO.mp4", "assets/EBVGKAHOOT/K1.jpg", "assets/EBVGKAHOOT/K2.jpg", "assets/EBVGKAHOOT/K3.jpg", "assets/EBVGKAHOOT/K4.jpg", "assets/EBVGKAHOOT/K5.jpg", "assets/EBVGKAHOOT/EBVGKAHOOT DEMO.mp4"]
   },
-  {
+{
     id: "citsync",
     title: { en: "CIT SYNC", es: "CIT SYNC", it: "CIT SYNC", ca: "CIT SYNC" },
     color: "#0f766e", category: { en: "Tools", es: "Herramientas", it: "Strumenti", ca: "Eines" },
     desc: {
-      en: "A Serverless Single Page Application (SPA) designed to manage resources, laboratories, and software requests at the Berta von Glümer IT Center. The platform operates with minimal latency, providing a robust and secure ecosystem for educational administration.<br><br><strong>Key Features:</strong><br>• Lab Management: Reservation system with availability validation.<br>• App Factory: Module for educational software requests using strict data validation.<br>• Equipment Loans: Real-time hardware inventory control.<br>• Admin Dashboard: Centralized interface with role-based access.<br><br><strong>Tech Stack:</strong><br>React, Tailwind CSS, Vite, Firebase (Auth & Firestore).",
-      es: "Una Single Page Application (SPA) Serverless diseñada para gestionar recursos, laboratorios y solicitudes de software en el Centro de Informática Berta von Glümer. La plataforma opera con latencia mínima, ofreciendo un ecosistema robusto y seguro para la administración educativa.<br><br><strong>Características Clave:</strong><br>• Gestión de Laboratorios: Sistema de reservas con validación de disponibilidad.<br>• Fábrica de Apps: Módulo de solicitudes de software con validación estricta de datos.<br>• Préstamos de Equipo: Control de inventario de hardware en tiempo real.<br>• Dashboard de Administración: Interfaz centralizada con separación de roles.<br><br><strong>Tecnologías:</strong><br>React, Tailwind CSS, Vite, Firebase (Auth & Firestore).",
-      it: "Una Single Page Application (SPA) Serverless progettata per gestire risorse.", ca: "Una Single Page Application (SPA) Serverless dissenyada per gestionar recursos."
+      en: "A Serverless Single Page Application (SPA) designed to manage resources, laboratories, and software requests at the Berta von Glümer IT Center. The platform operates with minimal latency, providing a robust and secure ecosystem for educational administration.<br><br><strong>Key Features:</strong><br>• Lab Management: Reservation system with availability validation.<br>• App Factory: Module for educational software requests using strict data validation.<br>• Equipment Loans: Real-time hardware inventory control.<br>• Admin Dashboard: Centralized interface with role-based access.<br><br><strong>Tech Stack:</strong><br>React, Tailwind CSS, Vite, Firebase (Auth & Firestore).<br><br><div class=\"demo-note\"><strong>Demo Access:</strong> Use password <em>1234</em> for all users.<br>Please sign in with password only (do not use Google Sign-In).<br>This is a public demo version for portfolio viewing.</div>",
+      es: "Una Single Page Application (SPA) Serverless diseñada para gestionar recursos, laboratorios y solicitudes de software en el Centro de Informática Berta von Glümer. La plataforma opera con latencia mínima, ofreciendo un ecosistema robusto y seguro para la administración educativa.<br><br><strong>Características Clave:</strong><br>• Gestión de Laboratorios: Sistema de reservas con validación de disponibilidad.<br>• Fábrica de Apps: Módulo de solicitudes de software con validación estricta de datos.<br>• Préstamos de Equipo: Control de inventario de hardware en tiempo real.<br>• Dashboard de Administración: Interfaz centralizada con separación de roles.<br><br><strong>Tecnologías:</strong><br>React, Tailwind CSS, Vite, Firebase (Auth & Firestore).<br><br><div class=\"demo-note\"><strong>Acceso Demo:</strong> Usa la contraseña <em>1234</em> para todos los usuarios.<br>Por favor inicia sesión solo con contraseña (no uses Google Sign-In).<br>Esta es una versión demo pública para visualización del portafolio.</div>",
+      it: "Una Single Page Application (SPA) Serverless progettata per gestire risorse.<br><br><div class=\"demo-note\"><strong>Accesso Demo:</strong> Usa la password <em>1234</em> per tutti gli utenti.<br>Accedi solo con password (non usare Google Sign-In).<br>Questa è una versione demo pubblica per la visualizzazione del portfolio.</div>", 
+      ca: "Una Single Page Application (SPA) Serverless dissenyada per gestionar recursos.<br><br><div class=\"demo-note\"><strong>Accés Demo:</strong> Utilitza la contrasenya <em>1234</em> per a tots els usuaris.<br>Si us plau, inicia sessió només amb contrasenya (no utilitzis Google Sign-In).<br>Aquesta és una versió de demostració pública per a la visualització del portafoli.</div>"
+    },
+    note: {
+      en: "<strong>Developer Note:</strong> All interactive web apps, the digital whiteboard, and other tools integrated into this platform were developed entirely by me (Marcus Escalona) as part of my role creating academic solutions for the institution's classes.",
+      es: "<strong>Nota del Desarrollador:</strong> Todas las aplicaciones web interactivas, la pizarra digital y demás herramientas integradas en esta plataforma fueron desarrolladas íntegramente por mí (Marcus Escalona), como parte de mi labor creando soluciones académicas para las clases de la institución.",
+      it: "<strong>Nota dello Sviluppatore:</strong> Tutte le web app interattive, la lavagna digitale e altri strumenti integrati in questa piattaforma sono stati sviluppati interamente da me (Marcus Escalona) come parte del mio ruolo nella creazione di soluzioni accademiche per l'istituto.",
+      ca: "<strong>Nota del Desenvolupador:</strong> Totes les aplicacions web interactives, la pissarra digital i altres eines integrades en aquesta plataforma van ser desenvolupades íntegrament per mi (Marcus Escalona) com a part de la meva tasca creant solucions acadèmiques per a la institució."
     },
     link: "https://marcuspicazo.github.io/cit-sync/", repo: "https://github.com/MarcusPicazo/cit-sync",
     mainImg: "assets/CITSYNC/CitSyncVideo.mp4", 
@@ -205,7 +215,10 @@ function updateUI_Language() {
 
   if (currentOpenProjectIndex !== null) {
     const data = projectsData[currentOpenProjectIndex];
-    setEl("det-title", data.title[currentLang]); setEl("det-desc", data.desc[currentLang]);
+    setEl("det-title", data.title[currentLang]); 
+    setEl("det-desc", data.desc[currentLang]);
+    const noteEl = document.getElementById("det-note");
+    if (noteEl && data.note) { noteEl.innerHTML = data.note[currentLang]; }
   }
 }
 
@@ -335,10 +348,10 @@ items.forEach((item, index) => {
       if(titleContainer) {
         titleContainer.innerText = data.title[currentLang]; titleContainer.style.transform = "scale(1)"; titleContainer.style.fontSize = "100px";
         titleContainer.style.fontSize = `${100 * ((window.innerWidth * 0.99) / titleContainer.getBoundingClientRect().width)}px`;
-        gsap.fromTo(titleContainer, { clipPath: "inset(0 50% 0 50%)", webkitClipPath: "inset(0 50% 0 50%)", opacity: 0 }, { clipPath: "inset(0 0% 0 0%)", webkitClipPath: "inset(0 0% 0 0%)", opacity: 1, duration: 0.8, ease: "power3.out", overwrite: "auto" });
+        gsap.fromTo(titleContainer, { clipPath: "inset(0 50% 0 50%)", webkitClipPath: "inset(0 50% 0 50%)", opacity: 0 }, { clipPath: "inset(0 0% 0 0%)", webkitClipPath: "inset(0 0% 0 0%)", opacity: 1, duration: 0.8, ease: "power4.out", overwrite: "auto" });
       }
 
-      gsap.to(items, { width: (i, el) => (el === item ? "36vw" : "7.2vw"), filter: (i, el) => el === item ? "grayscale(0%) brightness(1)" : "grayscale(100%) brightness(0.3)", duration: 0.8, ease: "power3.out", overwrite: "auto" });
+      gsap.to(items, { width: (i, el) => (el === item ? "36vw" : "7.2vw"), filter: (i, el) => el === item ? "grayscale(0%) brightness(1)" : "grayscale(100%) brightness(0.3)", duration: 0.8, ease: "power4.out", overwrite: "auto" });
 
       items.forEach((other) => {
         const imgWrap = other.querySelector(".img-wrapper");
@@ -346,13 +359,13 @@ items.forEach((item, index) => {
         const explore = other.querySelector(".explore-indicator");
         
         if (other === item) {
-          if(imgWrap) gsap.to(imgWrap, { scale: 1, duration: 0.8, ease: "power3.out", overwrite: "auto" });
-          if(info) gsap.to(info, { opacity: 1, y: 0, duration: 0.5, delay: 0.2, ease: "power3.out", overwrite: "auto" });
+          if(imgWrap) gsap.to(imgWrap, { scale: 1, duration: 0.8, ease: "power4.out", overwrite: "auto" });
+          if(info) gsap.to(info, { opacity: 1, y: 0, duration: 0.5, delay: 0.1, ease: "power4.out", overwrite: "auto" });
           if(explore) gsap.to(explore, { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.5)", overwrite: "auto" });
         } else {
-          if(imgWrap) gsap.to(imgWrap, { scale: 1.1, duration: 0.8, ease: "power3.out", overwrite: "auto" });
-          if(info) gsap.to(info, { opacity: 0, y: 20, duration: 0.4, ease: "power3.out", overwrite: "auto" });
-          if(explore) gsap.to(explore, { opacity: 0, scale: 0.5, duration: 0.4, ease: "power3.out", overwrite: "auto" });
+          if(imgWrap) gsap.to(imgWrap, { scale: 1, duration: 0.8, ease: "power4.out", overwrite: "auto" });
+          if(info) gsap.to(info, { opacity: 0, y: 20, duration: 0.4, ease: "power4.out", overwrite: "auto" });
+          if(explore) gsap.to(explore, { opacity: 0, scale: 0.5, duration: 0.4, ease: "power4.out", overwrite: "auto" });
         }
       });
     }, 75);
@@ -379,7 +392,7 @@ if(track) {
 
     if(bgLayer) bgLayer.style.backgroundColor = "#141414";
     if(titleContainer) gsap.to(titleContainer, { clipPath: "inset(0 50% 0 50%)", webkitClipPath: "inset(0 50% 0 50%)", opacity: 0, duration: 0.4, ease: "power2.in", overwrite: "auto" });
-    gsap.to(items, { width: "12vw", filter: "grayscale(100%) brightness(0.6)", duration: 0.8, ease: "power3.out", overwrite: "auto" });
+    gsap.to(items, { width: "12vw", filter: "grayscale(100%) brightness(0.6)", duration: 0.8, ease: "power4.out", overwrite: "auto" });
     
     items.forEach((other) => {
       const imgWrap = other.querySelector(".img-wrapper");
@@ -388,9 +401,9 @@ if(track) {
       if(vid) { vid.pause(); vid.currentTime = 0; vid.style.opacity = 0; }
       if(poster) poster.style.opacity = 1;
       
-      if(imgWrap) gsap.to(imgWrap, { scale: 1.1, duration: 0.8, ease: "power3.out", overwrite: "auto" });
-      if(info) gsap.to(info, { opacity: 0, y: 20, duration: 0.4, ease: "power3.out", overwrite: "auto" });
-      if(exp) gsap.to(exp, { opacity: 0, scale: 0.5, duration: 0.4, ease: "power3.out", overwrite: "auto" });
+      if(imgWrap) gsap.to(imgWrap, { scale: 1, duration: 0.8, ease: "power4.out", overwrite: "auto" });
+      if(info) gsap.to(info, { opacity: 0, y: 20, duration: 0.4, ease: "power4.out", overwrite: "auto" });
+      if(exp) gsap.to(exp, { opacity: 0, scale: 0.5, duration: 0.4, ease: "power4.out", overwrite: "auto" });
     });
   });
 }
@@ -408,6 +421,17 @@ function openDetailView(data) {
   const repoBtn = document.getElementById("det-repo"); if (repoBtn) { if(data.repo) { repoBtn.href = data.repo; repoBtn.style.display = "inline-flex"; } else repoBtn.style.display = "none"; }
   if(bgLayer) bgLayer.style.backgroundColor = "#141414";
 
+  const noteEl = document.getElementById("det-note");
+  if (noteEl) {
+    if (data.note) {
+      noteEl.innerHTML = data.note[currentLang];
+      noteEl.style.display = "block";
+      gsap.fromTo(noteEl, { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 1.2, delay: 0.4, ease: "power4.out" });
+    } else {
+      noteEl.style.display = "none";
+    }
+  }
+
   const imgContainer = document.getElementById("det-images"), thumbsContainer = document.getElementById("det-thumbs");
   if(imgContainer && thumbsContainer) {
     imgContainer.innerHTML = ""; thumbsContainer.innerHTML = "";
@@ -420,22 +444,20 @@ function openDetailView(data) {
     });
   }
 
-  // === RESTAURADA LA TRANSICIÓN CON EL BLUR ===
-  gsap.to(track, { filter: "blur(15px)", scale: 0.95, opacity: 0, duration: 1, ease: "power2.inOut" });
-  if(giantLayer) gsap.to(giantLayer, { opacity: 0, scale: 0.9, duration: 1, ease: "power2.inOut" });
+  gsap.to(track, { filter: "blur(15px)", scale: 0.95, opacity: 0, duration: 1.2, ease: "power4.inOut" });
+  if(giantLayer) gsap.to(giantLayer, { opacity: 0, scale: 0.9, duration: 1.2, ease: "power4.inOut" });
   gsap.to([mainHeader, contextText, footerLinks], { opacity: 0, duration: 0.6, pointerEvents: "none" });
 
   setTimeout(() => {
     const st = ScrollTrigger.getById("galleryScroll"); if(st) st.disable();
     if(galleryView) galleryView.style.display = "none";
-    if(detailView) { detailView.style.display = "block"; window.scrollTo(0, 0); gsap.fromTo(detailView, { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 1.2, ease: "power3.out" }); }
-    if(closeBtnWrapper) { closeBtnWrapper.style.display = "flex"; closeBtnWrapper.style.opacity = "0"; gsap.to(closeBtnWrapper, { opacity: 1, duration: 1, delay: 0.5 }); }
-    if(pCanvas) gsap.to(pCanvas, { opacity: 1, duration: 1.5, delay: 0.2 });
+    if(detailView) { detailView.style.display = "block"; window.scrollTo(0, 0); gsap.fromTo(detailView, { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 1.2, ease: "power4.out" }); }
+    if(closeBtnWrapper) { closeBtnWrapper.style.display = "flex"; closeBtnWrapper.style.opacity = "0"; gsap.to(closeBtnWrapper, { opacity: 1, duration: 1, delay: 0.4 }); }
+    if(pCanvas) gsap.to(pCanvas, { opacity: 1, duration: 1.2, delay: 0.2 });
 
-    gsap.fromTo(".detail-img-box", { y: 60, opacity: 0 }, { y: 0, opacity: 1, stagger: 0.15, duration: 1.2, ease: "power3.out", delay: 0.2, onComplete: () => gsap.to(".detail-img-box img, .detail-img-box video", { y: -8, duration: 4, repeat: -1, yoyo: true, ease: "sine.inOut", stagger: { each: 0.2, from: "start" } }) });
+    gsap.fromTo(".detail-img-box", { y: 40, opacity: 0 }, { y: 0, opacity: 1, stagger: 0.1, duration: 1.2, ease: "power4.out", delay: 0.1, onComplete: () => gsap.to(".detail-img-box img, .detail-img-box video", { y: -8, duration: 4, repeat: -1, yoyo: true, ease: "sine.inOut", stagger: { each: 0.2, from: "start" } }) });
     lenis.start(); setupDetailScrollSpy(); ScrollTrigger.refresh();
 
-    // === SOLUCIÓN AL BUG DE SCROLL DE EBVG HOOT ===
     const dCenter = document.getElementById("det-images");
     if(dCenter) { const ro = new ResizeObserver(() => ScrollTrigger.refresh()); ro.observe(dCenter); }
   }, 800);
@@ -444,19 +466,19 @@ function openDetailView(data) {
 function closeDetailView() {
   lenis.stop(); currentOpenProjectIndex = null;
   detailScrollTriggers.forEach((st) => st.kill()); detailScrollTriggers = [];
-  if(pCanvas) gsap.to(pCanvas, { opacity: 0, duration: 0.8 });
-  if(bgLayer) gsap.to(bgLayer, { backgroundColor: "#141414", duration: 0.8, ease: "power2.inOut" });
-  gsap.to([detailView, closeBtnWrapper], { opacity: 0, y: 30, duration: 0.8, ease: "power2.inOut", onComplete: () => {
+  if(pCanvas) gsap.to(pCanvas, { opacity: 0, duration: 0.6 });
+  if(bgLayer) gsap.to(bgLayer, { backgroundColor: "#141414", duration: 0.8, ease: "power4.inOut" });
+  
+  gsap.to([detailView, closeBtnWrapper], { opacity: 0, y: 30, duration: 0.8, ease: "power4.inOut", onComplete: () => {
       if(detailView) detailView.style.display = "none";
       if(closeBtnWrapper) closeBtnWrapper.style.display = "none";
       if(galleryView) galleryView.style.display = "block";
       window.scrollTo(0, savedScrollPosition);
       const st = ScrollTrigger.getById("galleryScroll"); if(st) st.enable();
       
-      // === RESTAURADA LA TRANSICIÓN AL CERRAR CON EL BLUR ===
-      gsap.to(track, { scale: 1, filter: "blur(0px)", opacity: 1, duration: 1, ease: "power2.out" });
+      gsap.to(track, { scale: 1, filter: "blur(0px)", opacity: 1, duration: 1.2, ease: "power4.out" });
       
-      gsap.to([giantLayer, mainHeader, contextText, footerLinks], { opacity: 1, duration: 1, ease: "power2.out", pointerEvents: "auto" });
+      gsap.to([giantLayer, mainHeader, contextText, footerLinks], { opacity: 1, duration: 1, ease: "power4.out", pointerEvents: "auto" });
       lenis.start(); ScrollTrigger.refresh();
     }
   });
@@ -471,47 +493,81 @@ function setupDetailScrollSpy() {
   thumbs.forEach(thumb => { thumb.addEventListener("click", () => { const target = document.getElementById(thumb.dataset.target); if(target) lenis.scrollTo(target, { offset: -50, duration: 1.2 }); }); });
 }
 
-// === PRELOADER ORIGINAL RESTAURADO ===
-window.addEventListener("load", () => {
+// === PRELOADER EXACTAMENTE COMO EL CÓDIGO FUENTE ORIGINAL ===
+document.addEventListener("DOMContentLoaded", () => {
   const preloader = document.getElementById("preloader");
   const plName = document.getElementById("pl-name");
   const plRole = document.getElementById("pl-role");
 
   if(typeof lenis !== "undefined") lenis.stop();
 
+  // 1. Reseteo forzado para que Ctrl+R funcione siempre y no parpadee
+  gsap.set(preloader, { opacity: 1, display: "flex" });
+  gsap.set(plName, { opacity: 0, y: 0 });
+  gsap.set(plRole, { opacity: 0, y: 0 });
+
+  // 2. Tu línea de tiempo (timeline) EXACTA del código fuente original
   const tl = gsap.timeline();
 
-  tl.to(plName, { opacity: 1, y: -10, duration: 1.5, ease: "power2.out", delay: 0.3 })
-    .to(plRole, { opacity: 1, y: -5, duration: 1.5, ease: "power2.out" }, "-=1")
-    .to(preloader, { opacity: 0, duration: 1.2, ease: "power2.inOut", delay: 0.8,
-      onComplete: () => {
-        if (preloader) preloader.style.display = "none";
-        if(typeof lenis !== "undefined") lenis.start();
-      },
-    });
+  tl.to(plName, {
+    opacity: 1,
+    y: -10,
+    duration: 1.5,
+    ease: "power2.out",
+    delay: 0.3,
+  })
+  .to(plRole, {
+    opacity: 1,
+    y: -5,
+    duration: 1.5,
+    ease: "power2.out",
+  }, "-=1")
+  .to(preloader, {
+    opacity: 0,
+    duration: 1.2,
+    ease: "power2.inOut",
+    delay: 0.8,
+    onComplete: () => {
+      if (preloader) preloader.style.display = "none";
+      if (typeof lenis !== "undefined") lenis.start();
+    },
+  });
 
-  renderLangOptions(); updateUI_Language();
+  // 3. Cargamos la interfaz al instante para que no haya retrasos
+  renderLangOptions();
+  updateUI_Language();
 });
+// === FIN DEL BLOQUE ===
 
 const btnAbout = document.getElementById("open-about-btn"), modalAbout = document.getElementById("about-modal");
 let aboutScrollTriggers = [];
+
 if(btnAbout && modalAbout) {
   btnAbout.addEventListener("click", (e) => {
     e.preventDefault(); lenis.stop(); modalAbout.style.display = "block";
-    gsap.fromTo(modalAbout, { opacity: 0 }, { opacity: 1, duration: 0.6, ease: "power2.out" });
-    const aboutElements = modalAbout.querySelectorAll(".about-img-box, .about-title, .about-subtitle, .about-text, .tech-category-header");
-    gsap.fromTo(aboutElements, { y: 40, opacity: 0 }, { y: 0, opacity: 1, stagger: 0.1, duration: 0.8, ease: "power3.out", delay: 0.2 });
+    gsap.fromTo(modalAbout, { opacity: 0 }, { opacity: 1, duration: 0.6, ease: "power4.out" });
+    
+    const aboutImg = modalAbout.querySelector(".about-img-box");
+    const aboutElements = modalAbout.querySelectorAll(".about-title, .about-subtitle, .about-text, .tech-category-header");
+    
+    gsap.fromTo(aboutImg, { y: 40, opacity: 0, scale: 0.95 }, { y: 0, opacity: 1, scale: 1, duration: 1.2, ease: "power4.out", delay: 0.1 });
+    gsap.fromTo(aboutElements, { y: 30, opacity: 0 }, { y: 0, opacity: 1, stagger: 0.05, duration: 1.2, ease: "power4.out", delay: 0.15 });
+    
     aboutScrollTriggers.forEach((st) => st.kill()); aboutScrollTriggers = [];
+    
     setTimeout(() => {
       const techTags = document.querySelectorAll(".tech-tag"); gsap.set(techTags, { opacity: 0, y: 15 });
-      aboutScrollTriggers.push(ScrollTrigger.create({ trigger: ".tech-container", scroller: "#about-modal", start: "top 85%", onEnter: () => gsap.to(techTags, { opacity: 1, y: 0, duration: 1.2, stagger: 0.05, ease: "power2.out" }) }));
+      aboutScrollTriggers.push(ScrollTrigger.create({ trigger: ".tech-container", scroller: "#about-modal", start: "top 85%", onEnter: () => gsap.to(techTags, { opacity: 1, y: 0, duration: 1, stagger: 0.03, ease: "back.out(1.5)" }) }));
+      
       document.querySelectorAll(".skill-fill").forEach((fill) => {
-        const tWidth = fill.getAttribute("data-width"); gsap.set(fill, { width: "0%" });
-        aboutScrollTriggers.push(ScrollTrigger.create({ trigger: fill.closest(".skill-item"), scroller: "#about-modal", start: "top 95%", onEnter: () => gsap.to(fill, { width: tWidth, duration: 2.5, ease: "power3.out" }) }));
+        const tWidth = fill.getAttribute("data-width"); 
+        const scaleVal = parseInt(tWidth) / 100;
+        gsap.set(fill, { scaleX: 0 });
+        aboutScrollTriggers.push(ScrollTrigger.create({ trigger: fill.closest(".skill-item"), scroller: "#about-modal", start: "top 95%", onEnter: () => gsap.to(fill, { scaleX: scaleVal, duration: 2, ease: "power4.out" }) }));
       });
-    }, 100);
+    }, 150);
   });
 }
 
 const cab = document.getElementById("close-about-btn");
-if(cab && modalAbout) { cab.addEventListener("click", () => { gsap.to(modalAbout, { opacity: 0, duration: 0.5, ease: "power2.in", onComplete: () => { modalAbout.style.display = "none"; lenis.start(); } }); }); }
+if(cab && modalAbout) { cab.addEventListener("click", () => { gsap.to(modalAbout, { opacity: 0, duration: 0.5, ease: "power4.inOut", onComplete: () => { modalAbout.style.display = "none"; lenis.start(); } }); }); }
