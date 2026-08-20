@@ -69,9 +69,9 @@ const projectsData = [
       it: 'Un\'esperienza web 3D interattiva sviluppata per esplorare il nostro vicinato stellare.', ca: 'Una experiència web 3D interactiva desenvolupada per explorar el nostre veïnatge estel·lar.'
     },
     link: "https://marcuspicazo.github.io/solar-system-ebvg/", repo: "https://github.com/MarcusPicazo/solar-system-ebvg",
-    mainImg: "assets/SOLAR SYSTEM/SOLAREBVG.mp4", 
-    previewImg: "assets/PREVIMG/solar sistem preview.jpg",
-    detailImgs: ["assets/SOLAR SYSTEM/SOLAREBVG.mp4", "assets/SOLAR SYSTEM/S1.png", "assets/SOLAR SYSTEM/S2.png"]
+    mainImg: "assets/solar-system/solar-ebvg.mp4",
+    previewImg: "assets/previews/solar-system.jpg",
+    detailImgs: ["assets/solar-system/solar-ebvg.mp4", "assets/solar-system/S1.png", "assets/solar-system/S2.png"]
   },
   {
     id: "ebvghoot",
@@ -84,8 +84,8 @@ const projectsData = [
     },
     link: "https://marcuspicazo.github.io/ebvg-hoot/", repo: "https://github.com/MarcusPicazo/ebvg-hoot",
     mainImg: "assets/EBVGKAHOOT/EBVGHOOTPRODUCTVIDEO.mp4",
-    previewImg: "assets/PREVIMG/EBVG HOOT PREVIEW.jpg",
-    detailImgs: ["assets/EBVGKAHOOT/EBVGHOOTPRODUCTVIDEO.mp4", "assets/EBVGKAHOOT/K1.jpg", "assets/EBVGKAHOOT/K2.jpg", "assets/EBVGKAHOOT/K3.jpg", "assets/EBVGKAHOOT/K4.jpg", "assets/EBVGKAHOOT/K5.jpg", "assets/EBVGKAHOOT/EBVGKAHOOT DEMO.mp4"]
+    previewImg: "assets/previews/ebvg-hoot.jpg",
+    detailImgs: ["assets/EBVGKAHOOT/EBVGHOOTPRODUCTVIDEO.mp4", "assets/EBVGKAHOOT/K1.jpg", "assets/EBVGKAHOOT/K2.jpg", "assets/EBVGKAHOOT/K3.jpg", "assets/EBVGKAHOOT/K4.jpg", "assets/EBVGKAHOOT/K5.jpg", "assets/EBVGKAHOOT/ebvg-kahoot-demo.mp4"]
   },
 {
     id: "citsync",
@@ -105,7 +105,7 @@ const projectsData = [
     },
     link: "https://marcuspicazo.github.io/cit-sync/", repo: "https://github.com/MarcusPicazo/cit-sync",
     mainImg: "assets/CITSYNC/CitSyncVideo.mp4", 
-    previewImg: "assets/PREVIMG/CITSYNCPREVIEW.PNG",
+    previewImg: "assets/previews/CITSYNCPREVIEW.png",
     detailImgs: ["assets/CITSYNC/CitSyncVideo.mp4", "assets/CITSYNC/CS1.png", "assets/CITSYNC/CS2.png", "assets/CITSYNC/CS3.png", "assets/CITSYNC/CS4.png"]
   },
   {
@@ -119,7 +119,7 @@ const projectsData = [
     },
     link: "https://marcuspicazo.github.io/lava-parkour-game-EBVG/", repo: "https://github.com/MarcusPicazo/lava-parkour-game-EBVG",
     mainImg: "assets/LAVA/Lava-no-questions.mp4", 
-    previewImg: "assets/PREVIMG/LAVA PREVIEW.jpg",
+    previewImg: "assets/previews/lava.jpg",
     detailImgs: ["assets/LAVA/lava-questions.mp4", "assets/LAVA/LAVA1.png", "assets/LAVA/LAVA2.png", "assets/LAVA/LAVA3.png", "assets/LAVA/Lava-no-questions.mp4"]
   },
   {
@@ -133,7 +133,7 @@ const projectsData = [
     },
     link: "https://marcuspicazo.github.io/art-studio-ebvg/", repo: "https://github.com/MarcusPicazo/art-studio-ebvg",
     mainImg: "assets/ARTSTUDIO/EBVGARTSTUDIO.mp4", 
-    previewImg: "assets/PREVIMG/ART STUDIO PREVIEW.jpg",
+    previewImg: "assets/previews/art-studio.jpg",
     detailImgs: ["assets/ARTSTUDIO/EBVGARTSTUDIO.mp4", "assets/ARTSTUDIO/A1.png", "assets/ARTSTUDIO/K2.png", "assets/ARTSTUDIO/K3.png"]
   },
   {
@@ -148,7 +148,7 @@ const projectsData = [
     },
     link: "https://marcuspicazo.github.io/ebvg-renaissance-gallery/", repo: "https://github.com/MarcusPicazo/ebvg-renaissance-gallery",
     mainImg: "assets/RENACIMIENTO/GALLERYVIDEO.mp4", 
-    previewImg: "assets/PREVIMG/RENAISSANCE PREVIEW.jpg",
+    previewImg: "assets/previews/renaissance.jpg",
     detailImgs: ["assets/RENACIMIENTO/GALLERYVIDEO.mp4", "assets/RENACIMIENTO/GALLERY1.png", "assets/RENACIMIENTO/GALLERY2.png", "assets/RENACIMIENTO/GALLERY3.png"]
   },
   {
@@ -163,7 +163,7 @@ const projectsData = [
     },
     link: "https://marcuspicazo.github.io/dna-journey-ebvg/", repo: "https://github.com/MarcusPicazo/dna-journey-ebvg",
     mainImg: "assets/DNA/DNAVIDEO.mp4", 
-    previewImg: "assets/PREVIMG/DNA PREVIEW.png",
+    previewImg: "assets/previews/dna.png",
     detailImgs: ["assets/DNA/DNAVIDEO.mp4", "assets/DNA/DNA1.png", "assets/DNA/DNA2.png"]
   },
   {
@@ -177,7 +177,7 @@ const projectsData = [
     },
     link: "https://marcuspicazo.github.io/3d-student-portfolio/", repo: "https://github.com/MarcusPicazo/3d-student-portfolio",
     mainImg: "assets/ARCADE/ARCADEVIDEO.mp4", 
-    previewImg: "assets/PREVIMG/ARCADE PREVIEW.jpg",
+    previewImg: "assets/previews/arcade.jpg",
     detailImgs: ["assets/ARCADE/ARCADEVIDEO.mp4", "assets/ARCADE/ARC1.png", "assets/ARCADE/ARC2.png", "assets/ARCADE/ARC3.png"]
   }
 ];
