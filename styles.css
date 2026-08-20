@@ -84,6 +84,7 @@ header .logo { justify-self: start; font-family: "Inter", sans-serif; font-weigh
 .header-nav { justify-self: end; display: flex; gap: 2.5rem; align-items: flex-start; pointer-events: auto; }
 
 .nav-info, .footer-links a, .lang-opt, .visit-link { font-family: "Inter", sans-serif; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.2em; font-weight: 500; text-decoration: none; color: rgba(255, 255, 255, 0.5); display: inline-flex; align-items: center; transition: color 0.3s ease; }
+.lang-opt { background: none; border: none; padding: 0; appearance: none; }
 .nav-info:hover, .footer-links a:hover, .lang-opt:hover, .lang-opt.active, .visit-link:hover { color: rgba(255, 255, 255, 1); }
 
 .animated-underline { position: relative; }
