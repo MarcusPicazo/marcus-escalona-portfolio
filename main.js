@@ -1,7 +1,7 @@
 /**
  * ========================================================
  * @project Marcus Escalona Portfolio
- * @author Marco Escalona (github.com/MarcusPicazo)
+ * @author Marcus Escalona (github.com/MarcusPicazo)
  * @description Core logic, 3D animations, and GSAP transitions.
  * @copyright 2026 Marco Escalona
  * ========================================================
