@@ -15,8 +15,16 @@
     "frontend",
     "javascript"
   ],
-  "author": "Marcus (Marco)  Escalona <marcuspicazo@outlook.com>",
+  "author": "Marcus Escalona <marcuspicazo@outlook.com>",
   "license": "MIT",
+  "homepage": "https://marcusescalona.art",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MarcusPicazo/marcus-escalona-portfolio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MarcusPicazo/marcus-escalona-portfolio/issues"
+  },
   "dependencies": {
     "serve": "^14.2.0"
   }
