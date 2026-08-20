@@ -187,7 +187,7 @@ function renderLangOptions() {
   if(!container) return;
   container.innerHTML = "";
   allLangsConfig.forEach((lang) => {
-    if (lang.id !== currentLang) container.innerHTML += `<a href="#" class="lang-opt animated-underline" data-lang="${lang.id}">${lang.short}${lang.long}</a>`;
+    if (lang.id !== currentLang) container.innerHTML += `<button type="button" class="lang-opt animated-underline" data-lang="${lang.id}">${lang.short}${lang.long}</button>`;
   });
   document.querySelectorAll(".lang-opt").forEach((btn) => {
     btn.addEventListener("click", (e) => { e.preventDefault(); const selectedLang = btn.getAttribute("data-lang"); if (selectedLang === currentLang) return; triggerLanguageWipe(selectedLang); });
