@@ -237,7 +237,7 @@ function triggerLanguageWipe(newLang) {
     { clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)", webkitClipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)" },
     { clipPath: "polygon(100% 0, 100% 0, 100% 100%, 100% 100%)", webkitClipPath: "polygon(100% 0, 100% 0, 100% 100%, 100% 100%)", duration: 0.4, ease: "power3.inOut",
     onComplete: () => {
-      currentLang = newLang; updateUI_Language(); renderLangOptions();
+      currentLang = newLang; document.documentElement.lang = newLang; updateUI_Language(); renderLangOptions();
       gsap.fromTo(targets, 
         { clipPath: "polygon(0 0, 0 0, 0 100%, 0 100%)", webkitClipPath: "polygon(0 0, 0 0, 0 100%, 0 100%)" }, 
         { clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)", webkitClipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)", duration: 0.4, ease: "power3.inOut" }
