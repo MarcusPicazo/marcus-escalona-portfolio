@@ -176,9 +176,37 @@ const projectsData = [
       it: "Galleria 3D interattiva costruita in collaborazione con i miei studenti.", ca: "Galeria 3D interactiva construïda en col·laboració amb els meus estudiants."
     },
     link: "https://marcuspicazo.github.io/3d-student-portfolio/", repo: "https://github.com/MarcusPicazo/3d-student-portfolio",
-    mainImg: "assets/ARCADE/ARCADEVIDEO.mp4", 
+    mainImg: "assets/ARCADE/ARCADEVIDEO.mp4",
     previewImg: "assets/previews/arcade.jpg",
     detailImgs: ["assets/ARCADE/ARCADEVIDEO.mp4", "assets/ARCADE/ARC1.png", "assets/ARCADE/ARC2.png", "assets/ARCADE/ARC3.png"]
+  },
+  {
+    id: "taylor",
+    title: { en: "TAYLOR", es: "TAYLOR", it: "TAYLOR", ca: "TAYLOR" },
+    color: "#9d174d", category: { en: "Startup / Safe Mobility", es: "Startup / Movilidad Segura", it: "Startup / Mobilità Sicura", ca: "Startup / Mobilitat Segura" },
+    desc: {
+      en: "Taylor is a safety-first mobility platform for LATAM, built around real-time identity verification, encrypted trip monitoring, and trusted-contact safety tools - with dedicated experiences for riders, drivers, and institutional partners like schools and businesses. I co-founded Taylor and built the marketing site's core architecture and scroll-driven experience.<br><br><strong>Key Features:</strong><br>• Universal Verification: Real-time biometric facial matching linked to official IDs before every trip.<br>• Total Traceability: Encrypted GPS monitoring with consented, active audio assistance.<br>• 911 Integration: Direct connection with authorities on route anomalies.<br>• Social Impact: A share of every trip funds education programs for women in LATAM.<br><br><strong>Technologies:</strong><br>Tailwind CSS, Three.js (WebGL backgrounds), GSAP &amp; ScrollTrigger, Lenis, Chart.js.",
+      es: "Taylor es una plataforma de movilidad enfocada en seguridad para LATAM, construida sobre verificación de identidad en tiempo real, monitoreo cifrado de viajes y herramientas de contactos de confianza - con experiencias dedicadas para pasajeros, conductores y socios institucionales como escuelas y empresas. Cofundé Taylor y construí la arquitectura central y la experiencia scroll-driven del sitio.<br><br><strong>Características Clave:</strong><br>• Verificación Universal: Coincidencia biométrica facial en tiempo real vinculada a identificaciones oficiales antes de cada viaje.<br>• Trazabilidad Total: Monitoreo GPS cifrado con asistencia de audio activa y consentida.<br>• Integración con el 911: Conexión directa con autoridades ante anomalías de ruta.<br>• Impacto Social: Parte de cada viaje financia programas educativos para mujeres en LATAM.<br><br><strong>Tecnologías:</strong><br>Tailwind CSS, Three.js (fondos WebGL), GSAP y ScrollTrigger, Lenis, Chart.js.",
+      it: "Piattaforma di mobilità sicura per l'America Latina, cofondata e sviluppata con verifica dell'identità e monitoraggio dei viaggi in tempo reale.", ca: "Plataforma de mobilitat segura per a Llatinoamèrica, cofundada i desenvolupada amb verificació d'identitat i seguiment de viatges en temps real."
+    },
+    link: "https://apptaylor.com/", repo: "https://github.com/MarcusPicazo/Taylor-Website",
+    mainImg: "assets/taylor/taylor-placeholder.svg",
+    previewImg: "assets/taylor/taylor-placeholder.svg",
+    detailImgs: ["assets/taylor/taylor-placeholder.svg"]
+  },
+  {
+    id: "nimio",
+    title: { en: "NIMIO LEVELS", es: "NIMIO LEVELS", it: "NIMIO LEVELS", ca: "NIMIO LEVELS" },
+    color: "#155e75", category: { en: "Tools / Internal Platform", es: "Herramientas / Plataforma Interna", it: "Strumenti / Piattaforma Interna", ca: "Eines / Plataforma Interna" },
+    desc: {
+      en: "Nimio Levels is a private, full-stack internal platform I built to manage team motivation: point tracking, level progression, custom avatars, and reward redemptions. Sensitive operations and approvals are handled server-side through signed HTTP-only cookies and Postgres row-level security.<br><br><strong>Key Features:</strong><br>• Role-Based Access: Separate flows for Admins (email/password) and Members (hashed personal access codes, never stored in plain text).<br>• Point &amp; Reward Ecosystem: Members submit point requests with private evidence; Admins approve, adjust, or reject them.<br>• Dynamic Progression: Member levels are calculated from historical points, unlocking custom avatars and GIFs without losing progress when points are spent.<br>• Admin Dashboard: User, reward, and point-ledger management with CSV report exports.<br><br><strong>Technologies:</strong><br>Next.js (App Router &amp; Server Actions), TypeScript, Tailwind CSS, Supabase (Postgres, RLS, pgcrypto, Storage).<br><br><div class=\"demo-note\"><strong>Note:</strong> Nimio Levels is a private, internal tool - the live link requires a personal access code and isn't publicly browsable. See the GitHub repo for the full write-up.</div>",
+      es: "Nimio Levels es una plataforma interna privada y full-stack que construí para gestionar la motivación del equipo: seguimiento de puntos, progresión de niveles, avatares personalizados y canje de recompensas. Las operaciones sensibles se manejan del lado del servidor mediante cookies HTTP-only firmadas y row-level security en Postgres.<br><br><strong>Características Clave:</strong><br>• Acceso por Roles: Flujos separados para Administradores (correo/contraseña) y Miembros (códigos de acceso personales hasheados, nunca en texto plano).<br>• Ecosistema de Puntos y Recompensas: Los miembros solicitan puntos con evidencia privada; los administradores aprueban, ajustan o rechazan.<br>• Progresión Dinámica: Los niveles se calculan según el historial de puntos, desbloqueando avatares y GIFs sin perder progreso al gastar puntos.<br>• Dashboard de Administración: Gestión de usuarios, recompensas y libro de puntos, con exportación de reportes CSV.<br><br><strong>Tecnologías:</strong><br>Next.js (App Router y Server Actions), TypeScript, Tailwind CSS, Supabase (Postgres, RLS, pgcrypto, Storage).<br><br><div class=\"demo-note\"><strong>Nota:</strong> Nimio Levels es una herramienta interna y privada - el enlace en vivo requiere un código de acceso personal y no es navegable públicamente. Consulta el repositorio de GitHub para el detalle completo.</div>",
+      it: "Piattaforma interna privata per gestire punti, livelli, avatar e ricompense del team, con accesso tramite codici hashati.", ca: "Plataforma interna privada per gestionar punts, nivells, avatars i recompenses de l'equip, amb accés mitjançant codis hashejats."
+    },
+    link: "https://nimio-levels.netlify.app/login", repo: "https://github.com/MarcusPicazo/NIO-INTERNAL",
+    mainImg: "assets/nimio/nimio-placeholder.svg",
+    previewImg: "assets/nimio/nimio-placeholder.svg",
+    detailImgs: ["assets/nimio/nimio-placeholder.svg"]
   }
 ];
 
