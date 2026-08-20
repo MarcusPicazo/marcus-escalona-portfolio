@@ -29,7 +29,7 @@ const translations = {
     techCat1: "Data & Logic (The Physics side)", techCat2: "Interactive Interfaces (The Music and Creativity side)", techCat3: "Real-Time Architecture (The Engineering side)",
     contextText: "SELECTED WORK<br>EdTech · Real-time Systems<br>Interactive Web Products",
     aboutText: "I am a British-Mexican Product Engineer specializing in the intersection of EdTech and interactive web systems. My background in physics and music defines my approach to software development: I tackle data architectures with scientific rigor and precision, while designing immersive interfaces with creativity and fluidity.<br><br>Through my experience teaching computer science, I have learned to reduce cognitive friction in digital environments. I am dedicated to building complete ecosystems—from real-time gamified platforms to in-browser 3D environments—transforming technical complexity into intuitive, stable, and high-impact learning tools.<br><br>To bring these platforms to life and analyze their performance, I work with the following technological ecosystem:",
-    closeBtn: "CLOSE", explore: "EXPLORE", visitLink: "Visit Application", sourceCode: "GitHub Repo", backToCatalog: "BACK TO CATALOG", email: "Email", linkedin: "LinkedIn", github: "GitHub", resume: "Resume",
+    closeBtn: "CLOSE", explore: "EXPLORE", visitLink: "Visit Application", sourceCode: "GitHub Repo", backToCatalog: "BACK TO CATALOG", email: "Email", linkedin: "LinkedIn", github: "GitHub", resume: "Resume", resumeEs: "Resume (ES)",
     skills: { en: { name: "English", lvl: "Native" }, es: { name: "Spanish", lvl: "Native" }, it: { name: "Italian", lvl: "B2" }, ca: { name: "Catalan", lvl: "B2" } },
   },
   es: {
@@ -37,7 +37,7 @@ const translations = {
     techCat1: "Data & Logic (El lado de la Física)", techCat2: "Interactive Interfaces (El lado de la Música y la Creatividad)", techCat3: "Real-Time Architecture (El lado de la Ingeniería)",
     contextText: "TRABAJO DESTACADO<br>EdTech · Sistemas en Tiempo Real<br>Productos Web Interactivos",
     aboutText: "Soy un Product Engineer británico-mexicano especializado en la intersección entre EdTech y sistemas web interactivos. Mi formación academica en física, música e ingenieria en sistemas define mi enfoque hacia el desarrollo de software: abordo las arquitecturas de datos con rigor científico y precisión, mientras diseño interfaces inmersivas con creatividad y fluidez.<br><br>A través de mi experiencia enseñando ciencias de la computación, he aprendido a reducir la fricción cognitiva en entornos digitales. Me dedico a construir ecosistemas completos —desde plataformas gamificadas en tiempo real hasta entornos 3D en el navegador— transformando la complejidad técnica en herramientas de aprendizaje intuitivas, estables y de alto impacto.<br><br>Para dar vida a estas plataformas y analizar su rendimiento, trabajo con el siguiente ecosistema tecnológico:",
-    closeBtn: "CERRAR", explore: "EXPLORAR", visitLink: "Visitar Aplicación", sourceCode: "Repositorio GitHub", backToCatalog: "VOLVER AL CATÁLOGO", email: "Email", linkedin: "LinkedIn", github: "GitHub", resume: "Currículum",
+    closeBtn: "CERRAR", explore: "EXPLORAR", visitLink: "Visitar Aplicación", sourceCode: "Repositorio GitHub", backToCatalog: "VOLVER AL CATÁLOGO", email: "Email", linkedin: "LinkedIn", github: "GitHub", resume: "Currículum", resumeEs: "Currículum (ES)",
     skills: { en: { name: "Inglés", lvl: "Nativo" }, es: { name: "Español", lvl: "Nativo" }, it: { name: "Italiano", lvl: "B2" }, ca: { name: "Catalán", lvl: "B2" } },
   },
   it: {
@@ -45,7 +45,7 @@ const translations = {
     techCat1: "Data & Logic (Il lato della Fisica)", techCat2: "Interactive Interfaces (Il lato della Musica e della Creatività)", techCat3: "Real-Time Architecture (Il lato dell'Ingegneria)",
     contextText: "LAVORI IN EVIDENZA<br>EdTech · Sistemi in Tempo Reale<br>Prodotti Web Interattivi",
     aboutText: "Sono un Product Engineer britannico-messicano specializzato nell'intersezione tra EdTech e sistemi web interattivi. La mia formazione in fisica e musica definisce il mio approccio allo sviluppo di software: affronto le architetture dei dati con rigore e precisione scientifica, mentre progetto interfacce immersive con creatività e fluidità.<br><br>Attraverso la mia esperienza nell'insegnamento dell'informatica, ho imparato a ridurre l'attrito cognitivo negli ambienti digitali. Mi dedico alla costruzione di ecosistemi completi — dalle piattaforme gamificate in tempo reale agli ambienti 3D nel browser — trasformando la complessità tecnica in strumenti di apprendimento intuitivi, stabili e di grande impatto.<br><br>Per dare vita a queste piattaforme e analizzare le loro prestazioni, lavoro con il seguente ecosistema tecnologico:",
-    closeBtn: "CHIUDI", explore: "ESPLORA", visitLink: "Visita l'App", sourceCode: "Repo GitHub", backToCatalog: "TORNA AL CATALOGO", email: "Email", linkedin: "LinkedIn", github: "GitHub", resume: "Curriculum",
+    closeBtn: "CHIUDI", explore: "ESPLORA", visitLink: "Visita l'App", sourceCode: "Repo GitHub", backToCatalog: "TORNA AL CATALOGO", email: "Email", linkedin: "LinkedIn", github: "GitHub", resume: "Curriculum", resumeEs: "Curriculum (ES)",
     skills: { en: { name: "Inglese", lvl: "Madrelingua" }, es: { name: "Spagnolo", lvl: "Madrelingua" }, it: { name: "Italiano", lvl: "B2" }, ca: { name: "Catalano", lvl: "B2" } },
   },
   ca: {
@@ -53,7 +53,7 @@ const translations = {
     techCat1: "Data & Logic (El costat de la Física)", techCat2: "Interactive Interfaces (El costat de la Música i la Creativitat)", techCat3: "Real-Time Architecture (El costat de l'Enginyeria)",
     contextText: "TREBALL DESTACAT<br>EdTech · Sistemes en Temps Real<br>Productes Web Interactius",
     aboutText: "Sóc un Product Engineer britànic-mexicà especialitzat en la intersecció entre EdTech i sistemes web interactius. La meva formació en física i música defineix el meu enfocament cap al desenvolupament de programari: abordo les arquitectures de dades amb rigor i precisió científica, mentre dissenyo interfícies immersives amb creativitat i fluïdesa.<br><br>A través de la meva experiència ensenyant ciències de la computació, he après a reduir la fricció cognitiva en entorns digitals. Em dedico a construir ecosistemi complets —des de plataformes gamificades en temps real fins a entorns 3D al navegador— transformant la complexitat tècnica en eines d'aprenentatge intuïtives, estables i d'alt impacte.<br><br>Per donar vida a aquestes plataformes i analitzar el seu rendiment, treballo amb el següent ecosistema tecnològic:",
-    closeBtn: "TANCAR", explore: "EXPLORAR", visitLink: "Visitar Aplicació", sourceCode: "Repositori GitHub", backToCatalog: "TORNAR AL CATÀLEG", email: "Correu", linkedin: "LinkedIn", github: "GitHub", resume: "Currículum",
+    closeBtn: "TANCAR", explore: "EXPLORAR", visitLink: "Visitar Aplicació", sourceCode: "Repositori GitHub", backToCatalog: "TORNAR AL CATÀLEG", email: "Correu", linkedin: "LinkedIn", github: "GitHub", resume: "Currículum", resumeEs: "Currículum (ES)",
     skills: { en: { name: "Anglès", lvl: "Natiu" }, es: { name: "Espanyol", lvl: "Natiu" }, it: { name: "Italià", lvl: "B2" }, ca: { name: "Català", lvl: "B2" } },
   },
 };
@@ -209,7 +209,7 @@ function updateUI_Language() {
   document.querySelectorAll(".btn-text").forEach((el) => el.innerText = t.backToCatalog);
   document.querySelectorAll(".det-link-text-node").forEach(el => el.innerText = t.visitLink);
   document.querySelectorAll(".det-repo-text-node").forEach(el => el.innerText = t.sourceCode);
-  setEl("footer-email", t.email); setEl("footer-linkedin", t.linkedin); setEl("footer-github", t.github); setEl("footer-resume", t.resume);
+  setEl("footer-email", t.email); setEl("footer-linkedin", t.linkedin); setEl("footer-github", t.github); setEl("footer-resume", t.resume); setEl("footer-resume-es", t.resumeEs);
 
   const activeLangConfig = allLangsConfig.find((l) => l.id === currentLang);
   if(activeLangConfig) { setEl("lang-short", activeLangConfig.short); setEl("lang-long", activeLangConfig.long); }
