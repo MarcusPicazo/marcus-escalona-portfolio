@@ -190,9 +190,9 @@ const projectsData = [
       it: "Piattaforma di mobilità sicura per l'America Latina, cofondata e sviluppata con verifica dell'identità e monitoraggio dei viaggi in tempo reale.", ca: "Plataforma de mobilitat segura per a Llatinoamèrica, cofundada i desenvolupada amb verificació d'identitat i seguiment de viatges en temps real."
     },
     link: "https://apptaylor.com/", repo: "https://github.com/MarcusPicazo/Taylor-Website",
-    mainImg: "assets/taylor/taylor-placeholder.svg",
+    mainImg: "assets/taylor/taylor-video.mp4",
     previewImg: "assets/taylor/taylor-placeholder.svg",
-    detailImgs: ["assets/taylor/taylor-placeholder.svg"]
+    detailImgs: ["assets/taylor/taylor-video.mp4", "assets/taylor/taylor-placeholder.svg"]
   },
   {
     id: "nimio",
@@ -378,8 +378,10 @@ items.forEach((item, index) => {
       
       const vid = item.querySelector(".gallery-video");
       const poster = item.querySelector(".gallery-poster");
-      if (vid) { vid.currentTime = 0; vid.style.opacity = 1; vid.play().catch(e=>console.log("Autoplay mitigado")); }
-      if (poster) poster.style.opacity = 0;
+      if (vid) {
+        vid.currentTime = 0;
+        vid.play().then(() => { vid.style.opacity = 1; if (poster) poster.style.opacity = 0; }).catch(e => console.log("Autoplay mitigado"));
+      }
 
       if(bgLayer) bgLayer.style.backgroundColor = data.color;
       if(titleContainer) {
