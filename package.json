@@ -4,7 +4,8 @@
   "description": "Interactive 3D and EdTech portfolio for Marcus Escalona.",
   "main": "main.js",
   "scripts": {
-    "start": "serve"
+    "start": "serve",
+    "generate:seo": "node scripts/generate-jsonld.js"
   },
   "keywords": [
     "portfolio",
