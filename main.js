@@ -204,9 +204,9 @@ const projectsData = [
       it: "L'app mobile di Taylor (Flutter, iOS e Android) con tre modalità: Passeggera, Conducente e Aziende, progettata per la sicurezza delle donne.", ca: "L'app mòbil de Taylor (Flutter, iOS i Android) amb tres modes: Passatgera, Conductora i Empreses, dissenyada per a la seguretat de les dones."
     },
     repo: "https://github.com/MarcusPicazo/Taylor-App",
-    mainImg: "assets/taylor-app/taylor-app-placeholder.png",
-    previewImg: "assets/taylor-app/taylor-app-placeholder.png",
-    detailImgs: ["assets/taylor-app/taylor-app-placeholder.png"]
+    mainImg: "assets/taylor-app/taylor-app-1.jpg",
+    previewImg: "assets/taylor-app/taylor-app-1.jpg",
+    detailImgs: ["assets/taylor-app/taylor-app-1.jpg"]
   },
   {
     id: "taylor-desktop",
@@ -218,9 +218,9 @@ const projectsData = [
       it: "Pannello Windows/macOS per aziende e scuole che usano Taylor, per tracciare le corse del team, programmare turni e gestire il personale.", ca: "Panell Windows/macOS per a empreses i escoles que usen Taylor, per fer seguiment dels trajectes de l'equip, programar torns i gestionar el personal."
     },
     repo: "https://github.com/MarcusPicazo/Taylor-Desktop",
-    mainImg: "assets/taylor-desktop/taylor-desktop-placeholder.png",
-    previewImg: "assets/taylor-desktop/taylor-desktop-placeholder.png",
-    detailImgs: ["assets/taylor-desktop/taylor-desktop-placeholder.png"]
+    mainImg: "assets/taylor-desktop/taylor-desktop-1.jpg",
+    previewImg: "assets/taylor-desktop/taylor-desktop-1.jpg",
+    detailImgs: ["assets/taylor-desktop/taylor-desktop-1.jpg"]
   },
   {
     id: "nimio",
