@@ -192,7 +192,35 @@ const projectsData = [
     link: "https://apptaylor.com/", repo: "https://github.com/MarcusPicazo/Taylor-Website",
     mainImg: "assets/taylor/taylor-video.mp4",
     previewImg: "assets/taylor/taylor-placeholder.svg",
-    detailImgs: ["assets/taylor/taylor-video.mp4", "assets/taylor/taylor-placeholder.svg"]
+    detailImgs: ["assets/taylor/taylor-placeholder.svg", "assets/taylor/taylor-video.mp4"]
+  },
+  {
+    id: "taylor-app",
+    title: { en: "TAYLOR APP", es: "TAYLOR APP", it: "TAYLOR APP", ca: "TAYLOR APP" },
+    color: "#FF3E81", category: { en: "Startup / Mobile App", es: "Startup / App Móvil", it: "Startup / App Mobile", ca: "Startup / App Mòbil" },
+    desc: {
+      en: "Taylor's mobile app (Flutter, iOS &amp; Android) is the product I lead as CTO &amp; CPO - a single app with three modes: Passenger, Driver, and Business. The tone is protective but modern: the product communicates protection, never fear.<br><br><strong>Key Features:</strong><br>• Passenger: live map, real address search, three ride tiers (Go / Pro / Max), live driver tracking, and a Safety tab (SOS, live location sharing, emergency contacts).<br>• Driver: online status, ride requests with an acceptance countdown, slide-to-confirm trip lifecycle, transparent earnings breakdown.<br>• Business (B2B): recurring night-shift scheduling and a live \"Tonight\" board, so companies know everyone got home safely.<br><br><strong>Technologies:</strong><br>Flutter &amp; Dart, Riverpod, go_router, Google Maps SDK &amp; Places API, geolocator, Firebase Cloud Firestore, Lottie &amp; custom CustomPainter animations. Identity verification (face + document recognition) is designed into onboarding and planned on the AI roadmap.",
+      es: "La app móvil de Taylor (Flutter, iOS y Android) es el producto que lidero como CTO y CPO - una sola app con tres modos: Pasajera, Conductora y Empresas. El tono es protector pero moderno: el producto comunica protección, nunca miedo.<br><br><strong>Características Clave:</strong><br>• Pasajera: mapa en vivo, búsqueda real de direcciones, tres niveles de viaje (Go / Pro / Max), seguimiento en vivo del conductor y una pestaña de Seguridad (SOS, compartir ubicación en vivo, contactos de emergencia).<br>• Conductora: estado en línea, solicitudes de viaje con cuenta regresiva de aceptación, ciclo de vida del viaje por deslizamiento, desglose transparente de ganancias.<br>• Empresas (B2B): programación recurrente de turnos nocturnos y un tablero \"Esta Noche\" en vivo, para que las empresas sepan que todo su equipo llegó bien a casa.<br><br><strong>Tecnologías:</strong><br>Flutter y Dart, Riverpod, go_router, Google Maps SDK y Places API, geolocator, Firebase Cloud Firestore, Lottie y animaciones personalizadas con CustomPainter. La verificación de identidad (reconocimiento facial y de documentos) está diseñada en el onboarding y planeada en el roadmap de IA.",
+      it: "L'app mobile di Taylor (Flutter, iOS e Android) con tre modalità: Passeggera, Conducente e Aziende, progettata per la sicurezza delle donne.", ca: "L'app mòbil de Taylor (Flutter, iOS i Android) amb tres modes: Passatgera, Conductora i Empreses, dissenyada per a la seguretat de les dones."
+    },
+    repo: "https://github.com/MarcusPicazo/Taylor-App",
+    mainImg: "assets/taylor-app/taylor-app-placeholder.png",
+    previewImg: "assets/taylor-app/taylor-app-placeholder.png",
+    detailImgs: ["assets/taylor-app/taylor-app-placeholder.png"]
+  },
+  {
+    id: "taylor-desktop",
+    title: { en: "TAYLOR DESKTOP", es: "TAYLOR DESKTOP", it: "TAYLOR DESKTOP", ca: "TAYLOR DESKTOP" },
+    color: "#1A1A1A", category: { en: "Startup / Desktop Tool", es: "Startup / Herramienta de Escritorio", it: "Startup / Strumento Desktop", ca: "Startup / Eina d'Escriptori" },
+    desc: {
+      en: "Taylor Business Desktop is a Windows/macOS panel for the companies and schools that use Taylor, letting the account owner track their team's rides live, schedule recurring routes, manage staff, and review history and billing from one place.<br><br><strong>Key Features:</strong><br>• Tonight: live tracking of the night's rides as a list, kanban board, or real-time map, with no-show alerts.<br>• Schedule: recurring ride series by day/time/route, list or monthly calendar view.<br>• Team: add or deactivate employees/students, search, profile photos.<br>• Account: company details, Taylor Credits wallet, payment methods, dark/light theme, Spanish and English.<br><br><strong>Technologies:</strong><br>Flutter (Windows &amp; macOS desktop), Google Maps via WebView2.<br><br><div class=\"demo-note\"><strong>Note:</strong> Runs on simulated data (no live backend yet) - a fully working, end-to-end panel built for product demos and usability testing, not production use.</div>",
+      es: "Taylor Business Desktop es un panel para Windows/macOS pensado para las empresas y escuelas que usan Taylor, permitiendo a la persona responsable de la cuenta rastrear los viajes de su equipo en vivo, programar rutas recurrentes, gestionar personal y revisar historial y facturación desde un solo lugar.<br><br><strong>Características Clave:</strong><br>• Esta Noche: seguimiento en vivo de los viajes de la noche como lista, tablero kanban o mapa en tiempo real, con alertas de inasistencia.<br>• Programación: series de viajes recurrentes por día/hora/ruta, vista de lista o calendario mensual.<br>• Equipo: agregar o desactivar empleados/estudiantes, búsqueda, fotos de perfil.<br>• Cuenta: datos de la empresa, monedero de Taylor Credits, métodos de pago, tema claro/oscuro, español e inglés.<br><br><strong>Tecnologías:</strong><br>Flutter (escritorio Windows y macOS), Google Maps vía WebView2.<br><br><div class=\"demo-note\"><strong>Nota:</strong> Funciona con datos simulados (aún sin backend en vivo) - un panel completamente funcional de principio a fin, construido para demos de producto y pruebas de usabilidad, no para producción.</div>",
+      it: "Pannello Windows/macOS per aziende e scuole che usano Taylor, per tracciare le corse del team, programmare turni e gestire il personale.", ca: "Panell Windows/macOS per a empreses i escoles que usen Taylor, per fer seguiment dels trajectes de l'equip, programar torns i gestionar el personal."
+    },
+    repo: "https://github.com/MarcusPicazo/Taylor-Desktop",
+    mainImg: "assets/taylor-desktop/taylor-desktop-placeholder.png",
+    previewImg: "assets/taylor-desktop/taylor-desktop-placeholder.png",
+    detailImgs: ["assets/taylor-desktop/taylor-desktop-placeholder.png"]
   },
   {
     id: "nimio",
@@ -456,7 +484,7 @@ function openDetailView(data) {
   
   const setEl = (id, val) => { const el = document.getElementById(id); if(el) el.innerHTML = val; };
   setEl("det-title", data.title[currentLang]); setEl("det-desc", data.desc[currentLang]);
-  const link = document.getElementById("det-link"); if(link) link.href = data.link;
+  const link = document.getElementById("det-link"); if(link) { if(data.link) { link.href = data.link; link.style.display = "inline-flex"; } else link.style.display = "none"; }
   const repoBtn = document.getElementById("det-repo"); if (repoBtn) { if(data.repo) { repoBtn.href = data.repo; repoBtn.style.display = "inline-flex"; } else repoBtn.style.display = "none"; }
   if(bgLayer) bgLayer.style.backgroundColor = "#141414";
 
