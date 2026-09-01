@@ -218,9 +218,9 @@ const projectsData = [
       it: "Pannello Windows/macOS per aziende e scuole che usano Taylor, per tracciare le corse del team, programmare turni e gestire il personale.", ca: "Panell Windows/macOS per a empreses i escoles que usen Taylor, per fer seguiment dels trajectes de l'equip, programar torns i gestionar el personal."
     },
     repo: "https://github.com/MarcusPicazo/Taylor-Desktop",
-    mainImg: "assets/taylor-desktop/taylor-desktop-dashboard.jpg",
-    previewImg: "assets/taylor-desktop/taylor-desktop-dashboard.jpg",
-    detailImgs: ["assets/taylor-desktop/taylor-desktop-dashboard.jpg", "assets/taylor-desktop/taylor-desktop-agenda.jpg", "assets/taylor-desktop/taylor-desktop-login.jpg"]
+    mainImg: "assets/taylor-desktop/taylor-desktop-1.jpg",
+    previewImg: "assets/taylor-desktop/taylor-desktop-1.jpg",
+    detailImgs: ["assets/taylor-desktop/taylor-desktop-1.jpg"]
   },
   {
     id: "nimio",
