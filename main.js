@@ -29,7 +29,7 @@ const translations = {
     techCat1: "Data & Logic (The Physics side)", techCat2: "Interactive Interfaces (The Music and Creativity side)", techCat3: "Real-Time Architecture (The Engineering side)",
     contextText: "SELECTED WORK<br>EdTech · Real-time Systems<br>Interactive Web Products",
     aboutText: "I am a British-Mexican Product Engineer specializing in the intersection of EdTech and interactive web systems. My background in physics and music defines my approach to software development: I tackle data architectures with scientific rigor and precision, while designing immersive interfaces with creativity and fluidity.<br><br>Through my experience teaching computer science, I have learned to reduce cognitive friction in digital environments. I am dedicated to building complete ecosystems—from real-time gamified platforms to in-browser 3D environments—transforming technical complexity into intuitive, stable, and high-impact learning tools.<br><br>To bring these platforms to life and analyze their performance, I work with the following technological ecosystem:",
-    closeBtn: "CLOSE", explore: "EXPLORE", visitLink: "Visit Application", download: "Download", sourceCode: "GitHub Repo", backToCatalog: "BACK TO CATALOG", email: "Email", linkedin: "LinkedIn", github: "GitHub", resume: "Resume", resumeEs: "Resume (ES)",
+    closeBtn: "CLOSE", explore: "EXPLORE", visitLink: "Visit Application", visitWebsite: "Visit Website", download: "Download", sourceCode: "GitHub Repo", backToCatalog: "BACK TO CATALOG", email: "Email", linkedin: "LinkedIn", github: "GitHub", resume: "Resume", resumeEs: "Resume (ES)",
     skills: { en: { name: "English", lvl: "Native" }, es: { name: "Spanish", lvl: "Native" }, it: { name: "Italian", lvl: "B2" }, ca: { name: "Catalan", lvl: "B2" } },
   },
   es: {
@@ -37,7 +37,7 @@ const translations = {
     techCat1: "Data & Logic (El lado de la Física)", techCat2: "Interactive Interfaces (El lado de la Música y la Creatividad)", techCat3: "Real-Time Architecture (El lado de la Ingeniería)",
     contextText: "TRABAJO DESTACADO<br>EdTech · Sistemas en Tiempo Real<br>Productos Web Interactivos",
     aboutText: "Soy un Product Engineer británico-mexicano especializado en la intersección entre EdTech y sistemas web interactivos. Mi formación academica en física, música e ingenieria en sistemas define mi enfoque hacia el desarrollo de software: abordo las arquitecturas de datos con rigor científico y precisión, mientras diseño interfaces inmersivas con creatividad y fluidez.<br><br>A través de mi experiencia enseñando ciencias de la computación, he aprendido a reducir la fricción cognitiva en entornos digitales. Me dedico a construir ecosistemas completos —desde plataformas gamificadas en tiempo real hasta entornos 3D en el navegador— transformando la complejidad técnica en herramientas de aprendizaje intuitivas, estables y de alto impacto.<br><br>Para dar vida a estas plataformas y analizar su rendimiento, trabajo con el siguiente ecosistema tecnológico:",
-    closeBtn: "CERRAR", explore: "EXPLORAR", visitLink: "Visitar Aplicación", download: "Descarga", sourceCode: "Repositorio GitHub", backToCatalog: "VOLVER AL CATÁLOGO", email: "Email", linkedin: "LinkedIn", github: "GitHub", resume: "Currículum", resumeEs: "Currículum (ES)",
+    closeBtn: "CERRAR", explore: "EXPLORAR", visitLink: "Visitar Aplicación", visitWebsite: "Visitar Sitio Web", download: "Descarga", sourceCode: "Repositorio GitHub", backToCatalog: "VOLVER AL CATÁLOGO", email: "Email", linkedin: "LinkedIn", github: "GitHub", resume: "Currículum", resumeEs: "Currículum (ES)",
     skills: { en: { name: "Inglés", lvl: "Nativo" }, es: { name: "Español", lvl: "Nativo" }, it: { name: "Italiano", lvl: "B2" }, ca: { name: "Catalán", lvl: "B2" } },
   },
   it: {
@@ -45,7 +45,7 @@ const translations = {
     techCat1: "Data & Logic (Il lato della Fisica)", techCat2: "Interactive Interfaces (Il lato della Musica e della Creatività)", techCat3: "Real-Time Architecture (Il lato dell'Ingegneria)",
     contextText: "LAVORI IN EVIDENZA<br>EdTech · Sistemi in Tempo Reale<br>Prodotti Web Interattivi",
     aboutText: "Sono un Product Engineer britannico-messicano specializzato nell'intersezione tra EdTech e sistemi web interattivi. La mia formazione in fisica e musica definisce il mio approccio allo sviluppo di software: affronto le architetture dei dati con rigore e precisione scientifica, mentre progetto interfacce immersive con creatività e fluidità.<br><br>Attraverso la mia esperienza nell'insegnamento dell'informatica, ho imparato a ridurre l'attrito cognitivo negli ambienti digitali. Mi dedico alla costruzione di ecosistemi completi — dalle piattaforme gamificate in tempo reale agli ambienti 3D nel browser — trasformando la complessità tecnica in strumenti di apprendimento intuitivi, stabili e di grande impatto.<br><br>Per dare vita a queste piattaforme e analizzare le loro prestazioni, lavoro con il seguente ecosistema tecnologico:",
-    closeBtn: "CHIUDI", explore: "ESPLORA", visitLink: "Visita l'App", download: "Scarica", sourceCode: "Repo GitHub", backToCatalog: "TORNA AL CATALOGO", email: "Email", linkedin: "LinkedIn", github: "GitHub", resume: "Curriculum", resumeEs: "Curriculum (ES)",
+    closeBtn: "CHIUDI", explore: "ESPLORA", visitLink: "Visita l'App", visitWebsite: "Visita il Sito", download: "Scarica", sourceCode: "Repo GitHub", backToCatalog: "TORNA AL CATALOGO", email: "Email", linkedin: "LinkedIn", github: "GitHub", resume: "Curriculum", resumeEs: "Curriculum (ES)",
     skills: { en: { name: "Inglese", lvl: "Madrelingua" }, es: { name: "Spagnolo", lvl: "Madrelingua" }, it: { name: "Italiano", lvl: "B2" }, ca: { name: "Catalano", lvl: "B2" } },
   },
   ca: {
@@ -53,7 +53,7 @@ const translations = {
     techCat1: "Data & Logic (El costat de la Física)", techCat2: "Interactive Interfaces (El costat de la Música i la Creativitat)", techCat3: "Real-Time Architecture (El costat de l'Enginyeria)",
     contextText: "TREBALL DESTACAT<br>EdTech · Sistemes en Temps Real<br>Productes Web Interactius",
     aboutText: "Sóc un Product Engineer britànic-mexicà especialitzat en la intersecció entre EdTech i sistemes web interactius. La meva formació en física i música defineix el meu enfocament cap al desenvolupament de programari: abordo les arquitectures de dades amb rigor i precisió científica, mentre dissenyo interfícies immersives amb creativitat i fluïdesa.<br><br>A través de la meva experiència ensenyant ciències de la computació, he après a reduir la fricció cognitiva en entorns digitals. Em dedico a construir ecosistemi complets —des de plataformes gamificades en temps real fins a entorns 3D al navegador— transformant la complexitat tècnica en eines d'aprenentatge intuïtives, estables i d'alt impacte.<br><br>Per donar vida a aquestes plataformes i analitzar el seu rendiment, treballo amb el següent ecosistema tecnològic:",
-    closeBtn: "TANCAR", explore: "EXPLORAR", visitLink: "Visitar Aplicació", download: "Descarrega", sourceCode: "Repositori GitHub", backToCatalog: "TORNAR AL CATÀLEG", email: "Correu", linkedin: "LinkedIn", github: "GitHub", resume: "Currículum", resumeEs: "Currículum (ES)",
+    closeBtn: "TANCAR", explore: "EXPLORAR", visitLink: "Visitar Aplicació", visitWebsite: "Visitar Lloc Web", download: "Descarrega", sourceCode: "Repositori GitHub", backToCatalog: "TORNAR AL CATÀLEG", email: "Correu", linkedin: "LinkedIn", github: "GitHub", resume: "Currículum", resumeEs: "Currículum (ES)",
     skills: { en: { name: "Anglès", lvl: "Natiu" }, es: { name: "Espanyol", lvl: "Natiu" }, it: { name: "Italià", lvl: "B2" }, ca: { name: "Català", lvl: "B2" } },
   },
 };
@@ -181,6 +181,20 @@ const projectsData = [
     detailImgs: ["assets/ARCADE/ARCADEVIDEO.mp4", "assets/ARCADE/ARC1.png", "assets/ARCADE/ARC2.png", "assets/ARCADE/ARC3.png"]
   },
   {
+    id: "atlas",
+    title: { en: "ATLAS", es: "ATLAS", it: "ATLAS", ca: "ATLAS" },
+    color: "#0c4a6e", category: { en: "Science / Geography", es: "Ciencias / Geografía", it: "Scienza / Geografia", ca: "Ciències / Geografia" },
+    desc: {
+      en: "An interactive 3D web application developed to help students explore the world through Earth's continents and countries. Built with a focus on modern UI/UX, real-time data visualization, and seamless bilingual support.<br><br><strong>Key Features:</strong><br>• Dual Exploration Modes: Toggle between a macro 'Continents' view and a detailed 'Countries' view.<br>• Interactive Data Visualization: Custom hover effects, dynamic tooltips, procedural Canvas textures for transcontinental regions, and smooth altitude transitions.<br>• Dynamic Information Panel: Population, area, historical context, and key facts loaded asynchronously per region.<br>• Bilingual Support: Seamless English/Spanish switching without reloading.<br><br><strong>Technologies:</strong><br>HTML5, Vanilla JavaScript, Three.js &amp; Globe.gl, Tailwind CSS, Natural Earth GeoJSON.",
+      es: "Una aplicación web 3D interactiva desarrollada para ayudar a los estudiantes a explorar el mundo a través de los continentes y países de la Tierra. Construida con un enfoque en UI/UX moderno, visualización de datos en tiempo real y soporte bilingüe fluido.<br><br><strong>Características Clave:</strong><br>• Modos de Exploración Dual: Alterna entre una vista macro de Continentes y una vista detallada de Países.<br>• Visualización de Datos Interactiva: Efectos hover personalizados, tooltips dinámicos, texturas procedurales (Canvas API) para regiones transcontinentales y transiciones suaves de altitud.<br>• Panel de Información Dinámico: Población, área, contexto histórico y datos clave cargados de forma asíncrona por región.<br>• Soporte Bilingüe: Cambio fluido entre inglés y español sin recargar la página.<br><br><strong>Tecnologías:</strong><br>HTML5, JavaScript Vanilla, Three.js y Globe.gl, Tailwind CSS, Natural Earth GeoJSON.",
+      it: "Applicazione web 3D interattiva per esplorare il mondo attraverso continenti e paesi, con Three.js e Globe.gl.", ca: "Aplicació web 3D interactiva per explorar el món a través de continents i països, amb Three.js i Globe.gl."
+    },
+    link: "https://marcuspicazo.github.io/3d-world-explorer-ebvg/", repo: "https://github.com/MarcusPicazo/atlas-ebvg",
+    mainImg: "assets/atlas/atlas-video.mp4",
+    previewImg: "assets/atlas/atlas-1.jpg",
+    detailImgs: ["assets/atlas/atlas-video.mp4", "assets/atlas/atlas-1.jpg", "assets/atlas/atlas-2.jpg", "assets/atlas/atlas-3.jpg"]
+  },
+  {
     id: "taylor",
     title: { en: "TAYLOR", es: "TAYLOR", it: "TAYLOR", ca: "TAYLOR" },
     color: "#9d174d", category: { en: "Startup / Safe Mobility", es: "Startup / Movilidad Segura", it: "Startup / Mobilità Sicura", ca: "Startup / Mobilitat Segura" },
@@ -295,7 +309,8 @@ function updateDetLinkVariant(data) {
   if (!link || !data) return;
   const t = translations[currentLang];
   const isDownload = data.id === "taylor-desktop" || data.id === "taylor-app";
-  link.querySelectorAll(".det-link-text-node").forEach((el) => { el.innerText = isDownload ? t.download : t.visitLink; });
+  const label = isDownload ? t.download : (data.id === "taylor" ? t.visitWebsite : t.visitLink);
+  link.querySelectorAll(".det-link-text-node").forEach((el) => { el.innerText = label; });
   link.querySelectorAll("svg").forEach((el) => { el.innerHTML = isDownload ? DET_LINK_ICON_DOWNLOAD : DET_LINK_ICON_DEFAULT; });
 }
 
