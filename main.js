@@ -71,7 +71,7 @@ const projectsData = [
     link: "https://marcuspicazo.github.io/solar-system-ebvg/", repo: "https://github.com/MarcusPicazo/solar-system-ebvg",
     mainImg: "assets/solar-system/solar-ebvg.mp4",
     previewImg: "assets/previews/solar-system.jpg",
-    detailImgs: ["assets/solar-system/solar-ebvg.mp4", "assets/solar-system/S1.png", "assets/solar-system/S2.png"]
+    detailImgs: ["assets/solar-system/solar-ebvg.mp4", "assets/solar-system/S1.jpg", "assets/solar-system/S2.jpg"]
   },
   {
     id: "ebvghoot",
@@ -105,80 +105,8 @@ const projectsData = [
     },
     link: "https://marcuspicazo.github.io/cit-sync/", repo: "https://github.com/MarcusPicazo/cit-sync",
     mainImg: "assets/CITSYNC/CitSyncVideo.mp4", 
-    previewImg: "assets/previews/CITSYNCPREVIEW.png",
-    detailImgs: ["assets/CITSYNC/CitSyncVideo.mp4", "assets/CITSYNC/CS1.png", "assets/CITSYNC/CS2.png", "assets/CITSYNC/CS3.png", "assets/CITSYNC/CS4.png"]
-  },
-  {
-    id: "lavaebvg",
-    title: { en: "LAVA EBVG", es: "LAVA EBVG", it: "LAVA EBVG", ca: "LAVA EBVG" },
-    color: "#6b1307", category: { en: "Games / Education", es: "Juegos / Educación", it: "Giochi / Educazione", ca: "Jocs / Educació" },
-    desc: {
-      en: "An interactive 3D parkour web minigame, developed entirely with native web technologies and Three.js. Created as a gamified educational experience for the Berta von Glümer School (2025), it allows students to learn and answer questions about sci-fi and dystopian books while jumping between platforms. This project reflects the intersection between systems engineering and educational innovation.<br><br><strong>Technologies & Skills:</strong><br>• JavaScript (ES6+): Event-driven logic, custom physics, raycasting collision detection, and real-time i18n.<br>• Three.js / WebGL: Custom meshes, procedurally generated canvas textures, and animated lava shaders.<br>• HTML5 & CSS3: Modular architecture, UI overlays, and native CSS animations.<br>• Game Design: Advanced mechanics like Coyote Time, momentum multipliers, and dynamic death zones.",
-      es: "Un minijuego web interactivo en 3D estilo Parkour, desarrollado íntegramente con tecnologías nativas web y Three.js. Creado como una experiencia gamificada para la escuela Berta von Glümer (2025), permite a los estudiantes responder preguntas sobre libros de ciencia ficción mientras saltan entre plataformas. Refleja la intersección entre ingeniería de sistemas e innovación educativa.<br><br><strong>Tecnologías y Habilidades:</strong><br>• JavaScript (ES6+): Lógica orientada a eventos, físicas personalizadas, colisiones por Raycasting e i18n en tiempo real.<br>• Three.js / WebGL: Mallas personalizadas, texturas procedurales (Canvas API) y shaders de lava animada.<br>• HTML5 & CSS3: Arquitectura modular, UI superpuesta y animaciones nativas.<br>• Game Design: Mecánicas avanzadas como Coyote Time, multiplicador de impulso y zonas de muerte dinámicas.",
-      it: "Un minigioco web 3D interattivo in stile Parkour.", ca: "Un minijoc web 3D interactiu d'estil Parkour."
-    },
-    link: "https://marcuspicazo.github.io/lava-parkour-game-EBVG/", repo: "https://github.com/MarcusPicazo/lava-parkour-game-EBVG",
-    mainImg: "assets/LAVA/Lava-no-questions.mp4", 
-    previewImg: "assets/previews/lava.jpg",
-    detailImgs: ["assets/LAVA/lava-questions.mp4", "assets/LAVA/LAVA1.png", "assets/LAVA/LAVA2.png", "assets/LAVA/LAVA3.png", "assets/LAVA/Lava-no-questions.mp4"]
-  },
-  {
-    id: "artstudio",
-    title: { en: "ART STUDIO", es: "ESTUDIO DE ARTE", it: "STUDIO D'ARTE", ca: "ESTUDI D'ART" },
-    color: "#831843", category: { en: "Art", es: "Arte", it: "Arte", ca: "Art" },
-    desc: {
-      en: 'An interactive 3D web experience built to help elementary school students learn how to mix colors and draw creatively. Developed entirely as a browser-native application, it combines a dynamic UI with 3D rendering to create an engaging, gamified learning environment.<br><br><strong>Features:</strong><br>• 3D Interactive Environment: Built with Three.js to render a stylized nature scene with an interactive easel and an animated 3D owl character.<br>• Dynamic Raycasting Canvas: Raycaster-based interactions allow users to paint directly onto a 3D mesh.<br>• Color Mixing Logic: Logically combine different base colors to generate new ones on the fly.<br>• Bilingual Support & Guided Tutorial.<br><br><strong>Technologies Used:</strong><br>HTML5 & CSS3, JavaScript (ES6 Modules), Three.js / WebGL, HTML Canvas API.',
-      es: 'Una experiencia web 3D interactiva construida para ayudar a estudiantes de primaria a aprender a mezclar colores y dibujar creativamente. Combina una UI dinámica con renderizado 3D para crear un entorno gamificado.<br><br><strong>Características:</strong><br>• Entorno 3D Interactivo: Construido con Three.js, incluye un caballete interactivo y un búho 3D animado.<br>• Canvas con Raycasting: Pinta directamente sobre un mesh 3D usando el ratón o toques.<br>• Lógica de Mezcla de Colores: Modo de mezcla incorporado para combinar colores base.<br>• Soporte Bilingüe y Tutorial Guiado.<br><br><strong>Tecnologías Utilizadas:</strong><br>HTML5 & CSS3, JavaScript (ES6 Modules), Three.js / WebGL, HTML Canvas API.',
-      it: "Un'esperienza web 3D interattiva creata per aiutare gli studenti.", ca: "Una experiència web 3D interactiva construïda per ajudar els estudiants."
-    },
-    link: "https://marcuspicazo.github.io/art-studio-ebvg/", repo: "https://github.com/MarcusPicazo/art-studio-ebvg",
-    mainImg: "assets/ARTSTUDIO/EBVGARTSTUDIO.mp4", 
-    previewImg: "assets/previews/art-studio.jpg",
-    detailImgs: ["assets/ARTSTUDIO/EBVGARTSTUDIO.mp4", "assets/ARTSTUDIO/A1.png", "assets/ARTSTUDIO/K2.png", "assets/ARTSTUDIO/K3.png"]
-  },
-  {
-    id: "renaissance",
-    title: { en: "RENAISSANCE", es: "RENACIMIENTO", it: "RINASCIMENTO", ca: "RENAIXEMENT" },
-    color: "#166534", 
-    category: { en: "Art / History", es: "Arte / Historia", it: "Arte / Storia", ca: "Art / Història" },
-    desc: {
-      en: 'An immersive, interactive 3D web application developed for the art students of the Berta von Glümer School (EBVG). This educational project allows users to navigate through a virtual museum featuring iconic Renaissance masterpieces, learning about history and art techniques through an interactive owl guide.<br><br><strong>Technologies & Technical Skills:</strong><br>• Core: HTML5, CSS3, JavaScript (ES6+)<br>• 3D Library: Three.js (WebGL rendering, Lighting, Raycasting, Physics/Collisions)<br>• Controls: PointerLockControls for first-person navigation (Desktop & Mobile touch support)<br>• Architecture: Modular component-based logic, clean separation of concerns.',
-      es: 'Una aplicación web 3D inmersiva e interactiva desarrollada para estudiantes de arte de la Escuela Berta von Glümer (EBVG). Este proyecto educativo permite navegar por un museo virtual con obras maestras del Renacimiento, aprendiendo técnicas de historia y arte a través de un búho guía interactivo.<br><br><strong>Tecnologías y Habilidades:</strong><br>• Core: HTML5, CSS3, JavaScript (ES6+)<br>• Librería 3D: Three.js (Renderizado WebGL, Iluminación, Raycasting, Físicas/Colisiones)<br>• Controles: PointerLockControls para navegación en primera persona.<br>• Arquitectura: Lógica basada en componentes modulares.',
-      it: "Museo virtuale 3D interattivo con capolavori.", ca: "Museu virtual 3D interactiu amb obres mestres."
-    },
-    link: "https://marcuspicazo.github.io/ebvg-renaissance-gallery/", repo: "https://github.com/MarcusPicazo/ebvg-renaissance-gallery",
-    mainImg: "assets/RENACIMIENTO/GALLERYVIDEO.mp4", 
-    previewImg: "assets/previews/renaissance.jpg",
-    detailImgs: ["assets/RENACIMIENTO/GALLERYVIDEO.mp4", "assets/RENACIMIENTO/GALLERY1.png", "assets/RENACIMIENTO/GALLERY2.png", "assets/RENACIMIENTO/GALLERY3.png"]
-  },
-  {
-    id: "dna",
-    title: { en: "DNA STRUCTURE", es: "EL ADN", it: "STRUTTURA DEL DNA", ca: "L'ADN" },
-    color: "#7f1d1d", 
-    category: { en: "Science / Biology", es: "Ciencias / Biología", it: "Scienza / Biologia", ca: "Ciències / Biologia" },
-    desc: {
-      en: 'DNA Journey is an interactive 3D web application designed to explore the molecular architecture of human DNA. Developed as a high-fidelity digital documentation tool, it allows users to navigate through a meticulously constructed 3D double helix, inspecting key biological components.<br><br><strong>Technical Highlights:</strong><br>• 3D Rendering: Implementation of Three.js for complex geometry generation, dynamic lighting, and particle environments.<br>• Cinematic Animations: Utilization of GSAP to manage precise camera movements and UI interactions tied to scroll events.<br>• Modern UI: Styled with Tailwind CSS to achieve a sci-fi, scientific, and immersive interface.<br>• Modular Architecture: Clean separation of concerns (HTML, CSS, JS).',
-      es: 'DNA Journey es una aplicación web 3D interactiva diseñada para explorar la arquitectura molecular del ADN humano. Permite a los usuarios navegar a través de una doble hélice 3D construida meticulosamente para inspeccionar componentes biológicos clave.<br><br><strong>Aspectos Técnicos:</strong><br>• Renderizado 3D: Implementación de Three.js para generación de geometría compleja, iluminación dinámica y partículas.<br>• Animaciones Cinemáticas: Uso de GSAP para gestionar movimientos precisos de cámara ligados a eventos de scroll.<br>• UI Moderna: Estilizado con Tailwind CSS para lograr una interfaz de ciencia ficción inmersiva.<br>• Arquitectura Modular: Separación limpia de código (HTML, CSS, JS).',
-      it: "Applicazione web 3D interattiva progettata per esplorare il DNA.", ca: "Aplicació web 3D interactiva dissenyada per explorar l'ADN."
-    },
-    link: "https://marcuspicazo.github.io/dna-journey-ebvg/", repo: "https://github.com/MarcusPicazo/dna-journey-ebvg",
-    mainImg: "assets/DNA/DNAVIDEO.mp4", 
-    previewImg: "assets/previews/dna.png",
-    detailImgs: ["assets/DNA/DNAVIDEO.mp4", "assets/DNA/DNA1.png", "assets/DNA/DNA2.png"]
-  },
-  {
-    id: "arcade",
-    title: { en: "STUDENT ARCADE", es: "STUDENT ARCADE", it: "STUDENT ARCADE", ca: "STUDENT ARCADE" },
-    color: "#a21caf", category: { en: "Games / Gallery", es: "Juegos / Galería", it: "Giochi / Galleria", ca: "Jocs / Galeria" },
-    desc: {
-      en: "An interactive 3D virtual exhibition hall designed to showcase the amazing technical projects created by my elementary and middle school computer science students. As their teacher, I taught them how to build their games and websites from scratch. We then collaboratively built this 3D gallery together, with me leading the development, to highlight our favorite projects. Step inside and explore the creativity of the next generation of developers!<br><br><strong>Features:</strong><br>• First-Person 3D Navigation: Explore using WASD and mouse controls.<br>• Three Interactive Rooms: Dedicated spaces for Arcade Games, Web Development, and UX Design.<br>• Figma-Style UX Canvas: Infinite canvas with drag-to-scroll to explore full-scale app mockups.<br>• Bilingual UI: Real-time toggling between English and Spanish.<br><br><strong>Technologies Used:</strong><br>HTML5, CSS3, JavaScript (ES6+), Three.js (WebGL), Tailwind CSS, Panzoom.",
-      es: "Una sala de exposición virtual en 3D diseñada para mostrar los increíbles proyectos técnicos creados por mis estudiantes de primaria y secundaria. Como su profesor, les enseñé a desarrollar sus juegos y sitios web desde cero, y luego construimos colaborativamente esta galería 3D, bajo mi liderazgo técnico, para destacar nuestros proyectos favoritos. ¡Entra y explora la creatividad de la próxima generación de desarrolladores!<br><br><strong>Características:</strong><br>• Navegación 3D en Primera Persona: Controles WASD y ratón.<br>• Tres Salas Interactivas: Espacios para Juegos Arcade, Desarrollo Web y Diseño UX.<br>• Canvas UX estilo Figma: Lienzo infinito interactivo para explorar mockups a escala real.<br>• UI Bilingüe: Alternancia en tiempo real entre Inglés y Español.<br><br><strong>Tecnologías:</strong><br>HTML5, CSS3, JavaScript (ES6+), Three.js (WebGL), Tailwind CSS, Panzoom.",
-      it: "Galleria 3D interattiva costruita in collaborazione con i miei studenti.", ca: "Galeria 3D interactiva construïda en col·laboració amb els meus estudiants."
-    },
-    link: "https://marcuspicazo.github.io/3d-student-portfolio/", repo: "https://github.com/MarcusPicazo/3d-student-portfolio",
-    mainImg: "assets/ARCADE/ARCADEVIDEO.mp4",
-    previewImg: "assets/previews/arcade.jpg",
-    detailImgs: ["assets/ARCADE/ARCADEVIDEO.mp4", "assets/ARCADE/ARC1.png", "assets/ARCADE/ARC2.png", "assets/ARCADE/ARC3.png"]
+    previewImg: "assets/previews/citsync.jpg",
+    detailImgs: ["assets/CITSYNC/CitSyncVideo.mp4", "assets/CITSYNC/CS1.jpg", "assets/CITSYNC/CS2.jpg", "assets/CITSYNC/CS3.jpg", "assets/CITSYNC/CS4.jpg"]
   },
   {
     id: "atlas",
@@ -193,6 +121,78 @@ const projectsData = [
     mainImg: "assets/atlas/atlas-video.mp4",
     previewImg: "assets/atlas/atlas-1.jpg",
     detailImgs: ["assets/atlas/atlas-video.mp4", "assets/atlas/atlas-1.jpg", "assets/atlas/atlas-2.jpg", "assets/atlas/atlas-3.jpg"]
+  },
+  {
+    id: "lavaebvg",
+    title: { en: "LAVA EBVG", es: "LAVA EBVG", it: "LAVA EBVG", ca: "LAVA EBVG" },
+    color: "#6b1307", category: { en: "Games / Education", es: "Juegos / Educación", it: "Giochi / Educazione", ca: "Jocs / Educació" },
+    desc: {
+      en: "An interactive 3D parkour web minigame, developed entirely with native web technologies and Three.js. Created as a gamified educational experience for the Berta von Glümer School (2025), it allows students to learn and answer questions about sci-fi and dystopian books while jumping between platforms. This project reflects the intersection between systems engineering and educational innovation.<br><br><strong>Technologies & Skills:</strong><br>• JavaScript (ES6+): Event-driven logic, custom physics, raycasting collision detection, and real-time i18n.<br>• Three.js / WebGL: Custom meshes, procedurally generated canvas textures, and animated lava shaders.<br>• HTML5 & CSS3: Modular architecture, UI overlays, and native CSS animations.<br>• Game Design: Advanced mechanics like Coyote Time, momentum multipliers, and dynamic death zones.",
+      es: "Un minijuego web interactivo en 3D estilo Parkour, desarrollado íntegramente con tecnologías nativas web y Three.js. Creado como una experiencia gamificada para la escuela Berta von Glümer (2025), permite a los estudiantes responder preguntas sobre libros de ciencia ficción mientras saltan entre plataformas. Refleja la intersección entre ingeniería de sistemas e innovación educativa.<br><br><strong>Tecnologías y Habilidades:</strong><br>• JavaScript (ES6+): Lógica orientada a eventos, físicas personalizadas, colisiones por Raycasting e i18n en tiempo real.<br>• Three.js / WebGL: Mallas personalizadas, texturas procedurales (Canvas API) y shaders de lava animada.<br>• HTML5 & CSS3: Arquitectura modular, UI superpuesta y animaciones nativas.<br>• Game Design: Mecánicas avanzadas como Coyote Time, multiplicador de impulso y zonas de muerte dinámicas.",
+      it: "Un minigioco web 3D interattivo in stile Parkour.", ca: "Un minijoc web 3D interactiu d'estil Parkour."
+    },
+    link: "https://marcuspicazo.github.io/lava-parkour-game-EBVG/", repo: "https://github.com/MarcusPicazo/lava-parkour-game-EBVG",
+    mainImg: "assets/LAVA/Lava-no-questions.mp4", 
+    previewImg: "assets/previews/lava.jpg",
+    detailImgs: ["assets/LAVA/lava-questions.mp4", "assets/LAVA/LAVA1.jpg", "assets/LAVA/LAVA2.jpg", "assets/LAVA/LAVA3.jpg", "assets/LAVA/Lava-no-questions.mp4"]
+  },
+  {
+    id: "artstudio",
+    title: { en: "ART STUDIO", es: "ESTUDIO DE ARTE", it: "STUDIO D'ARTE", ca: "ESTUDI D'ART" },
+    color: "#831843", category: { en: "Art", es: "Arte", it: "Arte", ca: "Art" },
+    desc: {
+      en: 'An interactive 3D web experience built to help elementary school students learn how to mix colors and draw creatively. Developed entirely as a browser-native application, it combines a dynamic UI with 3D rendering to create an engaging, gamified learning environment.<br><br><strong>Features:</strong><br>• 3D Interactive Environment: Built with Three.js to render a stylized nature scene with an interactive easel and an animated 3D owl character.<br>• Dynamic Raycasting Canvas: Raycaster-based interactions allow users to paint directly onto a 3D mesh.<br>• Color Mixing Logic: Logically combine different base colors to generate new ones on the fly.<br>• Bilingual Support & Guided Tutorial.<br><br><strong>Technologies Used:</strong><br>HTML5 & CSS3, JavaScript (ES6 Modules), Three.js / WebGL, HTML Canvas API.',
+      es: 'Una experiencia web 3D interactiva construida para ayudar a estudiantes de primaria a aprender a mezclar colores y dibujar creativamente. Combina una UI dinámica con renderizado 3D para crear un entorno gamificado.<br><br><strong>Características:</strong><br>• Entorno 3D Interactivo: Construido con Three.js, incluye un caballete interactivo y un búho 3D animado.<br>• Canvas con Raycasting: Pinta directamente sobre un mesh 3D usando el ratón o toques.<br>• Lógica de Mezcla de Colores: Modo de mezcla incorporado para combinar colores base.<br>• Soporte Bilingüe y Tutorial Guiado.<br><br><strong>Tecnologías Utilizadas:</strong><br>HTML5 & CSS3, JavaScript (ES6 Modules), Three.js / WebGL, HTML Canvas API.',
+      it: "Un'esperienza web 3D interattiva creata per aiutare gli studenti.", ca: "Una experiència web 3D interactiva construïda per ajudar els estudiants."
+    },
+    link: "https://marcuspicazo.github.io/art-studio-ebvg/", repo: "https://github.com/MarcusPicazo/art-studio-ebvg",
+    mainImg: "assets/ARTSTUDIO/EBVGARTSTUDIO.mp4", 
+    previewImg: "assets/previews/art-studio.jpg",
+    detailImgs: ["assets/ARTSTUDIO/EBVGARTSTUDIO.mp4", "assets/ARTSTUDIO/A1.jpg", "assets/ARTSTUDIO/K2.jpg", "assets/ARTSTUDIO/K3.jpg"]
+  },
+  {
+    id: "renaissance",
+    title: { en: "RENAISSANCE", es: "RENACIMIENTO", it: "RINASCIMENTO", ca: "RENAIXEMENT" },
+    color: "#166534", 
+    category: { en: "Art / History", es: "Arte / Historia", it: "Arte / Storia", ca: "Art / Història" },
+    desc: {
+      en: 'An immersive, interactive 3D web application developed for the art students of the Berta von Glümer School (EBVG). This educational project allows users to navigate through a virtual museum featuring iconic Renaissance masterpieces, learning about history and art techniques through an interactive owl guide.<br><br><strong>Technologies & Technical Skills:</strong><br>• Core: HTML5, CSS3, JavaScript (ES6+)<br>• 3D Library: Three.js (WebGL rendering, Lighting, Raycasting, Physics/Collisions)<br>• Controls: PointerLockControls for first-person navigation (Desktop & Mobile touch support)<br>• Architecture: Modular component-based logic, clean separation of concerns.',
+      es: 'Una aplicación web 3D inmersiva e interactiva desarrollada para estudiantes de arte de la Escuela Berta von Glümer (EBVG). Este proyecto educativo permite navegar por un museo virtual con obras maestras del Renacimiento, aprendiendo técnicas de historia y arte a través de un búho guía interactivo.<br><br><strong>Tecnologías y Habilidades:</strong><br>• Core: HTML5, CSS3, JavaScript (ES6+)<br>• Librería 3D: Three.js (Renderizado WebGL, Iluminación, Raycasting, Físicas/Colisiones)<br>• Controles: PointerLockControls para navegación en primera persona.<br>• Arquitectura: Lógica basada en componentes modulares.',
+      it: "Museo virtuale 3D interattivo con capolavori.", ca: "Museu virtual 3D interactiu amb obres mestres."
+    },
+    link: "https://marcuspicazo.github.io/ebvg-renaissance-gallery/", repo: "https://github.com/MarcusPicazo/ebvg-renaissance-gallery",
+    mainImg: "assets/RENACIMIENTO/GALLERYVIDEO.mp4", 
+    previewImg: "assets/previews/renaissance.jpg",
+    detailImgs: ["assets/RENACIMIENTO/GALLERYVIDEO.mp4", "assets/RENACIMIENTO/GALLERY1.jpg", "assets/RENACIMIENTO/GALLERY2.jpg", "assets/RENACIMIENTO/GALLERY3.jpg"]
+  },
+  {
+    id: "dna",
+    title: { en: "DNA STRUCTURE", es: "EL ADN", it: "STRUTTURA DEL DNA", ca: "L'ADN" },
+    color: "#7f1d1d", 
+    category: { en: "Science / Biology", es: "Ciencias / Biología", it: "Scienza / Biologia", ca: "Ciències / Biologia" },
+    desc: {
+      en: 'DNA Journey is an interactive 3D web application designed to explore the molecular architecture of human DNA. Developed as a high-fidelity digital documentation tool, it allows users to navigate through a meticulously constructed 3D double helix, inspecting key biological components.<br><br><strong>Technical Highlights:</strong><br>• 3D Rendering: Implementation of Three.js for complex geometry generation, dynamic lighting, and particle environments.<br>• Cinematic Animations: Utilization of GSAP to manage precise camera movements and UI interactions tied to scroll events.<br>• Modern UI: Styled with Tailwind CSS to achieve a sci-fi, scientific, and immersive interface.<br>• Modular Architecture: Clean separation of concerns (HTML, CSS, JS).',
+      es: 'DNA Journey es una aplicación web 3D interactiva diseñada para explorar la arquitectura molecular del ADN humano. Permite a los usuarios navegar a través de una doble hélice 3D construida meticulosamente para inspeccionar componentes biológicos clave.<br><br><strong>Aspectos Técnicos:</strong><br>• Renderizado 3D: Implementación de Three.js para generación de geometría compleja, iluminación dinámica y partículas.<br>• Animaciones Cinemáticas: Uso de GSAP para gestionar movimientos precisos de cámara ligados a eventos de scroll.<br>• UI Moderna: Estilizado con Tailwind CSS para lograr una interfaz de ciencia ficción inmersiva.<br>• Arquitectura Modular: Separación limpia de código (HTML, CSS, JS).',
+      it: "Applicazione web 3D interattiva progettata per esplorare il DNA.", ca: "Aplicació web 3D interactiva dissenyada per explorar l'ADN."
+    },
+    link: "https://marcuspicazo.github.io/dna-journey-ebvg/", repo: "https://github.com/MarcusPicazo/dna-journey-ebvg",
+    mainImg: "assets/DNA/DNAVIDEO.mp4", 
+    previewImg: "assets/previews/dna.jpg",
+    detailImgs: ["assets/DNA/DNAVIDEO.mp4", "assets/DNA/DNA1.jpg", "assets/DNA/DNA2.jpg"]
+  },
+  {
+    id: "arcade",
+    title: { en: "STUDENT ARCADE", es: "STUDENT ARCADE", it: "STUDENT ARCADE", ca: "STUDENT ARCADE" },
+    color: "#a21caf", category: { en: "Games / Gallery", es: "Juegos / Galería", it: "Giochi / Galleria", ca: "Jocs / Galeria" },
+    desc: {
+      en: "An interactive 3D virtual exhibition hall designed to showcase the amazing technical projects created by my elementary and middle school computer science students. As their teacher, I taught them how to build their games and websites from scratch. We then collaboratively built this 3D gallery together, with me leading the development, to highlight our favorite projects. Step inside and explore the creativity of the next generation of developers!<br><br><strong>Features:</strong><br>• First-Person 3D Navigation: Explore using WASD and mouse controls.<br>• Three Interactive Rooms: Dedicated spaces for Arcade Games, Web Development, and UX Design.<br>• Figma-Style UX Canvas: Infinite canvas with drag-to-scroll to explore full-scale app mockups.<br>• Bilingual UI: Real-time toggling between English and Spanish.<br><br><strong>Technologies Used:</strong><br>HTML5, CSS3, JavaScript (ES6+), Three.js (WebGL), Tailwind CSS, Panzoom.",
+      es: "Una sala de exposición virtual en 3D diseñada para mostrar los increíbles proyectos técnicos creados por mis estudiantes de primaria y secundaria. Como su profesor, les enseñé a desarrollar sus juegos y sitios web desde cero, y luego construimos colaborativamente esta galería 3D, bajo mi liderazgo técnico, para destacar nuestros proyectos favoritos. ¡Entra y explora la creatividad de la próxima generación de desarrolladores!<br><br><strong>Características:</strong><br>• Navegación 3D en Primera Persona: Controles WASD y ratón.<br>• Tres Salas Interactivas: Espacios para Juegos Arcade, Desarrollo Web y Diseño UX.<br>• Canvas UX estilo Figma: Lienzo infinito interactivo para explorar mockups a escala real.<br>• UI Bilingüe: Alternancia en tiempo real entre Inglés y Español.<br><br><strong>Tecnologías:</strong><br>HTML5, CSS3, JavaScript (ES6+), Three.js (WebGL), Tailwind CSS, Panzoom.",
+      it: "Galleria 3D interattiva costruita in collaborazione con i miei studenti.", ca: "Galeria 3D interactiva construïda en col·laboració amb els meus estudiants."
+    },
+    link: "https://marcuspicazo.github.io/3d-student-portfolio/", repo: "https://github.com/MarcusPicazo/3d-student-portfolio",
+    mainImg: "assets/ARCADE/ARCADEVIDEO.mp4",
+    previewImg: "assets/previews/arcade.jpg",
+    detailImgs: ["assets/ARCADE/ARCADEVIDEO.mp4", "assets/ARCADE/ARC1.jpg", "assets/ARCADE/ARC2.jpg", "assets/ARCADE/ARC3.jpg"]
   },
   {
     id: "taylor",
@@ -404,6 +404,14 @@ lenis.on("scroll", ScrollTrigger.update);
 gsap.ticker.add((time) => lenis.raf(time * 1000));
 gsap.ticker.lagSmoothing(0, 0);
 
+let isGalleryScrolling = false;
+let galleryScrollEndTimer;
+function markGalleryScrolling() {
+  isGalleryScrolling = true;
+  clearTimeout(galleryScrollEndTimer);
+  galleryScrollEndTimer = setTimeout(() => { isGalleryScrolling = false; }, 150);
+}
+
 function initGalleryScroll() {
   const itemsContainer = document.querySelector(".horizontal-section");
   const spectrumContainer = document.getElementById("spectrum");
@@ -414,7 +422,7 @@ function initGalleryScroll() {
   }
   const spectrumBars = document.querySelectorAll(".spectrum-bar");
   const getScrollAmount = () => -(track.scrollWidth - window.innerWidth);
-  gsap.to(track, { x: getScrollAmount, ease: "none", scrollTrigger: { trigger: itemsContainer, pin: true, scrub: 1, end: () => `+=${Math.abs(getScrollAmount()) * 2.5}`, invalidateOnRefresh: true, id: "galleryScroll", onUpdate: (self) => { const activeCount = Math.floor(self.progress * totalBars); spectrumBars.forEach((bar, index) => { if (index <= activeCount) bar.classList.add("active"); else bar.classList.remove("active"); }); } } });
+  gsap.to(track, { x: getScrollAmount, ease: "none", scrollTrigger: { trigger: itemsContainer, pin: true, scrub: 1, end: () => `+=${Math.abs(getScrollAmount()) * 2.5}`, invalidateOnRefresh: true, id: "galleryScroll", onUpdate: (self) => { markGalleryScrolling(); const activeCount = Math.floor(self.progress * totalBars); spectrumBars.forEach((bar, index) => { if (index <= activeCount) bar.classList.add("active"); else bar.classList.remove("active"); }); } } });
 }
 initGalleryScroll();
 
@@ -427,8 +435,8 @@ items.forEach((item, index) => {
     clearTimeout(hoverIntentTimer);
 
     hoverIntentTimer = setTimeout(() => {
-      if (currentOpenProjectIndex !== null) return;
-      
+      if (currentOpenProjectIndex !== null || isGalleryScrolling) return;
+
       stopFloatingAndAlign();
       
       const vid = item.querySelector(".gallery-video");
