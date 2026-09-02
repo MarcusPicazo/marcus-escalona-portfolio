@@ -29,7 +29,7 @@ const translations = {
     techCat1: "Data & Logic (The Physics side)", techCat2: "Interactive Interfaces (The Music and Creativity side)", techCat3: "Real-Time Architecture (The Engineering side)",
     contextText: "SELECTED WORK<br>EdTech · Real-time Systems<br>Interactive Web Products",
     aboutText: "I am a British-Mexican Product Engineer specializing in the intersection of EdTech and interactive web systems. My background in physics and music defines my approach to software development: I tackle data architectures with scientific rigor and precision, while designing immersive interfaces with creativity and fluidity.<br><br>Through my experience teaching computer science, I have learned to reduce cognitive friction in digital environments. I am dedicated to building complete ecosystems—from real-time gamified platforms to in-browser 3D environments—transforming technical complexity into intuitive, stable, and high-impact learning tools.<br><br>To bring these platforms to life and analyze their performance, I work with the following technological ecosystem:",
-    closeBtn: "CLOSE", explore: "EXPLORE", visitLink: "Visit Application", sourceCode: "GitHub Repo", backToCatalog: "BACK TO CATALOG", email: "Email", linkedin: "LinkedIn", github: "GitHub", resume: "Resume", resumeEs: "Resume (ES)",
+    closeBtn: "CLOSE", explore: "EXPLORE", visitLink: "Visit Application", download: "Download", sourceCode: "GitHub Repo", backToCatalog: "BACK TO CATALOG", email: "Email", linkedin: "LinkedIn", github: "GitHub", resume: "Resume", resumeEs: "Resume (ES)",
     skills: { en: { name: "English", lvl: "Native" }, es: { name: "Spanish", lvl: "Native" }, it: { name: "Italian", lvl: "B2" }, ca: { name: "Catalan", lvl: "B2" } },
   },
   es: {
@@ -37,7 +37,7 @@ const translations = {
     techCat1: "Data & Logic (El lado de la Física)", techCat2: "Interactive Interfaces (El lado de la Música y la Creatividad)", techCat3: "Real-Time Architecture (El lado de la Ingeniería)",
     contextText: "TRABAJO DESTACADO<br>EdTech · Sistemas en Tiempo Real<br>Productos Web Interactivos",
     aboutText: "Soy un Product Engineer británico-mexicano especializado en la intersección entre EdTech y sistemas web interactivos. Mi formación academica en física, música e ingenieria en sistemas define mi enfoque hacia el desarrollo de software: abordo las arquitecturas de datos con rigor científico y precisión, mientras diseño interfaces inmersivas con creatividad y fluidez.<br><br>A través de mi experiencia enseñando ciencias de la computación, he aprendido a reducir la fricción cognitiva en entornos digitales. Me dedico a construir ecosistemas completos —desde plataformas gamificadas en tiempo real hasta entornos 3D en el navegador— transformando la complejidad técnica en herramientas de aprendizaje intuitivas, estables y de alto impacto.<br><br>Para dar vida a estas plataformas y analizar su rendimiento, trabajo con el siguiente ecosistema tecnológico:",
-    closeBtn: "CERRAR", explore: "EXPLORAR", visitLink: "Visitar Aplicación", sourceCode: "Repositorio GitHub", backToCatalog: "VOLVER AL CATÁLOGO", email: "Email", linkedin: "LinkedIn", github: "GitHub", resume: "Currículum", resumeEs: "Currículum (ES)",
+    closeBtn: "CERRAR", explore: "EXPLORAR", visitLink: "Visitar Aplicación", download: "Descarga", sourceCode: "Repositorio GitHub", backToCatalog: "VOLVER AL CATÁLOGO", email: "Email", linkedin: "LinkedIn", github: "GitHub", resume: "Currículum", resumeEs: "Currículum (ES)",
     skills: { en: { name: "Inglés", lvl: "Nativo" }, es: { name: "Español", lvl: "Nativo" }, it: { name: "Italiano", lvl: "B2" }, ca: { name: "Catalán", lvl: "B2" } },
   },
   it: {
@@ -45,7 +45,7 @@ const translations = {
     techCat1: "Data & Logic (Il lato della Fisica)", techCat2: "Interactive Interfaces (Il lato della Musica e della Creatività)", techCat3: "Real-Time Architecture (Il lato dell'Ingegneria)",
     contextText: "LAVORI IN EVIDENZA<br>EdTech · Sistemi in Tempo Reale<br>Prodotti Web Interattivi",
     aboutText: "Sono un Product Engineer britannico-messicano specializzato nell'intersezione tra EdTech e sistemi web interattivi. La mia formazione in fisica e musica definisce il mio approccio allo sviluppo di software: affronto le architetture dei dati con rigore e precisione scientifica, mentre progetto interfacce immersive con creatività e fluidità.<br><br>Attraverso la mia esperienza nell'insegnamento dell'informatica, ho imparato a ridurre l'attrito cognitivo negli ambienti digitali. Mi dedico alla costruzione di ecosistemi completi — dalle piattaforme gamificate in tempo reale agli ambienti 3D nel browser — trasformando la complessità tecnica in strumenti di apprendimento intuitivi, stabili e di grande impatto.<br><br>Per dare vita a queste piattaforme e analizzare le loro prestazioni, lavoro con il seguente ecosistema tecnologico:",
-    closeBtn: "CHIUDI", explore: "ESPLORA", visitLink: "Visita l'App", sourceCode: "Repo GitHub", backToCatalog: "TORNA AL CATALOGO", email: "Email", linkedin: "LinkedIn", github: "GitHub", resume: "Curriculum", resumeEs: "Curriculum (ES)",
+    closeBtn: "CHIUDI", explore: "ESPLORA", visitLink: "Visita l'App", download: "Scarica", sourceCode: "Repo GitHub", backToCatalog: "TORNA AL CATALOGO", email: "Email", linkedin: "LinkedIn", github: "GitHub", resume: "Curriculum", resumeEs: "Curriculum (ES)",
     skills: { en: { name: "Inglese", lvl: "Madrelingua" }, es: { name: "Spagnolo", lvl: "Madrelingua" }, it: { name: "Italiano", lvl: "B2" }, ca: { name: "Catalano", lvl: "B2" } },
   },
   ca: {
@@ -53,7 +53,7 @@ const translations = {
     techCat1: "Data & Logic (El costat de la Física)", techCat2: "Interactive Interfaces (El costat de la Música i la Creativitat)", techCat3: "Real-Time Architecture (El costat de l'Enginyeria)",
     contextText: "TREBALL DESTACAT<br>EdTech · Sistemes en Temps Real<br>Productes Web Interactius",
     aboutText: "Sóc un Product Engineer britànic-mexicà especialitzat en la intersecció entre EdTech i sistemes web interactius. La meva formació en física i música defineix el meu enfocament cap al desenvolupament de programari: abordo les arquitectures de dades amb rigor i precisió científica, mentre dissenyo interfícies immersives amb creativitat i fluïdesa.<br><br>A través de la meva experiència ensenyant ciències de la computació, he après a reduir la fricció cognitiva en entorns digitals. Em dedico a construir ecosistemi complets —des de plataformes gamificades en temps real fins a entorns 3D al navegador— transformant la complexitat tècnica en eines d'aprenentatge intuïtives, estables i d'alt impacte.<br><br>Per donar vida a aquestes plataformes i analitzar el seu rendiment, treballo amb el següent ecosistema tecnològic:",
-    closeBtn: "TANCAR", explore: "EXPLORAR", visitLink: "Visitar Aplicació", sourceCode: "Repositori GitHub", backToCatalog: "TORNAR AL CATÀLEG", email: "Correu", linkedin: "LinkedIn", github: "GitHub", resume: "Currículum", resumeEs: "Currículum (ES)",
+    closeBtn: "TANCAR", explore: "EXPLORAR", visitLink: "Visitar Aplicació", download: "Descarrega", sourceCode: "Repositori GitHub", backToCatalog: "TORNAR AL CATÀLEG", email: "Correu", linkedin: "LinkedIn", github: "GitHub", resume: "Currículum", resumeEs: "Currículum (ES)",
     skills: { en: { name: "Anglès", lvl: "Natiu" }, es: { name: "Espanyol", lvl: "Natiu" }, it: { name: "Italià", lvl: "B2" }, ca: { name: "Català", lvl: "B2" } },
   },
 };
@@ -199,11 +199,11 @@ const projectsData = [
     title: { en: "TAYLOR APP", es: "TAYLOR APP", it: "TAYLOR APP", ca: "TAYLOR APP" },
     color: "#FF3E81", category: { en: "Startup / Mobile App", es: "Startup / App Móvil", it: "Startup / App Mobile", ca: "Startup / App Mòbil" },
     desc: {
-      en: "Taylor's mobile app (Flutter, iOS &amp; Android) is the product I lead as CTO &amp; CPO - a single app with three modes: Passenger, Driver, and Business. The tone is protective but modern: the product communicates protection, never fear.<br><br><strong>Key Features:</strong><br>• Passenger: live map, real address search, three ride tiers (Go / Pro / Max), live driver tracking, and a Safety tab (SOS, live location sharing, emergency contacts).<br>• Driver: online status, ride requests with an acceptance countdown, slide-to-confirm trip lifecycle, transparent earnings breakdown.<br>• Business (B2B): recurring night-shift scheduling and a live \"Tonight\" board, so companies know everyone got home safely.<br><br><strong>Technologies:</strong><br>Flutter &amp; Dart, Riverpod, go_router, Google Maps SDK &amp; Places API, geolocator, Firebase Cloud Firestore, Lottie &amp; custom CustomPainter animations. Identity verification (face + document recognition) is designed into onboarding and planned on the AI roadmap.",
-      es: "La app móvil de Taylor (Flutter, iOS y Android) es el producto que lidero como CTO y CPO - una sola app con tres modos: Pasajera, Conductora y Empresas. El tono es protector pero moderno: el producto comunica protección, nunca miedo.<br><br><strong>Características Clave:</strong><br>• Pasajera: mapa en vivo, búsqueda real de direcciones, tres niveles de viaje (Go / Pro / Max), seguimiento en vivo del conductor y una pestaña de Seguridad (SOS, compartir ubicación en vivo, contactos de emergencia).<br>• Conductora: estado en línea, solicitudes de viaje con cuenta regresiva de aceptación, ciclo de vida del viaje por deslizamiento, desglose transparente de ganancias.<br>• Empresas (B2B): programación recurrente de turnos nocturnos y un tablero \"Esta Noche\" en vivo, para que las empresas sepan que todo su equipo llegó bien a casa.<br><br><strong>Tecnologías:</strong><br>Flutter y Dart, Riverpod, go_router, Google Maps SDK y Places API, geolocator, Firebase Cloud Firestore, Lottie y animaciones personalizadas con CustomPainter. La verificación de identidad (reconocimiento facial y de documentos) está diseñada en el onboarding y planeada en el roadmap de IA.",
-      it: "L'app mobile di Taylor (Flutter, iOS e Android) con tre modalità: Passeggera, Conducente e Aziende, progettata per la sicurezza delle donne.", ca: "L'app mòbil de Taylor (Flutter, iOS i Android) amb tres modes: Passatgera, Conductora i Empreses, dissenyada per a la seguretat de les dones."
+      en: "Taylor's mobile app (Flutter, iOS &amp; Android) is the product I lead as CTO &amp; CPO - a single app with three modes: Passenger, Driver, and Business. The tone is protective but modern: the product communicates protection, never fear.<br><br><strong>Key Features:</strong><br>• Passenger: live map, real address search, three ride tiers (Go / Pro / Max), live driver tracking, and a Safety tab (SOS, live location sharing, emergency contacts).<br>• Driver: online status, ride requests with an acceptance countdown, slide-to-confirm trip lifecycle, transparent earnings breakdown.<br>• Business (B2B): recurring night-shift scheduling and a live \"Tonight\" board, so companies know everyone got home safely.<br><br><strong>Technologies:</strong><br>Flutter &amp; Dart, Riverpod, go_router, Google Maps SDK &amp; Places API, geolocator, Firebase Cloud Firestore, Lottie &amp; custom CustomPainter animations. Identity verification (face + document recognition) is designed into onboarding and planned on the AI roadmap.<br><br><div class=\"demo-note\"><strong>Android only, direct APK install (not on Google Play yet):</strong><br>1. Tap Install APK and wait for the download.<br>2. Open the downloaded file from your notification bar or Downloads folder.<br>3. Allow \"install from this source\" when prompted - normal for apps outside the store.<br>4. Tap Install, then Open.<br>If you see a \"not verified by Play Protect\" warning, choose Install anyway - happens with any app installed outside the store.</div>",
+      es: "La app móvil de Taylor (Flutter, iOS y Android) es el producto que lidero como CTO y CPO - una sola app con tres modos: Pasajera, Conductora y Empresas. El tono es protector pero moderno: el producto comunica protección, nunca miedo.<br><br><strong>Características Clave:</strong><br>• Pasajera: mapa en vivo, búsqueda real de direcciones, tres niveles de viaje (Go / Pro / Max), seguimiento en vivo del conductor y una pestaña de Seguridad (SOS, compartir ubicación en vivo, contactos de emergencia).<br>• Conductora: estado en línea, solicitudes de viaje con cuenta regresiva de aceptación, ciclo de vida del viaje por deslizamiento, desglose transparente de ganancias.<br>• Empresas (B2B): programación recurrente de turnos nocturnos y un tablero \"Esta Noche\" en vivo, para que las empresas sepan que todo su equipo llegó bien a casa.<br><br><strong>Tecnologías:</strong><br>Flutter y Dart, Riverpod, go_router, Google Maps SDK y Places API, geolocator, Firebase Cloud Firestore, Lottie y animaciones personalizadas con CustomPainter. La verificación de identidad (reconocimiento facial y de documentos) está diseñada en el onboarding y planeada en el roadmap de IA.<br><br><div class=\"demo-note\"><strong>Solo Android, instalación directa por APK (aún no está en Google Play):</strong><br>1. Toca Install APK y espera a que descargue.<br>2. Abre el archivo descargado desde tu barra de notificaciones o la carpeta de Descargas.<br>3. Permite \"instalar desde esta fuente\" cuando te lo pida - es normal en apps que aún no están en la tienda.<br>4. Toca Instalar y luego Abrir.<br>Si aparece una advertencia de \"no verificada por Play Protect\", elige Instalar de todas formas - pasa con cualquier app instalada fuera de la tienda.</div>",
+      it: "L'app mobile di Taylor (Flutter, iOS e Android) con tre modalità: Passeggera, Conducente e Aziende, progettata per la sicurezza delle donne.<br><br><div class=\"demo-note\"><strong>Solo Android, installazione diretta tramite APK (non ancora su Google Play).</strong></div>", ca: "L'app mòbil de Taylor (Flutter, iOS i Android) amb tres modes: Passatgera, Conductora i Empreses, dissenyada per a la seguretat de les dones.<br><br><div class=\"demo-note\"><strong>Només Android, instal·lació directa per APK (encara no a Google Play).</strong></div>"
     },
-    repo: "https://github.com/MarcusPicazo/Taylor-App",
+    link: "https://apptaylor.com/app/taylor-v0.1.0.apk", repo: "https://github.com/MarcusPicazo/Taylor-App",
     mainImg: "assets/taylor-app/taylor-app-1.jpg",
     previewImg: "assets/taylor-app/taylor-app-1.jpg",
     detailImgs: ["assets/taylor-app/taylor-app-1.jpg"]
@@ -280,11 +280,23 @@ function updateUI_Language() {
 
   if (currentOpenProjectIndex !== null) {
     const data = projectsData[currentOpenProjectIndex];
-    setEl("det-title", data.title[currentLang]); 
+    setEl("det-title", data.title[currentLang]);
     setEl("det-desc", data.desc[currentLang]);
     const noteEl = document.getElementById("det-note");
     if (noteEl && data.note) { noteEl.innerHTML = data.note[currentLang]; }
+    updateDetLinkVariant(data);
   }
+}
+
+const DET_LINK_ICON_DEFAULT = '<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line>';
+const DET_LINK_ICON_DOWNLOAD = '<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line>';
+function updateDetLinkVariant(data) {
+  const link = document.getElementById("det-link");
+  if (!link || !data) return;
+  const t = translations[currentLang];
+  const isDownload = data.id === "taylor-desktop" || data.id === "taylor-app";
+  link.querySelectorAll(".det-link-text-node").forEach((el) => { el.innerText = isDownload ? t.download : t.visitLink; });
+  link.querySelectorAll("svg").forEach((el) => { el.innerHTML = isDownload ? DET_LINK_ICON_DOWNLOAD : DET_LINK_ICON_DEFAULT; });
 }
 
 function triggerLanguageWipe(newLang) {
@@ -485,6 +497,7 @@ function openDetailView(data) {
   const setEl = (id, val) => { const el = document.getElementById(id); if(el) el.innerHTML = val; };
   setEl("det-title", data.title[currentLang]); setEl("det-desc", data.desc[currentLang]);
   const link = document.getElementById("det-link"); if(link) { if(data.link) { link.href = data.link; link.style.display = "inline-flex"; } else link.style.display = "none"; }
+  updateDetLinkVariant(data);
   const repoBtn = document.getElementById("det-repo"); if (repoBtn) { if(data.repo) { repoBtn.href = data.repo; repoBtn.style.display = "inline-flex"; } else repoBtn.style.display = "none"; }
   if(bgLayer) bgLayer.style.backgroundColor = "#141414";
 
