@@ -249,6 +249,34 @@ const projectsData = [
     mainImg: "assets/nimio/nimio-placeholder.svg",
     previewImg: "assets/nimio/nimio-placeholder.svg",
     detailImgs: ["assets/nimio/nimio-placeholder.svg"]
+  },
+  {
+    id: "aura-3d",
+    title: { en: "AURA 3D", es: "AURA 3D", it: "AURA 3D", ca: "AURA 3D" },
+    color: "#4d7c0f", category: { en: "Real Estate / 3D Selector", es: "Inmobiliario / Selector 3D", it: "Immobiliare / Selettore 3D", ca: "Immobiliari / Selector 3D" },
+    desc: {
+      en: "Aura 3D is an interactive 3D unit selector for real-estate developers, built under Tezontle 3D, my studio for 3D sales tools. Buyers explore a masterplan and a tower in the browser, filter units by real-time availability, check sunlight at any hour, step inside a unit, and request a quote - all on a reusable engine where a new client means a config file and a database, not new code.<br><br><strong>Key Features:</strong><br>• Real-time inventory: units are colored by status (available / reserved / sold) and update live through Supabase Realtime.<br>• Sunlight simulation: the real sun position by latitude, date and hour, highlighting the units that get afternoon sun.<br>• View from the unit: 360° photos or a procedurally furnished interior, with free look.<br>• Compare up to 3 units, share favorites by link, and generate a PDF quote with the payment scheme.<br>• Guided presentation tour and a touch-screen showroom mode that resets itself.<br>• Installable PWA that works offline, bilingual ES/EN, plus an admin panel and a sales CRM (private).<br><br><strong>Technologies:</strong><br>React, TypeScript (strict), React Three Fiber &amp; three.js, Zustand, Tailwind CSS, Supabase (Postgres, Auth, Realtime, RLS), Vite, Vercel.<br><br><div class=\"demo-note\"><strong>Note:</strong> Commercial demo with sample data for a fictional development (Torre Aura Del Valle). The source code is private and proprietary.</div>",
+      es: "Aura 3D es un selector 3D interactivo de unidades para desarrolladoras inmobiliarias, construido bajo Tezontle 3D, mi estudio de herramientas de venta en 3D. El comprador explora el masterplan y una torre en el navegador, filtra por disponibilidad en tiempo real, revisa el asoleamiento a cualquier hora, entra a una unidad y pide su cotización, todo sobre un motor reutilizable: un cliente nuevo se resuelve con un archivo de configuración y una base de datos, no con código nuevo.<br><br><strong>Características Clave:</strong><br>• Inventario en tiempo real: las unidades se colorean por estado (disponible / apartada / vendida) y se actualizan en vivo con Supabase Realtime.<br>• Simulación de asoleamiento: la posición real del sol según latitud, fecha y hora, resaltando las unidades que reciben sol de tarde.<br>• Vista desde la unidad: fotos 360° o un interior amueblado generado por código, con giro libre.<br>• Comparador de hasta 3 unidades, favoritos que se comparten por liga y cotización en PDF con el esquema de pagos.<br>• Recorrido de presentación guiado y modo showroom para pantalla táctil que se reinicia solo.<br>• PWA instalable que funciona sin conexión, bilingüe ES/EN, más un panel de administración y un CRM de ventas (privados).<br><br><strong>Tecnologías:</strong><br>React, TypeScript (modo estricto), React Three Fiber y three.js, Zustand, Tailwind CSS, Supabase (Postgres, Auth, Realtime, RLS), Vite, Vercel.<br><br><div class=\"demo-note\"><strong>Nota:</strong> Demo comercial con datos de ejemplo de un desarrollo ficticio (Torre Aura Del Valle). El código fuente es privado y propietario.</div>",
+      it: "Selettore 3D interattivo di unità per sviluppatori immobiliari, con disponibilità in tempo reale, simulazione solare e preventivo in PDF.", ca: "Selector 3D interactiu d'unitats per a promotors immobiliaris, amb disponibilitat en temps real, simulació solar i pressupost en PDF."
+    },
+    link: "https://aura-demo-kappa.vercel.app/aura",
+    mainImg: "assets/aura-3d/aura-3d-video.mp4",
+    previewImg: "assets/aura-3d/aura-3d-1.jpg",
+    detailImgs: ["assets/aura-3d/aura-3d-video.mp4", "assets/aura-3d/aura-3d-1.jpg", "assets/aura-3d/aura-3d-2.jpg", "assets/aura-3d/aura-3d-3.jpg"]
+  },
+  {
+    id: "aura-landing",
+    title: { en: "AURA LANDING", es: "AURA LANDING", it: "AURA LANDING", ca: "AURA LANDING" },
+    color: "#a16207", category: { en: "Real Estate / Landing Page", es: "Inmobiliario / Landing Page", it: "Immobiliare / Landing Page", ca: "Immobiliari / Landing Page" },
+    desc: {
+      en: "A cinematic landing page for a real-estate pre-sale, built as a scroll-driven journey: as you scroll, the page glides from an aerial view to the facade, the lobby, the pool, the penthouse and the roof garden through video clips scrubbed frame by frame. It is the landing piece of the Tezontle 3D package, next to the 3D selector.<br><br><strong>Key Features:</strong><br>• Scroll-scrubbed video journey across six stops, with a progress rail and copy for each stop.<br>• Sections for typologies (five, from 62 to 180 m²), eight amenities, location, payment scheme, advisor, and FAQ.<br>• Floating WhatsApp button and prefilled messages for booking a visit.<br>• Static and fast: no backend, optimized images (WebP and JPEG) and a privacy notice page.<br><br><strong>Technologies:</strong><br>Astro, Tailwind CSS, GSAP, Lenis, TypeScript, Netlify.<br><br><div class=\"demo-note\"><strong>Note:</strong> Demo with sample content for a fictional development (Torre Aura Del Valle).</div>",
+      es: "Una landing page cinematográfica para la preventa de un desarrollo inmobiliario, construida como un recorrido guiado por el scroll: al bajar, la página avanza de una vista aérea a la fachada, el lobby, la alberca, el penthouse y el roof garden mediante clips de video controlados cuadro por cuadro. Es la pieza de landing del paquete de Tezontle 3D, junto al selector 3D.<br><br><strong>Características Clave:</strong><br>• Recorrido en video controlado por el scroll a través de seis paradas, con riel de progreso y texto para cada parada.<br>• Secciones de tipologías (cinco, de 62 a 180 m²), ocho amenidades, ubicación, esquema de pagos, asesora y preguntas frecuentes.<br>• Botón flotante de WhatsApp y mensajes prellenados para agendar una visita.<br>• Estática y rápida: sin backend, imágenes optimizadas (WebP y JPEG) y página de aviso de privacidad.<br><br><strong>Tecnologías:</strong><br>Astro, Tailwind CSS, GSAP, Lenis, TypeScript, Netlify.<br><br><div class=\"demo-note\"><strong>Nota:</strong> Demo con contenido de ejemplo de un desarrollo ficticio (Torre Aura Del Valle).</div>",
+      it: "Landing page cinematografica per la prevendita di uno sviluppo immobiliare, con video controllato dallo scroll.", ca: "Landing page cinematogràfica per a la preventa d'un desenvolupament immobiliari, amb vídeo controlat per l'scroll."
+    },
+    repo: "https://github.com/MarcusPicazo/aura-landing",
+    mainImg: "assets/aura-landing/aura-landing-video.mp4",
+    previewImg: "assets/aura-landing/aura-landing-1.jpg",
+    detailImgs: ["assets/aura-landing/aura-landing-video.mp4", "assets/aura-landing/aura-landing-1.jpg", "assets/aura-landing/aura-landing-2.jpg", "assets/aura-landing/aura-landing-3.jpg", "assets/aura-landing/aura-landing-4.jpg", "assets/aura-landing/aura-landing-5.jpg", "assets/aura-landing/aura-landing-6.jpg", "assets/aura-landing/aura-landing-7.jpg"]
   }
 ];
 
@@ -309,7 +337,7 @@ function updateDetLinkVariant(data) {
   if (!link || !data) return;
   const t = translations[currentLang];
   const isDownload = data.id === "taylor-desktop" || data.id === "taylor-app";
-  const label = isDownload ? t.download : (data.id === "taylor" ? t.visitWebsite : t.visitLink);
+  const label = isDownload ? t.download : (data.id === "taylor" || data.id === "aura-landing" ? t.visitWebsite : t.visitLink);
   link.querySelectorAll(".det-link-text-node").forEach((el) => { el.innerText = label; });
   link.querySelectorAll("svg").forEach((el) => { el.innerHTML = isDownload ? DET_LINK_ICON_DOWNLOAD : DET_LINK_ICON_DEFAULT; });
 }
