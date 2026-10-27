@@ -147,10 +147,23 @@ header .logo { justify-self: start; font-family: "Inter", sans-serif; font-weigh
 .tech-tag { font-family: "Inter", sans-serif; font-size: 0.85rem; padding: 0.35rem 0.8rem; border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 50px; background: rgba(255, 255, 255, 0.03); color: rgba(255, 255, 255, 0.8); transition: all 0.3s ease; will-change: transform, opacity; }
 .tech-tag:hover { background: rgba(255, 255, 255, 0.9); color: #000; border-color: rgba(255, 255, 255, 0.9); }
 
+.exp-list { display: flex; flex-direction: column; }
+.exp-item { padding: 1.4rem 0; border-top: 1px solid rgba(255, 255, 255, 0.1); will-change: transform, opacity; }
+.exp-item:first-child { border-top: none; padding-top: 0; }
+.exp-head { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; flex-wrap: wrap; }
+.exp-role { font-family: "Inter", sans-serif; font-size: 1.05rem; font-weight: 500; color: #fff; }
+.exp-date { font-family: "Inter", sans-serif; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: rgba(255, 255, 255, 0.45); white-space: nowrap; }
+.exp-org { font-family: "Inter", sans-serif; font-size: 0.85rem; color: rgba(255, 255, 255, 0.6); margin: 0.2rem 0 0.7rem; }
+.exp-desc { font-family: "Inter", sans-serif; font-size: 0.95rem; line-height: 1.65; font-weight: 300; color: rgba(255, 255, 255, 0.75); }
+.edu-list { display: flex; flex-direction: column; gap: 1.1rem; }
+.edu-item { display: grid; grid-template-columns: 9rem 1fr; gap: 1rem; font-family: "Inter", sans-serif; font-size: 0.95rem; line-height: 1.6; font-weight: 300; color: rgba(255, 255, 255, 0.75); will-change: transform, opacity; }
+.edu-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1.5px; color: rgba(255, 255, 255, 0.5); padding-top: 0.25rem; }
+
 @media (max-width: 900px) {
   .about-layout { grid-template-columns: 1fr; gap: 3rem; }
   .about-img-box { max-width: 400px; margin: 0 auto; }
   .tech-container { grid-template-columns: 1fr; gap: 1.5rem; }
+  .edu-item { grid-template-columns: 1fr; gap: 0.2rem; }
 }
 
 .close-about-btn { position: absolute; top: 0; right: 0; font-size: 0.8rem; letter-spacing: 2px; font-family: "Inter", sans-serif; text-transform: uppercase; color: transparent; pointer-events: auto; display: inline-flex; align-items: center; justify-content: center; cursor: none; z-index: 10; }

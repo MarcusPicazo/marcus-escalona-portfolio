@@ -26,36 +26,204 @@ const allLangsConfig = [
 const translations = {
   en: {
     role: "PRODUCT ENGINEER", aboutBtn: "About Me", aboutTitle: "About Me", techTitle: "Tech Stack", langTitle: "Languages & Communication",
-    techCat1: "Data & Logic (The Physics side)", techCat2: "Interactive Interfaces (The Music and Creativity side)", techCat3: "Real-Time Architecture (The Engineering side)",
+    techCat1: "Frontend & Core", techCat2: "AI / LLM & Voice", techCat3: "Integrations & APIs", techCat4: "Cloud & Backend", techCat5: "3D & Performance", techCat6: "Tools & Workflow", expTitle: "Experience", eduTitle: "Education & Certifications",
     contextText: "SELECTED WORK<br>EdTech · Real-time Systems<br>Interactive Web Products",
-    aboutText: "I am a British-Mexican Product Engineer specializing in the intersection of EdTech and interactive web systems. My background in physics and music defines my approach to software development: I tackle data architectures with scientific rigor and precision, while designing immersive interfaces with creativity and fluidity.<br><br>Through my experience teaching computer science, I have learned to reduce cognitive friction in digital environments. I am dedicated to building complete ecosystems—from real-time gamified platforms to in-browser 3D environments—transforming technical complexity into intuitive, stable, and high-impact learning tools.<br><br>To bring these platforms to life and analyze their performance, I work with the following technological ecosystem:",
+    aboutText: "I am a British-Mexican Product & Forward Deployed Engineer with 6+ years across product, systems and infrastructure engineering, and I have taken several products from zero to production. I own problems end to end: scoping with non-technical stakeholders, designing the architecture, building in React, TypeScript, Node.js and Python, integrating third-party APIs and shipping. My background in physics and music shapes how I work: I approach data and systems with scientific rigor, and interfaces with creativity and fluidity.<br><br>I lead engineering for a platform suite used by 200+ students and staff — from real-time multiplayer games to in-browser 3D learning environments — and I build independent products: Tezontle 3D, a real-time 3D sales platform for real-estate developers; Socio, a bilingual AI receptionist built on LLMs, speech-to-text and telephony/WhatsApp APIs; and Taylor, a safe-mobility platform for women that I co-founded. I am also developing Bodega Abierta, an open-source warehouse system for Mexican food banks.<br><br>I work AI-native, directing agentic tools like Claude Code to ship fast without trading off quality. I am open to hybrid (CDMX) or remote roles. This is the ecosystem I work with:",
     closeBtn: "CLOSE", explore: "EXPLORE", visitLink: "Visit Application", visitWebsite: "Visit Website", download: "Download", sourceCode: "GitHub Repo", backToCatalog: "BACK TO CATALOG", email: "Email", linkedin: "LinkedIn", github: "GitHub", resume: "Resume", resumeEs: "Resume (ES)",
     skills: { en: { name: "English", lvl: "Native" }, es: { name: "Spanish", lvl: "Native" }, it: { name: "Italian", lvl: "B2" }, ca: { name: "Catalan", lvl: "B2" } },
   },
   es: {
     role: "PRODUCT ENGINEER", aboutBtn: "Sobre Mí", aboutTitle: "Sobre Mí", techTitle: "Tecnologías", langTitle: "Idiomas y Comunicación",
-    techCat1: "Data & Logic (El lado de la Física)", techCat2: "Interactive Interfaces (El lado de la Música y la Creatividad)", techCat3: "Real-Time Architecture (El lado de la Ingeniería)",
+    techCat1: "Frontend y Core", techCat2: "IA / LLM y Voz", techCat3: "Integraciones y APIs", techCat4: "Nube y Backend", techCat5: "3D y Rendimiento", techCat6: "Herramientas y Flujo de trabajo", expTitle: "Experiencia", eduTitle: "Formación y Certificaciones",
     contextText: "TRABAJO DESTACADO<br>EdTech · Sistemas en Tiempo Real<br>Productos Web Interactivos",
-    aboutText: "Soy un Product Engineer británico-mexicano especializado en la intersección entre EdTech y sistemas web interactivos. Mi formación academica en física, música e ingenieria en sistemas define mi enfoque hacia el desarrollo de software: abordo las arquitecturas de datos con rigor científico y precisión, mientras diseño interfaces inmersivas con creatividad y fluidez.<br><br>A través de mi experiencia enseñando ciencias de la computación, he aprendido a reducir la fricción cognitiva en entornos digitales. Me dedico a construir ecosistemas completos —desde plataformas gamificadas en tiempo real hasta entornos 3D en el navegador— transformando la complejidad técnica en herramientas de aprendizaje intuitivas, estables y de alto impacto.<br><br>Para dar vida a estas plataformas y analizar su rendimiento, trabajo con el siguiente ecosistema tecnológico:",
+    aboutText: "Soy un Product & Forward Deployed Engineer británico-mexicano con más de 6 años en ingeniería de producto, sistemas e infraestructura, y he llevado varios productos de cero a producción. Me hago cargo de los problemas de punta a punta: defino el alcance con personas no técnicas, diseño la arquitectura, desarrollo en React, TypeScript, Node.js y Python, integro APIs de terceros y lo pongo en producción. Mi formación en física y música marca mi forma de trabajar: abordo los datos y los sistemas con rigor científico, y las interfaces con creatividad y fluidez.<br><br>Dirijo la ingeniería de una suite de plataformas con más de 200 usuarios —desde juegos multijugador en tiempo real hasta entornos de aprendizaje 3D en el navegador— y construyo productos independientes: Tezontle 3D, una plataforma 3D en tiempo real para vender preventas inmobiliarias; Socio, una recepcionista bilingüe con IA construida sobre LLMs, voz a texto y APIs de telefonía y WhatsApp; y Taylor, una plataforma de movilidad segura para mujeres que cofundé. También desarrollo Bodega Abierta, un sistema de almacén de código abierto para bancos de alimentos en México.<br><br>Trabajo de forma AI-native, dirigiendo herramientas agénticas como Claude Code para entregar rápido sin sacrificar calidad. Estoy disponible para roles híbridos (CDMX) o remotos. Este es el ecosistema con el que trabajo:",
     closeBtn: "CERRAR", explore: "EXPLORAR", visitLink: "Visitar Aplicación", visitWebsite: "Visitar Sitio Web", download: "Descarga", sourceCode: "Repositorio GitHub", backToCatalog: "VOLVER AL CATÁLOGO", email: "Email", linkedin: "LinkedIn", github: "GitHub", resume: "Currículum", resumeEs: "Currículum (ES)",
     skills: { en: { name: "Inglés", lvl: "Nativo" }, es: { name: "Español", lvl: "Nativo" }, it: { name: "Italiano", lvl: "B2" }, ca: { name: "Catalán", lvl: "B2" } },
   },
   it: {
     role: "PRODUCT ENGINEER", aboutBtn: "Su di Me", aboutTitle: "Su di Me", techTitle: "Tecnologie", langTitle: "Lingue e Comunicazione",
-    techCat1: "Data & Logic (Il lato della Fisica)", techCat2: "Interactive Interfaces (Il lato della Musica e della Creatività)", techCat3: "Real-Time Architecture (Il lato dell'Ingegneria)",
+    techCat1: "Frontend e Core", techCat2: "IA / LLM e Voce", techCat3: "Integrazioni e API", techCat4: "Cloud e Backend", techCat5: "3D e Prestazioni", techCat6: "Strumenti e Flusso di lavoro", expTitle: "Esperienza", eduTitle: "Formazione e Certificazioni",
     contextText: "LAVORI IN EVIDENZA<br>EdTech · Sistemi in Tempo Reale<br>Prodotti Web Interattivi",
-    aboutText: "Sono un Product Engineer britannico-messicano specializzato nell'intersezione tra EdTech e sistemi web interattivi. La mia formazione in fisica e musica definisce il mio approccio allo sviluppo di software: affronto le architetture dei dati con rigore e precisione scientifica, mentre progetto interfacce immersive con creatività e fluidità.<br><br>Attraverso la mia esperienza nell'insegnamento dell'informatica, ho imparato a ridurre l'attrito cognitivo negli ambienti digitali. Mi dedico alla costruzione di ecosistemi completi — dalle piattaforme gamificate in tempo reale agli ambienti 3D nel browser — trasformando la complessità tecnica in strumenti di apprendimento intuitivi, stabili e di grande impatto.<br><br>Per dare vita a queste piattaforme e analizzare le loro prestazioni, lavoro con il seguente ecosistema tecnologico:",
+    aboutText: "Sono un Product & Forward Deployed Engineer britannico-messicano con oltre 6 anni di esperienza in ingegneria di prodotto, sistemi e infrastruttura, e ho portato diversi prodotti da zero alla produzione. Mi occupo dei problemi dall'inizio alla fine: definisco l'ambito con persone non tecniche, progetto l'architettura, sviluppo in React, TypeScript, Node.js e Python, integro API di terze parti e rilascio. La mia formazione in fisica e musica definisce il mio modo di lavorare: affronto dati e sistemi con rigore scientifico, e le interfacce con creatività e fluidità.<br><br>Guido l'ingegneria di una suite di piattaforme usata da oltre 200 persone — dai giochi multiplayer in tempo reale agli ambienti di apprendimento 3D nel browser — e costruisco prodotti indipendenti: Tezontle 3D, una piattaforma 3D in tempo reale per vendere immobili in prevendita; Socio, una receptionist bilingue con IA basata su LLM, riconoscimento vocale e API di telefonia e WhatsApp; e Taylor, una piattaforma di mobilità sicura per le donne che ho cofondato. Sto inoltre sviluppando Bodega Abierta, un sistema di magazzino open source per i banchi alimentari messicani.<br><br>Lavoro in modo AI-native, dirigendo strumenti agentici come Claude Code per consegnare in fretta senza sacrificare la qualità. Sono disponibile per ruoli ibridi (CDMX) o da remoto. Questo è l'ecosistema con cui lavoro:",
     closeBtn: "CHIUDI", explore: "ESPLORA", visitLink: "Visita l'App", visitWebsite: "Visita il Sito", download: "Scarica", sourceCode: "Repo GitHub", backToCatalog: "TORNA AL CATALOGO", email: "Email", linkedin: "LinkedIn", github: "GitHub", resume: "Curriculum", resumeEs: "Curriculum (ES)",
     skills: { en: { name: "Inglese", lvl: "Madrelingua" }, es: { name: "Spagnolo", lvl: "Madrelingua" }, it: { name: "Italiano", lvl: "B2" }, ca: { name: "Catalano", lvl: "B2" } },
   },
   ca: {
     role: "PRODUCT ENGINEER", aboutBtn: "Sobre Mi", aboutTitle: "Sobre Mi", techTitle: "Tecnologies", langTitle: "Idiomes i Comunicació",
-    techCat1: "Data & Logic (El costat de la Física)", techCat2: "Interactive Interfaces (El costat de la Música i la Creativitat)", techCat3: "Real-Time Architecture (El costat de l'Enginyeria)",
+    techCat1: "Frontend i Core", techCat2: "IA / LLM i Veu", techCat3: "Integracions i APIs", techCat4: "Núvol i Backend", techCat5: "3D i Rendiment", techCat6: "Eines i Flux de treball", expTitle: "Experiència", eduTitle: "Formació i Certificacions",
     contextText: "TREBALL DESTACAT<br>EdTech · Sistemes en Temps Real<br>Productes Web Interactius",
-    aboutText: "Sóc un Product Engineer britànic-mexicà especialitzat en la intersecció entre EdTech i sistemes web interactius. La meva formació en física i música defineix el meu enfocament cap al desenvolupament de programari: abordo les arquitectures de dades amb rigor i precisió científica, mentre dissenyo interfícies immersives amb creativitat i fluïdesa.<br><br>A través de la meva experiència ensenyant ciències de la computació, he après a reduir la fricció cognitiva en entorns digitals. Em dedico a construir ecosistemi complets —des de plataformes gamificades en temps real fins a entorns 3D al navegador— transformant la complexitat tècnica en eines d'aprenentatge intuïtives, estables i d'alt impacte.<br><br>Per donar vida a aquestes plataformes i analitzar el seu rendiment, treballo amb el següent ecosistema tecnològic:",
+    aboutText: "Sóc un Product & Forward Deployed Engineer britànic-mexicà amb més de 6 anys en enginyeria de producte, sistemes i infraestructura, i he portat diversos productes de zero a producció. M'encarrego dels problemes de punta a punta: defineixo l'abast amb persones no tècniques, dissenyo l'arquitectura, desenvolupo en React, TypeScript, Node.js i Python, integro APIs de tercers i ho poso en producció. La meva formació en física i música marca la meva manera de treballar: abordo les dades i els sistemes amb rigor científic, i les interfícies amb creativitat i fluïdesa.<br><br>Dirigeixo l'enginyeria d'una suite de plataformes amb més de 200 usuaris —des de jocs multijugador en temps real fins a entorns d'aprenentatge 3D al navegador— i construeixo productes independents: Tezontle 3D, una plataforma 3D en temps real per vendre immobles en preventa; Socio, una recepcionista bilingüe amb IA construïda sobre LLMs, veu a text i APIs de telefonia i WhatsApp; i Taylor, una plataforma de mobilitat segura per a dones que vaig cofundar. També desenvolupo Bodega Abierta, un sistema de magatzem de codi obert per a bancs d'aliments a Mèxic.<br><br>Treballo de manera AI-native, dirigint eines agèntiques com Claude Code per lliurar ràpid sense sacrificar la qualitat. Estic disponible per a rols híbrids (CDMX) o en remot. Aquest és l'ecosistema amb què treballo:",
     closeBtn: "TANCAR", explore: "EXPLORAR", visitLink: "Visitar Aplicació", visitWebsite: "Visitar Lloc Web", download: "Descarrega", sourceCode: "Repositori GitHub", backToCatalog: "TORNAR AL CATÀLEG", email: "Correu", linkedin: "LinkedIn", github: "GitHub", resume: "Currículum", resumeEs: "Currículum (ES)",
     skills: { en: { name: "Anglès", lvl: "Natiu" }, es: { name: "Espanyol", lvl: "Natiu" }, it: { name: "Italià", lvl: "B2" }, ca: { name: "Català", lvl: "B2" } },
   },
+};
+
+
+// Experiencia y formación del About (del CV). Los textos van por idioma; empresas y fechas numéricas no cambian.
+const experienceData = [
+  {
+    "org": "Escuela Berta Von Glümer",
+    "role": {
+      "en": "Lead Product Engineer",
+      "es": "Lead Product Engineer",
+      "it": "Lead Product Engineer",
+      "ca": "Lead Product Engineer"
+    },
+    "dates": {
+      "en": "Oct 2023 – Present",
+      "es": "Oct 2023 – Actual",
+      "it": "Ott 2023 – Oggi",
+      "ca": "Oct 2023 – Actualitat"
+    },
+    "desc": {
+      "en": "Architected and shipped a suite of five React and TypeScript apps for 200+ students and staff, plus three interactive 3D learning environments in Three.js and WebGL. Led EBVG-Hoot, a real-time multiplayer platform, and built CIT-Sync, replacing manual spreadsheet workflows across departments.",
+      "es": "Diseñé y lancé una suite de cinco apps en React y TypeScript para más de 200 alumnos y personal, además de tres entornos de aprendizaje 3D interactivos en Three.js y WebGL. Lideré EBVG-Hoot, una plataforma multijugador en tiempo real, y creé CIT-Sync, que reemplazó flujos manuales en hojas de cálculo entre departamentos.",
+      "it": "Ho progettato e rilasciato una suite di cinque app in React e TypeScript per oltre 200 studenti e membri del personale, più tre ambienti di apprendimento 3D interattivi in Three.js e WebGL. Ho guidato EBVG-Hoot, una piattaforma multiplayer in tempo reale, e creato CIT-Sync, che ha sostituito i flussi manuali su fogli di calcolo tra i reparti.",
+      "ca": "Vaig dissenyar i llançar una suite de cinc apps en React i TypeScript per a més de 200 alumnes i personal, a més de tres entorns d'aprenentatge 3D interactius en Three.js i WebGL. Vaig liderar EBVG-Hoot, una plataforma multijugador en temps real, i vaig crear CIT-Sync, que va substituir fluxos manuals en fulls de càlcul entre departaments."
+    }
+  },
+  {
+    "org": "Getting Out",
+    "role": {
+      "en": "Systems Engineer",
+      "es": "Ingeniero de Sistemas",
+      "it": "Ingegnere di Sistemi",
+      "ca": "Enginyer de Sistemes"
+    },
+    "dates": {
+      "en": "2022 – 2023",
+      "es": "2022 – 2023",
+      "it": "2022 – 2023",
+      "ca": "2022 – 2023"
+    },
+    "desc": {
+      "en": "Built Python automation services, REST APIs and microservices for internal data processing, and designed SQL data models and a service-oriented architecture for operational reporting.",
+      "es": "Desarrollé servicios de automatización en Python, APIs REST y microservicios para el procesamiento interno de datos, y diseñé modelos de datos SQL y una arquitectura orientada a servicios para los reportes operativos.",
+      "it": "Ho sviluppato servizi di automazione in Python, API REST e microservizi per l'elaborazione interna dei dati, e progettato modelli di dati SQL e un'architettura orientata ai servizi per i report operativi.",
+      "ca": "Vaig desenvolupar serveis d'automatització en Python, APIs REST i microserveis per al processament intern de dades, i vaig dissenyar models de dades SQL i una arquitectura orientada a serveis per als informes operatius."
+    }
+  },
+  {
+    "org": "Black Fox Productions",
+    "role": {
+      "en": "Audio Engineer (Remote)",
+      "es": "Ingeniero de Audio (Remoto)",
+      "it": "Ingegnere Audio (Remoto)",
+      "ca": "Enginyer d'Àudio (Remot)"
+    },
+    "dates": {
+      "en": "2019 – 2025",
+      "es": "2019 – 2025",
+      "it": "2019 – 2025",
+      "ca": "2019 – 2025"
+    },
+    "desc": {
+      "en": "Broadcast-ready audio post-production for international cinema chains, with asynchronous review cycles and signal routing across Pro Tools, Ableton Live, iZotope RX and Dante.",
+      "es": "Postproducción de audio lista para transmisión para cadenas de cine internacionales, con ciclos de revisión asíncronos y ruteo de señal en Pro Tools, Ableton Live, iZotope RX y Dante.",
+      "it": "Post-produzione audio pronta per la trasmissione per catene cinematografiche internazionali, con cicli di revisione asincroni e routing del segnale in Pro Tools, Ableton Live, iZotope RX e Dante.",
+      "ca": "Postproducció d'àudio llesta per a emissió per a cadenes de cinema internacionals, amb cicles de revisió asíncrons i encaminament de senyal a Pro Tools, Ableton Live, iZotope RX i Dante."
+    }
+  },
+  {
+    "org": "Cedros College",
+    "role": {
+      "en": "IT Systems Engineer",
+      "es": "Ingeniero de Sistemas TI",
+      "it": "Ingegnere di Sistemi IT",
+      "ca": "Enginyer de Sistemes TI"
+    },
+    "dates": {
+      "en": "2021 – 2022",
+      "es": "2021 – 2022",
+      "it": "2021 – 2022",
+      "ca": "2021 – 2022"
+    },
+    "desc": {
+      "en": "Network security and infrastructure administration across the corporate network: Active Directory, Fortinet, Windows Server and Group Policy.",
+      "es": "Seguridad de red y administración de infraestructura en la red corporativa: Active Directory, Fortinet, Windows Server y Group Policy.",
+      "it": "Sicurezza di rete e amministrazione dell'infrastruttura della rete aziendale: Active Directory, Fortinet, Windows Server e Group Policy.",
+      "ca": "Seguretat de xarxa i administració d'infraestructura a la xarxa corporativa: Active Directory, Fortinet, Windows Server i Group Policy."
+    }
+  },
+  {
+    "org": "CONACULTA / Secretaría de Cultura",
+    "role": {
+      "en": "Systems Engineer",
+      "es": "Ingeniero de Sistemas",
+      "it": "Ingegnere di Sistemi",
+      "ca": "Enginyer de Sistemes"
+    },
+    "dates": {
+      "en": "2016 – 2017",
+      "es": "2016 – 2017",
+      "it": "2016 – 2017",
+      "ca": "2016 – 2017"
+    },
+    "desc": {
+      "en": "Technical architecture support, QA testing and debugging of custom government software: Linux, SQL and Bash.",
+      "es": "Soporte de arquitectura técnica, pruebas de QA y depuración de software gubernamental a la medida: Linux, SQL y Bash.",
+      "it": "Supporto all'architettura tecnica, test di QA e debug di software governativo personalizzato: Linux, SQL e Bash.",
+      "ca": "Suport d'arquitectura tècnica, proves de QA i depuració de programari governamental a mida: Linux, SQL i Bash."
+    }
+  }
+];
+const educationData = {
+  "en": [
+    [
+      "Completed",
+      "B.Eng. Computer Systems, Universidad Europea de Madrid · B.Sc. Music & Innovation, Universidad Panamericana"
+    ],
+    [
+      "Coursework",
+      "B.Sc. Physics, Universidad Autónoma Metropolitana (through final year) · M.Sc. Astrophysics"
+    ],
+    [
+      "Certifications",
+      "IBM Full Stack Developer · IBM Machine Learning & Python · Google Digital Marketing · EF SET C2 English"
+    ]
+  ],
+  "es": [
+    [
+      "Concluidos",
+      "Ingeniería en Sistemas Computacionales, Universidad Europea de Madrid · Licenciatura en Música e Innovación, Universidad Panamericana"
+    ],
+    [
+      "Estudios",
+      "Licenciatura en Física, Universidad Autónoma Metropolitana (hasta último año) · Maestría en Astrofísica"
+    ],
+    [
+      "Certificaciones",
+      "IBM Full Stack Developer · IBM Machine Learning & Python · Google Digital Marketing · EF SET C2 English"
+    ]
+  ],
+  "it": [
+    [
+      "Completati",
+      "Ingegneria dei Sistemi Informatici, Universidad Europea de Madrid · Laurea in Musica e Innovazione, Universidad Panamericana"
+    ],
+    [
+      "Studi",
+      "Laurea in Fisica, Universidad Autónoma Metropolitana (fino all'ultimo anno) · Master in Astrofisica"
+    ],
+    [
+      "Certificazioni",
+      "IBM Full Stack Developer · IBM Machine Learning & Python · Google Digital Marketing · EF SET C2 English"
+    ]
+  ],
+  "ca": [
+    [
+      "Completats",
+      "Enginyeria de Sistemes Computacionals, Universidad Europea de Madrid · Grau en Música i Innovació, Universidad Panamericana"
+    ],
+    [
+      "Estudis",
+      "Grau en Física, Universidad Autónoma Metropolitana (fins a l'últim curs) · Màster en Astrofísica"
+    ],
+    [
+      "Certificacions",
+      "IBM Full Stack Developer · IBM Machine Learning & Python · Google Digital Marketing · EF SET C2 English"
+    ]
+  ]
 };
 
 const projectsData = [
@@ -273,7 +441,7 @@ const projectsData = [
       es: "Una landing page cinematográfica para la preventa de un desarrollo inmobiliario, construida como un recorrido guiado por el scroll: al bajar, la página avanza de una vista aérea a la fachada, el lobby, la alberca, el penthouse y el roof garden mediante clips de video controlados cuadro por cuadro. Es la pieza de landing del paquete de Tezontle 3D, junto al selector 3D.<br><br><strong>Características Clave:</strong><br>• Recorrido en video controlado por el scroll a través de seis paradas, con riel de progreso y texto para cada parada.<br>• Secciones de tipologías (cinco, de 62 a 180 m²), ocho amenidades, ubicación, esquema de pagos, asesora y preguntas frecuentes.<br>• Botón flotante de WhatsApp y mensajes prellenados para agendar una visita.<br>• Estática y rápida: sin backend, imágenes optimizadas (WebP y JPEG) y página de aviso de privacidad.<br><br><strong>Tecnologías:</strong><br>Astro, Tailwind CSS, GSAP, Lenis, TypeScript, Netlify.<br><br><div class=\"demo-note\"><strong>Nota:</strong> Demo con contenido de ejemplo de un desarrollo ficticio (Torre Aura Del Valle).</div>",
       it: "Landing page cinematografica per la prevendita di uno sviluppo immobiliare, con video controllato dallo scroll.", ca: "Landing page cinematogràfica per a la preventa d'un desenvolupament immobiliari, amb vídeo controlat per l'scroll."
     },
-    repo: "https://github.com/MarcusPicazo/aura-landing",
+    link: "https://demoauradelvalle.netlify.app", repo: "https://github.com/MarcusPicazo/aura-landing",
     mainImg: "assets/aura-landing/aura-landing-video.mp4",
     previewImg: "assets/aura-landing/aura-landing-1.jpg",
     detailImgs: ["assets/aura-landing/aura-landing-video.mp4", "assets/aura-landing/aura-landing-1.jpg", "assets/aura-landing/aura-landing-2.jpg", "assets/aura-landing/aura-landing-3.jpg", "assets/aura-landing/aura-landing-4.jpg", "assets/aura-landing/aura-landing-5.jpg", "assets/aura-landing/aura-landing-6.jpg", "assets/aura-landing/aura-landing-7.jpg"]
@@ -294,11 +462,19 @@ function renderLangOptions() {
   });
 }
 
+function renderAboutLists() {
+  const expList = document.getElementById("exp-list"), eduList = document.getElementById("edu-list");
+  if (expList) expList.innerHTML = experienceData.map((e) => `<div class="exp-item"><div class="exp-head"><span class="exp-role">${e.role[currentLang]}</span><span class="exp-date">${e.dates[currentLang]}</span></div><div class="exp-org">${e.org}</div><p class="exp-desc">${e.desc[currentLang]}</p></div>`).join("");
+  if (eduList) eduList.innerHTML = educationData[currentLang].map(([label, text]) => `<div class="edu-item"><span class="edu-label">${label}</span><span class="edu-text">${text}</span></div>`).join("");
+}
+
 function updateUI_Language() {
   const t = translations[currentLang];
   const setEl = (id, val) => { const el = document.getElementById(id); if(el) el.innerHTML = val; };
   setEl("pl-role", t.role); setEl("open-about-btn", t.aboutBtn); setEl("about-title", t.aboutTitle);
   setEl("tech-cat-1", t.techCat1); setEl("tech-cat-2", t.techCat2); setEl("tech-cat-3", t.techCat3);
+  setEl("tech-cat-4", t.techCat4); setEl("tech-cat-5", t.techCat5); setEl("tech-cat-6", t.techCat6);
+  setEl("about-title-exp", t.expTitle); setEl("about-title-edu", t.eduTitle); renderAboutLists();
   setEl("about-title-lang", t.langTitle); setEl("about-text-container", t.aboutText); setEl("context-text", t.contextText);
   setEl("skill-1-name", t.skills.en.name); setEl("skill-1-lvl", t.skills.en.lvl); setEl("skill-2-name", t.skills.es.name); setEl("skill-2-lvl", t.skills.es.lvl);
   setEl("skill-3-name", t.skills.it.name); setEl("skill-3-lvl", t.skills.it.lvl); setEl("skill-4-name", t.skills.ca.name); setEl("skill-4-lvl", t.skills.ca.lvl);
@@ -374,14 +550,16 @@ document.addEventListener("mouseover", (e) => {
 const pCanvas = document.getElementById("project-particles"); const pCtx = pCanvas ? pCanvas.getContext("2d") : null;
 const aCanvas = document.getElementById("about-particles"); const aCtx = aCanvas ? aCanvas.getContext("2d") : null;
 let pWidth, pHeight, projParticles = [], aWidth, aHeight, aboutParticles = [];
+// Cada lienzo de partículas solo se dibuja mientras su vista está visible (detalle de proyecto / modal About), no a 60 fps todo el tiempo.
+let projParticlesActive = false, aboutParticlesActive = false;
 
 function initParticlesSystems() {
   if(pCanvas) { pWidth = pCanvas.width = window.innerWidth; pHeight = pCanvas.height = window.innerHeight; projParticles = []; for (let i = 0; i < 90; i++) projParticles.push({ x: Math.random() * pWidth, y: Math.random() * pHeight, r: Math.random() * 1.5 + 0.5, vx: (Math.random() - 0.5) * 0.3, vy: -0.2 - Math.random() * 0.4, baseAlpha: Math.random() * 0.4 + 0.2 }); }
   if(aCanvas) { aWidth = aCanvas.width = window.innerWidth; aHeight = aCanvas.height = window.innerHeight; aboutParticles = []; for (let i = 0; i < 80; i++) aboutParticles.push({ x: Math.random() * aWidth, y: Math.random() * aHeight, r: Math.random() * 1.5 + 0.5, vx: (Math.random() - 0.5) * 0.3, vy: -0.1 - Math.random() * 0.3, baseAlpha: Math.random() * 0.4 + 0.1 }); }
 }
 function drawParticles() {
-  if(pCtx) { pCtx.clearRect(0, 0, pWidth, pHeight); projParticles.forEach((p) => { p.x += p.vx; p.y += p.vy; if (p.x < 0) p.x = pWidth; if (p.x > pWidth) p.x = 0; if (p.y < 0) p.y = pHeight; if (p.y > pHeight) p.y = 0; pCtx.beginPath(); pCtx.arc(p.x, p.y, p.r, 0, Math.PI * 2); pCtx.fillStyle = `rgba(255, 255, 255, ${p.baseAlpha * Math.pow(1 - p.y / pHeight, 1.5)})`; pCtx.fill(); }); }
-  if(aCtx) { aCtx.clearRect(0, 0, aWidth, aHeight); aboutParticles.forEach((p) => { p.x += p.vx; p.y += p.vy; if (p.x < 0) p.x = aWidth; if (p.x > aWidth) p.x = 0; if (p.y < 0) p.y = aHeight; if (p.y > aHeight) p.y = 0; aCtx.beginPath(); aCtx.arc(p.x, p.y, p.r, 0, Math.PI * 2); aCtx.fillStyle = `rgba(255, 255, 255, ${p.baseAlpha})`; aCtx.fill(); }); }
+  if(pCtx && projParticlesActive) { pCtx.clearRect(0, 0, pWidth, pHeight); projParticles.forEach((p) => { p.x += p.vx; p.y += p.vy; if (p.x < 0) p.x = pWidth; if (p.x > pWidth) p.x = 0; if (p.y < 0) p.y = pHeight; if (p.y > pHeight) p.y = 0; pCtx.beginPath(); pCtx.arc(p.x, p.y, p.r, 0, Math.PI * 2); pCtx.fillStyle = `rgba(255, 255, 255, ${p.baseAlpha * Math.pow(1 - p.y / pHeight, 1.5)})`; pCtx.fill(); }); }
+  if(aCtx && aboutParticlesActive) { aCtx.clearRect(0, 0, aWidth, aHeight); aboutParticles.forEach((p) => { p.x += p.vx; p.y += p.vy; if (p.x < 0) p.x = aWidth; if (p.x > aWidth) p.x = 0; if (p.y < 0) p.y = aHeight; if (p.y > aHeight) p.y = 0; aCtx.beginPath(); aCtx.arc(p.x, p.y, p.r, 0, Math.PI * 2); aCtx.fillStyle = `rgba(255, 255, 255, ${p.baseAlpha})`; aCtx.fill(); }); }
   requestAnimationFrame(drawParticles);
 }
 initParticlesSystems(); drawParticles(); window.addEventListener("resize", initParticlesSystems);
@@ -391,17 +569,18 @@ const bgLayer = document.querySelector(".bg-layer");
 const titleContainer = document.getElementById("dynamic-title");
 
 if (track) {
-  projectsData.forEach((proj, index) => {
+  // Se arma todo el HTML y se asigna una sola vez (con `+=` el navegador re-parseaba y recreaba las tarjetas anteriores en cada vuelta).
+  track.innerHTML = projectsData.map((proj, index) => {
     const isVideo = proj.mainImg.match(/\.(mp4|webm)$/i);
-    const posterImg = proj.previewImg; 
-    
-    let mediaContent = `<img src="${posterImg}" alt="project img" class="gallery-poster">`;
+    const posterImg = proj.previewImg;
+
+    let mediaContent = `<img src="${posterImg}" alt="${proj.title.en}" class="gallery-poster" decoding="async">`;
     if (isVideo) {
         mediaContent += `<video src="${proj.mainImg}" loop muted playsinline preload="metadata" class="gallery-video"></video>`;
     }
 
-    track.innerHTML += `<div class="gallery-item" data-index="${index}" data-id="${proj.id}"><div class="img-wrapper">${mediaContent}</div><div class="explore-indicator lang-wipe-target"><div class="explore-bg"></div><span class="explore-text">EXPLORE</span></div><div class="item-info"><span class="item-category lang-wipe-target">${proj.category.en}</span><h2 class="item-title lang-wipe-target">${proj.title.en}</h2></div></div>`;
-  });
+    return `<div class="gallery-item" data-index="${index}" data-id="${proj.id}"><div class="img-wrapper">${mediaContent}</div><div class="explore-indicator lang-wipe-target"><div class="explore-bg"></div><span class="explore-text">EXPLORE</span></div><div class="item-info"><span class="item-category lang-wipe-target">${proj.category.en}</span><h2 class="item-title lang-wipe-target">${proj.title.en}</h2></div></div>`;
+  }).join("");
 }
 
 const items = document.querySelectorAll(".gallery-item");
@@ -432,23 +611,18 @@ lenis.on("scroll", ScrollTrigger.update);
 gsap.ticker.add((time) => lenis.raf(time * 1000));
 gsap.ticker.lagSmoothing(0, 0);
 
-let isGalleryScrolling = false;
-let galleryScrollEndTimer;
-function markGalleryScrolling() {
-  isGalleryScrolling = true;
-  clearTimeout(galleryScrollEndTimer);
-  galleryScrollEndTimer = setTimeout(() => { isGalleryScrolling = false; }, 150);
-}
-// El scrub de GSAP sigue deslizando la pista cerca de 1 s después de que termina el scroll, así que
-// también se mide el movimiento real de la pista (px por cuadro) para no activar un hover mientras se desliza.
-let trackLastX = 0, trackMovingUntil = 0;
+// Velocidad real de la pista (px/s, suavizada). El scroll de Lenis + el scrub de GSAP dejan la pista deslizándose
+// más de un segundo después de soltar la rueda, pero a velocidades bajas ya no cambia de tarjeta bajo el cursor:
+// se considera "en movimiento" solo por encima de GALLERY_SETTLE_SPEED, así el hover abre en cuanto desacelera.
+const GALLERY_SETTLE_SPEED = 260;
+let trackLastX = 0, trackLastT = performance.now(), trackSpeed = 0;
 gsap.ticker.add(() => {
   if (!track) return;
-  const x = gsap.getProperty(track, "x");
-  if (Math.abs(x - trackLastX) > 0.4) trackMovingUntil = performance.now() + 120;
-  trackLastX = x;
+  const now = performance.now(), x = gsap.getProperty(track, "x"), dt = now - trackLastT;
+  if (dt > 0) trackSpeed += (Math.abs(x - trackLastX) / dt * 1000 - trackSpeed) * 0.4;
+  trackLastX = x; trackLastT = now;
 });
-const galleryIsMoving = () => isGalleryScrolling || performance.now() < trackMovingUntil;
+const galleryIsMoving = () => trackSpeed > GALLERY_SETTLE_SPEED;
 
 function initGalleryScroll() {
   const itemsContainer = document.querySelector(".horizontal-section");
@@ -459,67 +633,86 @@ function initGalleryScroll() {
     const bar = document.createElement("div"); bar.className = "spectrum-bar"; bar.style.height = `${6 + Math.random() * 12}px`; spectrumContainer.appendChild(bar);
   }
   const spectrumBars = document.querySelectorAll(".spectrum-bar");
+  let lastActiveBars = -1;
   const getScrollAmount = () => -(track.scrollWidth - window.innerWidth);
-  gsap.to(track, { x: getScrollAmount, ease: "none", scrollTrigger: { trigger: itemsContainer, pin: true, scrub: 1, end: () => `+=${Math.abs(getScrollAmount()) * 2.5}`, invalidateOnRefresh: true, id: "galleryScroll", onUpdate: (self) => { markGalleryScrolling(); const activeCount = Math.floor(self.progress * totalBars); spectrumBars.forEach((bar, index) => { if (index <= activeCount) bar.classList.add("active"); else bar.classList.remove("active"); }); } } });
+  gsap.to(track, { x: getScrollAmount, ease: "none", scrollTrigger: { trigger: itemsContainer, pin: true, scrub: 1, end: () => `+=${Math.abs(getScrollAmount()) * 2.5}`, invalidateOnRefresh: true, id: "galleryScroll", onUpdate: (self) => { const activeCount = Math.floor(self.progress * totalBars); if (activeCount === lastActiveBars) return; lastActiveBars = activeCount; spectrumBars.forEach((bar, index) => { if (index <= activeCount) bar.classList.add("active"); else bar.classList.remove("active"); }); } } });
 }
 initGalleryScroll();
 
 let hoverIntentTimer;
-let pendingHoverItem = null;
+let pendingHoverItem = null, hoveredItem = null;
+const hoverStarters = new Map();
+const prefetchedProjects = new Set();
+
+// Mientras el cursor está sobre una tarjeta se precargan las imágenes del detalle, para que al abrir el proyecto ya estén en caché.
+function prefetchProject(data) {
+  if (prefetchedProjects.has(data.id)) return;
+  prefetchedProjects.add(data.id);
+  data.detailImgs.forEach((src) => { if (!/\.(mp4|webm)$/i.test(src)) { const img = new Image(); img.decoding = "async"; img.src = src; } });
+}
+
+function activateHover(item, data) {
+  hoveredItem = item;
+  stopFloatingAndAlign();
+  prefetchProject(data);
+
+  const vid = item.querySelector(".gallery-video");
+  const poster = item.querySelector(".gallery-poster");
+  if (vid) {
+    vid.currentTime = 0;
+    vid.play().then(() => { vid.style.opacity = 1; if (poster) poster.style.opacity = 0; }).catch(e => console.log("Autoplay mitigado"));
+  }
+
+  if(bgLayer) bgLayer.style.backgroundColor = data.color;
+  if(titleContainer) {
+    titleContainer.innerText = data.title[currentLang]; titleContainer.style.transform = "scale(1)"; titleContainer.style.fontSize = "100px";
+    titleContainer.style.fontSize = `${100 * ((window.innerWidth * 0.99) / titleContainer.getBoundingClientRect().width)}px`;
+    gsap.fromTo(titleContainer, { clipPath: "inset(0 50% 0 50%)", webkitClipPath: "inset(0 50% 0 50%)", opacity: 0 }, { clipPath: "inset(0 0% 0 0%)", webkitClipPath: "inset(0 0% 0 0%)", opacity: 1, duration: 0.8, ease: "power4.out", overwrite: "auto" });
+  }
+
+  gsap.to(items, { width: (i, el) => (el === item ? "36vw" : "7.2vw"), filter: (i, el) => el === item ? "grayscale(0%) brightness(1)" : "grayscale(100%) brightness(0.3)", duration: 0.8, ease: "power4.out", overwrite: "auto" });
+
+  items.forEach((other) => {
+    const imgWrap = other.querySelector(".img-wrapper");
+    const info = other.querySelector(".item-info");
+    const explore = other.querySelector(".explore-indicator");
+
+    if (other === item) {
+      if(imgWrap) gsap.to(imgWrap, { scale: 1, duration: 0.8, ease: "power4.out", overwrite: "auto" });
+      if(info) gsap.to(info, { opacity: 1, y: 0, duration: 0.5, delay: 0.1, ease: "power4.out", overwrite: "auto" });
+      if(explore) gsap.to(explore, { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.5)", overwrite: "auto" });
+    } else {
+      if(imgWrap) gsap.to(imgWrap, { scale: 1, duration: 0.8, ease: "power4.out", overwrite: "auto" });
+      if(info) gsap.to(info, { opacity: 0, y: 20, duration: 0.4, ease: "power4.out", overwrite: "auto" });
+      if(explore) gsap.to(explore, { opacity: 0, scale: 0.5, duration: 0.4, ease: "power4.out", overwrite: "auto" });
+    }
+  });
+}
+
+// Pone en cola el hover de una tarjeta. Si la pista aún se desliza rápido (scroll o cola del scrub) se espera y se reintenta
+// en lugar de descartarlo: la tarjeta que quede bajo el cursor se abre en cuanto la galería desacelera.
+function queueHover(item, data) {
+  clearTimeout(hoverIntentTimer);
+  pendingHoverItem = item;
+  const tryActivate = () => {
+    if (pendingHoverItem !== item || currentOpenProjectIndex !== null) return;
+    if (galleryIsMoving()) { hoverIntentTimer = setTimeout(tryActivate, 40); return; }
+    pendingHoverItem = null;
+    activateHover(item, data);
+  };
+  hoverIntentTimer = setTimeout(tryActivate, 40);
+}
+
 items.forEach((item, index) => {
   const data = projectsData[index];
-  const exploreBtn = item.querySelector(".explore-indicator");
+  hoverStarters.set(item, () => queueHover(item, data));
 
-  item.addEventListener("mouseenter", () => {
-    clearTimeout(hoverIntentTimer);
-    pendingHoverItem = item;
-
-    // Si la pista aún se desliza (scroll o cola del scrub) se espera y se reintenta, en lugar de descartar
-    // el hover: la tarjeta que quede bajo el cursor se abre en cuanto la galería se detiene.
-    const activateHover = () => {
-      if (pendingHoverItem !== item || currentOpenProjectIndex !== null) return;
-      if (galleryIsMoving()) { hoverIntentTimer = setTimeout(activateHover, 80); return; }
-
-      stopFloatingAndAlign();
-      
-      const vid = item.querySelector(".gallery-video");
-      const poster = item.querySelector(".gallery-poster");
-      if (vid) {
-        vid.currentTime = 0;
-        vid.play().then(() => { vid.style.opacity = 1; if (poster) poster.style.opacity = 0; }).catch(e => console.log("Autoplay mitigado"));
-      }
-
-      if(bgLayer) bgLayer.style.backgroundColor = data.color;
-      if(titleContainer) {
-        titleContainer.innerText = data.title[currentLang]; titleContainer.style.transform = "scale(1)"; titleContainer.style.fontSize = "100px";
-        titleContainer.style.fontSize = `${100 * ((window.innerWidth * 0.99) / titleContainer.getBoundingClientRect().width)}px`;
-        gsap.fromTo(titleContainer, { clipPath: "inset(0 50% 0 50%)", webkitClipPath: "inset(0 50% 0 50%)", opacity: 0 }, { clipPath: "inset(0 0% 0 0%)", webkitClipPath: "inset(0 0% 0 0%)", opacity: 1, duration: 0.8, ease: "power4.out", overwrite: "auto" });
-      }
-
-      gsap.to(items, { width: (i, el) => (el === item ? "36vw" : "7.2vw"), filter: (i, el) => el === item ? "grayscale(0%) brightness(1)" : "grayscale(100%) brightness(0.3)", duration: 0.8, ease: "power4.out", overwrite: "auto" });
-
-      items.forEach((other) => {
-        const imgWrap = other.querySelector(".img-wrapper");
-        const info = other.querySelector(".item-info");
-        const explore = other.querySelector(".explore-indicator");
-        
-        if (other === item) {
-          if(imgWrap) gsap.to(imgWrap, { scale: 1, duration: 0.8, ease: "power4.out", overwrite: "auto" });
-          if(info) gsap.to(info, { opacity: 1, y: 0, duration: 0.5, delay: 0.1, ease: "power4.out", overwrite: "auto" });
-          if(explore) gsap.to(explore, { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.5)", overwrite: "auto" });
-        } else {
-          if(imgWrap) gsap.to(imgWrap, { scale: 1, duration: 0.8, ease: "power4.out", overwrite: "auto" });
-          if(info) gsap.to(info, { opacity: 0, y: 20, duration: 0.4, ease: "power4.out", overwrite: "auto" });
-          if(explore) gsap.to(explore, { opacity: 0, scale: 0.5, duration: 0.4, ease: "power4.out", overwrite: "auto" });
-        }
-      });
-    };
-    hoverIntentTimer = setTimeout(activateHover, 75);
-  });
+  item.addEventListener("mouseenter", () => queueHover(item, data));
 
   item.addEventListener("mouseleave", () => {
     clearTimeout(hoverIntentTimer);
     if (pendingHoverItem === item) pendingHoverItem = null;
+    if (hoveredItem === item) hoveredItem = null;
     const vid = item.querySelector(".gallery-video");
     const poster = item.querySelector(".gallery-poster");
     if (vid) { vid.pause(); vid.currentTime = 0; vid.style.opacity = 0; }
@@ -531,32 +724,54 @@ items.forEach((item, index) => {
   });
 });
 
+// Respaldo: el navegador no siempre lanza mouseenter cuando la pista se desliza bajo un cursor quieto o se detiene justo debajo de él.
+// Con la galería en reposo se consulta qué tarjeta hay realmente bajo el último punto del cursor y, si no está abierta, se abre.
+let lastPointer = null, resolveHoverAt = 0;
+window.addEventListener("pointermove", (e) => { if (e.pointerType === "mouse") lastPointer = { x: e.clientX, y: e.clientY }; }, { passive: true });
+document.documentElement.addEventListener("mouseleave", () => { lastPointer = null; });
+gsap.ticker.add(() => {
+  const now = performance.now();
+  if (now < resolveHoverAt) return;
+  resolveHoverAt = now + 100;
+  if (!lastPointer || currentOpenProjectIndex !== null || galleryIsMoving()) return;
+  const el = document.elementFromPoint(lastPointer.x, lastPointer.y);
+  const item = el ? el.closest(".gallery-item") : null;
+  if (item && item !== hoveredItem && item !== pendingHoverItem) hoverStarters.get(item)();
+});
+
+// Estado de reposo de la galería: fondo oscuro, tarjetas al 12vw en gris, título oculto y flotación activa.
+function resetGalleryHover() {
+  clearTimeout(hoverIntentTimer); pendingHoverItem = null; hoveredItem = null;
+  startFloating();
+
+  if(bgLayer) bgLayer.style.backgroundColor = "#141414";
+  if(titleContainer) gsap.to(titleContainer, { clipPath: "inset(0 50% 0 50%)", webkitClipPath: "inset(0 50% 0 50%)", opacity: 0, duration: 0.4, ease: "power2.in", overwrite: "auto" });
+  gsap.to(items, { width: "12vw", filter: "grayscale(100%) brightness(0.6)", duration: 0.8, ease: "power4.out", overwrite: "auto" });
+
+  items.forEach((other) => {
+    const imgWrap = other.querySelector(".img-wrapper");
+    const info = other.querySelector(".item-info"), exp = other.querySelector(".explore-indicator");
+    const vid = other.querySelector(".gallery-video"); const poster = other.querySelector(".gallery-poster");
+    if(vid) { vid.pause(); vid.currentTime = 0; vid.style.opacity = 0; }
+    if(poster) poster.style.opacity = 1;
+
+    if(imgWrap) gsap.to(imgWrap, { scale: 1, duration: 0.8, ease: "power4.out", overwrite: "auto" });
+    if(info) gsap.to(info, { opacity: 0, y: 20, duration: 0.4, ease: "power4.out", overwrite: "auto" });
+    if(exp) gsap.to(exp, { opacity: 0, scale: 0.5, duration: 0.4, ease: "power4.out", overwrite: "auto" });
+  });
+}
+
 if(track) {
   track.addEventListener("mouseleave", () => {
-    clearTimeout(hoverIntentTimer); pendingHoverItem = null; if (currentOpenProjectIndex !== null) return;
-    
-    startFloating();
-
-    if(bgLayer) bgLayer.style.backgroundColor = "#141414";
-    if(titleContainer) gsap.to(titleContainer, { clipPath: "inset(0 50% 0 50%)", webkitClipPath: "inset(0 50% 0 50%)", opacity: 0, duration: 0.4, ease: "power2.in", overwrite: "auto" });
-    gsap.to(items, { width: "12vw", filter: "grayscale(100%) brightness(0.6)", duration: 0.8, ease: "power4.out", overwrite: "auto" });
-    
-    items.forEach((other) => {
-      const imgWrap = other.querySelector(".img-wrapper");
-      const info = other.querySelector(".item-info"), exp = other.querySelector(".explore-indicator");
-      const vid = other.querySelector(".gallery-video"); const poster = other.querySelector(".gallery-poster");
-      if(vid) { vid.pause(); vid.currentTime = 0; vid.style.opacity = 0; }
-      if(poster) poster.style.opacity = 1;
-      
-      if(imgWrap) gsap.to(imgWrap, { scale: 1, duration: 0.8, ease: "power4.out", overwrite: "auto" });
-      if(info) gsap.to(info, { opacity: 0, y: 20, duration: 0.4, ease: "power4.out", overwrite: "auto" });
-      if(exp) gsap.to(exp, { opacity: 0, scale: 0.5, duration: 0.4, ease: "power4.out", overwrite: "auto" });
-    });
+    clearTimeout(hoverIntentTimer); pendingHoverItem = null; hoveredItem = null;
+    if (currentOpenProjectIndex !== null) return;
+    resetGalleryHover();
   });
 }
 
 const galleryView = document.getElementById("gallery-view"), detailView = document.getElementById("detail-view"), giantLayer = document.getElementById("giant-layer"), closeBtnWrapper = document.getElementById("close-btn-wrapper"), mainHeader = document.getElementById("main-header"), contextText = document.getElementById("context-text"), footerLinks = document.getElementById("footer-links");
 let detailScrollTriggers = [];
+let detailResizeObserver = null;
 
 function openDetailView(data) {
   savedScrollPosition = window.scrollY; lenis.stop();
@@ -582,14 +797,15 @@ function openDetailView(data) {
 
   const imgContainer = document.getElementById("det-images"), thumbsContainer = document.getElementById("det-thumbs");
   if(imgContainer && thumbsContainer) {
-    imgContainer.innerHTML = ""; thumbsContainer.innerHTML = "";
+    let boxesHtml = "", thumbsHtml = "";
     data.detailImgs.forEach((src, idx) => {
       const isVideo = src.match(/\.(mp4|webm)$/i);
-      const mediaElement = isVideo ? `<video src="${src}" autoplay loop muted playsinline></video>` : `<img src="${src}" alt="Screenshot">`;
-      const thumbElement = isVideo ? `<video src="${src}" muted></video>` : `<img src="${src}" alt="thumb">`;
-      imgContainer.innerHTML += `<div class="detail-img-box" id="img-${idx}">${mediaElement}</div>`;
-      thumbsContainer.innerHTML += `<div class="thumb-item ${idx === 0 ? "active" : ""}" data-target="img-${idx}">${thumbElement}</div>`;
+      const mediaElement = isVideo ? `<video src="${src}" autoplay loop muted playsinline></video>` : `<img src="${src}" alt="${data.title.en} - ${idx + 1}" decoding="async">`;
+      const thumbElement = isVideo ? `<video src="${src}" muted preload="metadata"></video>` : `<img src="${src}" alt="" decoding="async">`;
+      boxesHtml += `<div class="detail-img-box" id="img-${idx}">${mediaElement}</div>`;
+      thumbsHtml += `<div class="thumb-item ${idx === 0 ? "active" : ""}" data-target="img-${idx}">${thumbElement}</div>`;
     });
+    imgContainer.innerHTML = boxesHtml; thumbsContainer.innerHTML = thumbsHtml;
   }
 
   gsap.to(track, { filter: "blur(15px)", scale: 0.95, opacity: 0, duration: 1.2, ease: "power4.inOut" });
@@ -601,26 +817,28 @@ function openDetailView(data) {
     if(galleryView) galleryView.style.display = "none";
     if(detailView) { detailView.style.display = "block"; window.scrollTo(0, 0); gsap.fromTo(detailView, { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 1.2, ease: "power4.out" }); }
     if(closeBtnWrapper) { closeBtnWrapper.style.display = "flex"; closeBtnWrapper.style.opacity = "0"; gsap.to(closeBtnWrapper, { opacity: 1, duration: 1, delay: 0.4 }); }
-    if(pCanvas) gsap.to(pCanvas, { opacity: 1, duration: 1.2, delay: 0.2 });
+    if(pCanvas) { projParticlesActive = true; gsap.to(pCanvas, { opacity: 1, duration: 1.2, delay: 0.2 }); }
 
     gsap.fromTo(".detail-img-box", { y: 40, opacity: 0 }, { y: 0, opacity: 1, stagger: 0.1, duration: 1.2, ease: "power4.out", delay: 0.1, onComplete: () => gsap.to(".detail-img-box img, .detail-img-box video", { y: -8, duration: 4, repeat: -1, yoyo: true, ease: "sine.inOut", stagger: { each: 0.2, from: "start" } }) });
     lenis.start(); setupDetailScrollSpy(); ScrollTrigger.refresh();
 
     const dCenter = document.getElementById("det-images");
-    if(dCenter) { const ro = new ResizeObserver(() => ScrollTrigger.refresh()); ro.observe(dCenter); }
+    if(dCenter) { if(detailResizeObserver) detailResizeObserver.disconnect(); detailResizeObserver = new ResizeObserver(() => ScrollTrigger.refresh()); detailResizeObserver.observe(dCenter); }
   }, 800);
 }
 
 function closeDetailView() {
   lenis.stop(); currentOpenProjectIndex = null;
   detailScrollTriggers.forEach((st) => st.kill()); detailScrollTriggers = [];
-  if(pCanvas) gsap.to(pCanvas, { opacity: 0, duration: 0.6 });
+  if(detailResizeObserver) { detailResizeObserver.disconnect(); detailResizeObserver = null; }
+  if(pCanvas) gsap.to(pCanvas, { opacity: 0, duration: 0.6, onComplete: () => { projParticlesActive = false; } });
   if(bgLayer) gsap.to(bgLayer, { backgroundColor: "#141414", duration: 0.8, ease: "power4.inOut" });
   
   gsap.to([detailView, closeBtnWrapper], { opacity: 0, y: 30, duration: 0.8, ease: "power4.inOut", onComplete: () => {
       if(detailView) detailView.style.display = "none";
       if(closeBtnWrapper) closeBtnWrapper.style.display = "none";
       if(galleryView) galleryView.style.display = "block";
+      resetGalleryHover();
       window.scrollTo(0, savedScrollPosition);
       const st = ScrollTrigger.getById("galleryScroll"); if(st) st.enable();
       
@@ -692,7 +910,7 @@ let aboutScrollTriggers = [];
 
 if(btnAbout && modalAbout) {
   btnAbout.addEventListener("click", (e) => {
-    e.preventDefault(); lenis.stop(); modalAbout.style.display = "block";
+    e.preventDefault(); lenis.stop(); modalAbout.style.display = "block"; aboutParticlesActive = true;
     gsap.fromTo(modalAbout, { opacity: 0 }, { opacity: 1, duration: 0.6, ease: "power4.out" });
     
     const aboutImg = modalAbout.querySelector(".about-img-box");
@@ -707,6 +925,9 @@ if(btnAbout && modalAbout) {
       const techTags = document.querySelectorAll(".tech-tag"); gsap.set(techTags, { opacity: 0, y: 15 });
       aboutScrollTriggers.push(ScrollTrigger.create({ trigger: ".tech-container", scroller: "#about-modal", start: "top 85%", onEnter: () => gsap.to(techTags, { opacity: 1, y: 0, duration: 1, stagger: 0.03, ease: "back.out(1.5)" }) }));
       
+      const listItems = document.querySelectorAll(".exp-item, .edu-item"); gsap.set(listItems, { opacity: 0, y: 20 });
+      aboutScrollTriggers.push(...ScrollTrigger.batch(listItems, { scroller: "#about-modal", start: "top 92%", once: true, onEnter: (batch) => gsap.to(batch, { opacity: 1, y: 0, duration: 0.9, stagger: 0.08, ease: "power3.out", overwrite: true }) }));
+
       document.querySelectorAll(".skill-fill").forEach((fill) => {
         const tWidth = fill.getAttribute("data-width"); 
         const scaleVal = parseInt(tWidth) / 100;
@@ -718,4 +939,4 @@ if(btnAbout && modalAbout) {
 }
 
 const cab = document.getElementById("close-about-btn");
-if(cab && modalAbout) { cab.addEventListener("click", () => { gsap.to(modalAbout, { opacity: 0, duration: 0.5, ease: "power4.inOut", onComplete: () => { modalAbout.style.display = "none"; lenis.start(); } }); }); }
+if(cab && modalAbout) { cab.addEventListener("click", () => { gsap.to(modalAbout, { opacity: 0, duration: 0.5, ease: "power4.inOut", onComplete: () => { modalAbout.style.display = "none"; aboutParticlesActive = false; lenis.start(); } }); }); }
