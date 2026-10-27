@@ -1,0 +1,14 @@
+<svg viewBox="0 0 800 1200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="socioGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1c0f08"/>
+      <stop offset="100%" stop-color="#7c2d12"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1200" fill="url(#socioGrad)"/>
+  <rect x="60" y="60" width="680" height="1080" fill="none" stroke="#fb923c33" stroke-width="1"/>
+  <text x="400" y="545" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" letter-spacing="4" fill="#fb923c">RECEPCIONISTA</text>
+  <text x="400" y="572" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" letter-spacing="4" fill="#fb923c">BILINGÜE CON IA</text>
+  <text x="400" y="650" text-anchor="middle" font-family="Arial, sans-serif" font-size="58" font-weight="800" fill="#ffffff">SOCIO</text>
+  <text x="400" y="1140" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" letter-spacing="3" fill="#ffffff66">PREVIEW COMING SOON</text>
+</svg>
