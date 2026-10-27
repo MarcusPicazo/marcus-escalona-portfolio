@@ -439,6 +439,16 @@ function markGalleryScrolling() {
   clearTimeout(galleryScrollEndTimer);
   galleryScrollEndTimer = setTimeout(() => { isGalleryScrolling = false; }, 150);
 }
+// El scrub de GSAP sigue deslizando la pista cerca de 1 s después de que termina el scroll, así que
+// también se mide el movimiento real de la pista (px por cuadro) para no activar un hover mientras se desliza.
+let trackLastX = 0, trackMovingUntil = 0;
+gsap.ticker.add(() => {
+  if (!track) return;
+  const x = gsap.getProperty(track, "x");
+  if (Math.abs(x - trackLastX) > 0.4) trackMovingUntil = performance.now() + 120;
+  trackLastX = x;
+});
+const galleryIsMoving = () => isGalleryScrolling || performance.now() < trackMovingUntil;
 
 function initGalleryScroll() {
   const itemsContainer = document.querySelector(".horizontal-section");
@@ -455,15 +465,20 @@ function initGalleryScroll() {
 initGalleryScroll();
 
 let hoverIntentTimer;
+let pendingHoverItem = null;
 items.forEach((item, index) => {
   const data = projectsData[index];
   const exploreBtn = item.querySelector(".explore-indicator");
 
   item.addEventListener("mouseenter", () => {
     clearTimeout(hoverIntentTimer);
+    pendingHoverItem = item;
 
-    hoverIntentTimer = setTimeout(() => {
-      if (currentOpenProjectIndex !== null || isGalleryScrolling) return;
+    // Si la pista aún se desliza (scroll o cola del scrub) se espera y se reintenta, en lugar de descartar
+    // el hover: la tarjeta que quede bajo el cursor se abre en cuanto la galería se detiene.
+    const activateHover = () => {
+      if (pendingHoverItem !== item || currentOpenProjectIndex !== null) return;
+      if (galleryIsMoving()) { hoverIntentTimer = setTimeout(activateHover, 80); return; }
 
       stopFloatingAndAlign();
       
@@ -498,11 +513,13 @@ items.forEach((item, index) => {
           if(explore) gsap.to(explore, { opacity: 0, scale: 0.5, duration: 0.4, ease: "power4.out", overwrite: "auto" });
         }
       });
-    }, 75);
+    };
+    hoverIntentTimer = setTimeout(activateHover, 75);
   });
 
   item.addEventListener("mouseleave", () => {
-    clearTimeout(hoverIntentTimer); 
+    clearTimeout(hoverIntentTimer);
+    if (pendingHoverItem === item) pendingHoverItem = null;
     const vid = item.querySelector(".gallery-video");
     const poster = item.querySelector(".gallery-poster");
     if (vid) { vid.pause(); vid.currentTime = 0; vid.style.opacity = 0; }
@@ -516,7 +533,7 @@ items.forEach((item, index) => {
 
 if(track) {
   track.addEventListener("mouseleave", () => {
-    clearTimeout(hoverIntentTimer); if (currentOpenProjectIndex !== null) return;
+    clearTimeout(hoverIntentTimer); pendingHoverItem = null; if (currentOpenProjectIndex !== null) return;
     
     startFloating();
 
