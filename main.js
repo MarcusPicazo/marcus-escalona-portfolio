@@ -373,8 +373,8 @@ const projectsData = [
     },
     link: "https://apptaylor.com/", repo: "https://github.com/MarcusPicazo/Taylor-Website",
     mainImg: "assets/taylor/taylor-video.mp4",
-    previewImg: "assets/taylor/taylor-placeholder.svg",
-    detailImgs: ["assets/taylor/taylor-placeholder.svg", "assets/taylor/taylor-video.mp4"]
+    previewImg: "assets/taylor/taylor-1.jpg",
+    detailImgs: ["assets/taylor/taylor-1.jpg", "assets/taylor/taylor-video.mp4", "assets/taylor/taylor-2.jpg", "assets/taylor/taylor-3.jpg", "assets/taylor/taylor-4.jpg"]
   },
   {
     id: "taylor-app",
@@ -414,9 +414,9 @@ const projectsData = [
       it: "Piattaforma interna privata per gestire punti, livelli, avatar e ricompense del team, con accesso tramite codici hashati.", ca: "Plataforma interna privada per gestionar punts, nivells, avatars i recompenses de l'equip, amb accés mitjançant codis hashejats."
     },
     link: "https://nimio-levels.netlify.app/login", repo: "https://github.com/MarcusPicazo/NIO-INTERNAL",
-    mainImg: "assets/nimio/nimio-placeholder.svg",
-    previewImg: "assets/nimio/nimio-placeholder.svg",
-    detailImgs: ["assets/nimio/nimio-placeholder.svg"]
+    mainImg: "assets/nimio/nimio-1.jpg",
+    previewImg: "assets/nimio/nimio-1.jpg",
+    detailImgs: ["assets/nimio/nimio-2.jpg"]
   },
   {
     id: "aura-3d",
@@ -445,6 +445,33 @@ const projectsData = [
     mainImg: "assets/aura-landing/aura-landing-video.mp4",
     previewImg: "assets/aura-landing/aura-landing-1.jpg",
     detailImgs: ["assets/aura-landing/aura-landing-video.mp4", "assets/aura-landing/aura-landing-1.jpg", "assets/aura-landing/aura-landing-2.jpg", "assets/aura-landing/aura-landing-3.jpg", "assets/aura-landing/aura-landing-4.jpg", "assets/aura-landing/aura-landing-5.jpg", "assets/aura-landing/aura-landing-6.jpg", "assets/aura-landing/aura-landing-7.jpg"]
+  },
+  {
+    id: "socio",
+    title: { en: "SOCIO", es: "SOCIO", it: "SOCIO", ca: "SOCIO" },
+    color: "#ea580c", category: { en: "AI / Voice Receptionist", es: "IA / Recepcionista de Voz", it: "IA / Receptionist Vocale", ca: "IA / Recepcionista de Veu" },
+    desc: {
+      en: "Socio is a bilingual AI back office for Latino-owned service businesses in the US (roofing, landscaping, cleaning, plumbing, HVAC, painting). The owner runs everything from WhatsApp in Spanish, while customers receive everything in English, professionally.<br><br><strong>Key Features:</strong><br>• Never miss a call: a Vapi voice agent on a Twilio number answers in English, Claude Haiku summarises and classifies the call, and within a minute the owner gets a Spanish summary on WhatsApp with buttons to confirm or call back.<br>• Quote with a voice note: a Spanish voice note is transcribed, Claude Sonnet turns it into an itemised English quote, it is rendered to PDF and emailed with a public accept link, and the owner approves it before anything reaches the customer.<br>• Automatic follow-up: a reminder when the customer does not reply and an alert as soon as the quote is accepted.<br>• Multi-tenant backend with verified webhooks, atomic claim-before-process handling against duplicate events and 111 automated tests.<br>• Guided onboarding: a 15-minute setup with call forwarding per carrier and a test call.<br><br><strong>Technologies:</strong><br>React, TypeScript (strict), Tailwind CSS, Vite, Supabase (Postgres, RLS, Edge Functions, pg_cron), Twilio, Vapi, WhatsApp Cloud API, Claude API, Deepgram, Resend, Stripe, Vercel.<br><br><div class=\"demo-note\"><strong>Note:</strong> MVP. The live app is an operator panel behind a login, so there is no public demo; the full source is in the repository.</div>",
+      es: "Socio es una oficina bilingüe con IA para negocios latinos de servicios en EE. UU. (techadores, jardinería, limpieza, plomería, aire acondicionado, pintura). El dueño maneja todo por WhatsApp, en español, mientras sus clientes reciben todo en inglés, de forma profesional.<br><br><strong>Características Clave:</strong><br>• Nunca más una llamada perdida: un agente de voz de Vapi sobre un número de Twilio contesta en inglés, Claude Haiku resume y clasifica la llamada y en menos de un minuto el dueño recibe por WhatsApp un resumen en español con botones para confirmar o devolver la llamada.<br>• Cotiza con una nota de voz: la nota de voz en español se transcribe, Claude Sonnet la convierte en una cotización desglosada en inglés, se genera en PDF y se envía por correo con un enlace público para aceptarla, y el dueño la aprueba antes de que algo llegue al cliente.<br>• Seguimiento automático: recordatorio si el cliente no responde y aviso en cuanto acepta la cotización.<br>• Backend multi-cliente con webhooks verificados, control atómico contra eventos duplicados y 111 pruebas automatizadas.<br>• Onboarding guiado: configuración de 15 minutos con desvío de llamadas por compañía y llamada de prueba.<br><br><strong>Tecnologías:</strong><br>React, TypeScript (modo estricto), Tailwind CSS, Vite, Supabase (Postgres, RLS, Edge Functions, pg_cron), Twilio, Vapi, WhatsApp Cloud API, Claude API, Deepgram, Resend, Stripe, Vercel.<br><br><div class=\"demo-note\"><strong>Nota:</strong> MVP. La aplicación en línea es un panel de operador con inicio de sesión, por lo que no hay demo pública; el código completo está en el repositorio.</div>",
+      it: "Receptionist bilingue con IA per attività di servizi di proprietà di latini negli USA: risponde alle chiamate, riassume su WhatsApp in spagnolo e genera preventivi in inglese a partire da una nota vocale.", ca: "Recepcionista bilingüe amb IA per a negocis de serveis de propietaris llatins als EUA: respon les trucades, fa resums per WhatsApp en espanyol i genera pressupostos en anglès a partir d'una nota de veu."
+    },
+    repo: "https://github.com/MarcusPicazo/SPEC-Socio",
+    mainImg: "assets/socio/socio-placeholder.svg",
+    previewImg: "assets/socio/socio-placeholder.svg",
+    detailImgs: ["assets/socio/socio-placeholder.svg"]
+  },
+  {
+    id: "bodega-abierta",
+    title: { en: "BODEGA ABIERTA", es: "BODEGA ABIERTA", it: "BODEGA ABIERTA", ca: "BODEGA ABIERTA" },
+    color: "#78716c", category: { en: "Nonprofit / Warehouse Management", es: "Sin Fines de Lucro / Gestión de Almacén", it: "Non Profit / Gestione del Magazzino", ca: "Sense Ànim de Lucre / Gestió de Magatzem" },
+    desc: {
+      en: "Bodega Abierta is an open-source warehouse management system for Mexican food banks (RapiJazz A.C.). It is a multi-tenant, offline-first PWA, so a food bank keeps working even without a connection.<br><br><strong>Key Features:</strong><br>• Donation intake with OCR and barcode scanning (Tesseract.js, jsQR).<br>• FEFO expiry alerts: the products closest to expiring go out first.<br>• Distribution tracking and a donor impact portal.<br>• Sustainability reporting: kg rescued, waste percentage and CO₂e.<br>• I wrote the product specification and the UX for about 35 screens.<br><br><strong>Technologies:</strong><br>Next.js, TypeScript, PostgreSQL, Prisma, offline-first PWA, Tesseract.js, jsQR. Apache-2.0 license.<br><br><div class=\"demo-note\"><strong>Note:</strong> Currently in development; there is no public demo yet.</div>",
+      es: "Bodega Abierta es un sistema de gestión de almacén de código abierto para bancos de alimentos en México (RapiJazz A.C.). Es una PWA multi-cliente y offline-first, de modo que un banco de alimentos sigue trabajando aunque no tenga conexión.<br><br><strong>Características Clave:</strong><br>• Recepción de donativos con OCR y lectura de códigos de barras (Tesseract.js, jsQR).<br>• Alertas de caducidad FEFO: los productos más próximos a caducar salen primero.<br>• Control de entregas y portal de impacto para donantes.<br>• Reportes de sostenibilidad: kg rescatados, porcentaje de merma y CO₂e.<br>• Escribí la especificación de producto y la UX de unas 35 pantallas.<br><br><strong>Tecnologías:</strong><br>Next.js, TypeScript, PostgreSQL, Prisma, PWA offline-first, Tesseract.js, jsQR. Licencia Apache-2.0.<br><br><div class=\"demo-note\"><strong>Nota:</strong> Actualmente en desarrollo; todavía no hay demo pública.</div>",
+      it: "Sistema di gestione del magazzino open source per i banchi alimentari messicani (RapiJazz A.C.): PWA multi-cliente e offline-first con OCR, codici a barre e avvisi di scadenza FEFO. In sviluppo.", ca: "Sistema de gestió de magatzem de codi obert per als bancs d'aliments de Mèxic (RapiJazz A.C.): PWA multiclient i offline-first amb OCR, codis de barres i alertes de caducitat FEFO. En desenvolupament."
+    },
+    mainImg: "assets/bodega-abierta/bodega-placeholder.svg",
+    previewImg: "assets/bodega-abierta/bodega-placeholder.svg",
+    detailImgs: ["assets/bodega-abierta/bodega-placeholder.svg"]
   }
 ];
 
@@ -540,7 +567,7 @@ window.addEventListener("mousemove", (e) => {
   mouseX = e.clientX; mouseY = e.clientY;
 });
 gsap.ticker.add(() => {
-  if(!cursor) return;
+  if(!cursor || isTouchLayout()) return;
   cursorX += (mouseX - cursorX) * 0.6; cursorY += (mouseY - cursorY) * 0.6;
   cursor.style.transform = `translate(calc(${cursorX}px - 50%), calc(${cursorY}px - 50%))`;
 });
@@ -568,6 +595,11 @@ const track = document.querySelector(".gallery-track");
 const bgLayer = document.querySelector(".bg-layer");
 const titleContainer = document.getElementById("dynamic-title");
 
+// Modo táctil / celular: pantallas angostas o sin hover (teléfonos y tablets). Ahí no hay cursor, así que las tarjetas
+// quedan abiertas (CSS), se abren con un toque y el fondo toma el color de la tarjeta centrada. El escritorio con mouse no entra aquí.
+const touchLayoutQuery = window.matchMedia("(max-width: 820px), (hover: none)");
+const isTouchLayout = () => touchLayoutQuery.matches;
+
 if (track) {
   // Se arma todo el HTML y se asigna una sola vez (con `+=` el navegador re-parseaba y recreaba las tarjetas anteriores en cada vuelta).
   track.innerHTML = projectsData.map((proj, index) => {
@@ -592,6 +624,7 @@ let floatTweens = [];
 function startFloating() {
   floatTweens.forEach(t => t.kill());
   floatTweens = [];
+  if (isTouchLayout()) return;
   document.querySelectorAll(".img-wrapper").forEach((wrapper, index) => {
     const tween = gsap.to(wrapper, { y: -10, rotationZ: index % 2 === 0 ? 0.15 : -0.15, duration: 3.5 + (index % 2), repeat: -1, yoyo: true, ease: "sine.inOut", delay: index * 0.3 });
     floatTweens.push(tween);
@@ -621,8 +654,22 @@ gsap.ticker.add(() => {
   const now = performance.now(), x = gsap.getProperty(track, "x"), dt = now - trackLastT;
   if (dt > 0) trackSpeed += (Math.abs(x - trackLastX) / dt * 1000 - trackSpeed) * 0.4;
   trackLastX = x; trackLastT = now;
+  if (isTouchLayout()) syncTouchColor();
 });
 const galleryIsMoving = () => trackSpeed > GALLERY_SETTLE_SPEED;
+
+// En modo táctil el fondo toma el color de la tarjeta que está más cerca del centro de la pantalla.
+let lastTouchIdx = -1;
+function syncTouchColor() {
+  if (!bgLayer || !track || currentOpenProjectIndex !== null || items.length < 2) return;
+  const step = items[1].offsetLeft - items[0].offsetLeft;
+  if (step <= 0) return;
+  const x = gsap.getProperty(track, "x");
+  const idx = Math.max(0, Math.min(items.length - 1, Math.round((window.innerWidth / 2 - x - items[0].offsetLeft - items[0].offsetWidth / 2) / step)));
+  if (idx === lastTouchIdx) return;
+  lastTouchIdx = idx;
+  bgLayer.style.backgroundColor = projectsData[idx].color;
+}
 
 function initGalleryScroll() {
   const itemsContainer = document.querySelector(".horizontal-section");
@@ -635,13 +682,14 @@ function initGalleryScroll() {
   const spectrumBars = document.querySelectorAll(".spectrum-bar");
   let lastActiveBars = -1;
   const getScrollAmount = () => -(track.scrollWidth - window.innerWidth);
-  gsap.to(track, { x: getScrollAmount, ease: "none", scrollTrigger: { trigger: itemsContainer, pin: true, scrub: 1, end: () => `+=${Math.abs(getScrollAmount()) * 2.5}`, invalidateOnRefresh: true, id: "galleryScroll", onUpdate: (self) => { const activeCount = Math.floor(self.progress * totalBars); if (activeCount === lastActiveBars) return; lastActiveBars = activeCount; spectrumBars.forEach((bar, index) => { if (index <= activeCount) bar.classList.add("active"); else bar.classList.remove("active"); }); } } });
+  gsap.to(track, { x: getScrollAmount, ease: "none", scrollTrigger: { trigger: itemsContainer, pin: true, scrub: isTouchLayout() ? 0.5 : 1, end: () => `+=${Math.abs(getScrollAmount()) * (isTouchLayout() ? 0.9 : 2.5)}`, invalidateOnRefresh: true, id: "galleryScroll", onUpdate: (self) => { const activeCount = Math.floor(self.progress * totalBars); if (activeCount === lastActiveBars) return; lastActiveBars = activeCount; spectrumBars.forEach((bar, index) => { if (index <= activeCount) bar.classList.add("active"); else bar.classList.remove("active"); }); } } });
 }
 initGalleryScroll();
 
 let hoverIntentTimer;
 let pendingHoverItem = null, hoveredItem = null;
 const hoverStarters = new Map();
+const itemIndex = new Map([...items].map((el, i) => [el, i]));
 const prefetchedProjects = new Set();
 
 // Mientras el cursor está sobre una tarjeta se precargan las imágenes del detalle, para que al abrir el proyecto ya estén en caché.
@@ -651,7 +699,20 @@ function prefetchProject(data) {
   data.detailImgs.forEach((src) => { if (!/\.(mp4|webm)$/i.test(src)) { const img = new Image(); img.decoding = "async"; img.src = src; } });
 }
 
+// Al abrir una tarjeta las demás se encogen (12vw -> 7.2vw), así que las anteriores empujan a la abierta hacia la izquierda
+// (4.8vw por cada tarjeta previa) y se salía de debajo del cursor, abriendo la siguiente en cascada. Se compensa moviendo la pista
+// con un margen izquierdo animado con la misma curva, de modo que el borde izquierdo de la tarjeta abierta se queda donde estaba.
+function holdCardPosition(item) {
+  const idx = itemIndex.get(item);
+  const vw = window.innerWidth / 100;
+  const compNow = parseFloat(gsap.getProperty(track, "marginLeft")) || 0;
+  const gap = parseFloat(getComputedStyle(items[0]).marginRight) || 0;
+  const finalLeft = items[0].offsetLeft - compNow + idx * (7.2 * vw + gap);
+  gsap.to(track, { marginLeft: item.offsetLeft - finalLeft, duration: 0.8, ease: "power4.out", overwrite: "auto" });
+}
+
 function activateHover(item, data) {
+  if (isTouchLayout()) return;
   hoveredItem = item;
   stopFloatingAndAlign();
   prefetchProject(data);
@@ -670,6 +731,7 @@ function activateHover(item, data) {
     gsap.fromTo(titleContainer, { clipPath: "inset(0 50% 0 50%)", webkitClipPath: "inset(0 50% 0 50%)", opacity: 0 }, { clipPath: "inset(0 0% 0 0%)", webkitClipPath: "inset(0 0% 0 0%)", opacity: 1, duration: 0.8, ease: "power4.out", overwrite: "auto" });
   }
 
+  holdCardPosition(item);
   gsap.to(items, { width: (i, el) => (el === item ? "36vw" : "7.2vw"), filter: (i, el) => el === item ? "grayscale(0%) brightness(1)" : "grayscale(100%) brightness(0.3)", duration: 0.8, ease: "power4.out", overwrite: "auto" });
 
   items.forEach((other) => {
@@ -692,6 +754,7 @@ function activateHover(item, data) {
 // Pone en cola el hover de una tarjeta. Si la pista aún se desliza rápido (scroll o cola del scrub) se espera y se reintenta
 // en lugar de descartarlo: la tarjeta que quede bajo el cursor se abre en cuanto la galería desacelera.
 function queueHover(item, data) {
+  if (isTouchLayout()) return;
   clearTimeout(hoverIntentTimer);
   pendingHoverItem = item;
   const tryActivate = () => {
@@ -733,7 +796,7 @@ gsap.ticker.add(() => {
   const now = performance.now();
   if (now < resolveHoverAt) return;
   resolveHoverAt = now + 100;
-  if (!lastPointer || currentOpenProjectIndex !== null || galleryIsMoving()) return;
+  if (!lastPointer || currentOpenProjectIndex !== null || isTouchLayout() || galleryIsMoving()) return;
   const el = document.elementFromPoint(lastPointer.x, lastPointer.y);
   const item = el ? el.closest(".gallery-item") : null;
   if (item && item !== hoveredItem && item !== pendingHoverItem) hoverStarters.get(item)();
@@ -742,11 +805,13 @@ gsap.ticker.add(() => {
 // Estado de reposo de la galería: fondo oscuro, tarjetas al 12vw en gris, título oculto y flotación activa.
 function resetGalleryHover() {
   clearTimeout(hoverIntentTimer); pendingHoverItem = null; hoveredItem = null;
+  if (isTouchLayout()) { lastTouchIdx = -1; syncTouchColor(); return; }
   startFloating();
 
   if(bgLayer) bgLayer.style.backgroundColor = "#141414";
   if(titleContainer) gsap.to(titleContainer, { clipPath: "inset(0 50% 0 50%)", webkitClipPath: "inset(0 50% 0 50%)", opacity: 0, duration: 0.4, ease: "power2.in", overwrite: "auto" });
   gsap.to(items, { width: "12vw", filter: "grayscale(100%) brightness(0.6)", duration: 0.8, ease: "power4.out", overwrite: "auto" });
+  gsap.to(track, { marginLeft: 0, duration: 0.8, ease: "power4.out", overwrite: "auto" });
 
   items.forEach((other) => {
     const imgWrap = other.querySelector(".img-wrapper");
@@ -764,9 +829,31 @@ function resetGalleryHover() {
 if(track) {
   track.addEventListener("mouseleave", () => {
     clearTimeout(hoverIntentTimer); pendingHoverItem = null; hoveredItem = null;
-    if (currentOpenProjectIndex !== null) return;
+    if (currentOpenProjectIndex !== null || isTouchLayout()) return;
     resetGalleryHover();
   });
+}
+
+// Al cruzar el umbral (girar el teléfono, cambiar el tamaño de la ventana) se limpian los estilos en línea que dejó el hover de escritorio.
+touchLayoutQuery.addEventListener("change", () => {
+  floatTweens.forEach(t => t.kill()); floatTweens = [];
+  clearTimeout(hoverIntentTimer); pendingHoverItem = null; hoveredItem = null;
+  gsap.set(items, { clearProps: "width,filter" });
+  gsap.set(document.querySelectorAll(".img-wrapper, .item-info, .explore-indicator"), { clearProps: "all" });
+  if (titleContainer) gsap.set(titleContainer, { opacity: 0 });
+  lastTouchIdx = -1;
+  gsap.set(track, { clearProps: "marginLeft" });
+  if (currentOpenProjectIndex === null) resetGalleryHover();
+  ScrollTrigger.refresh();
+});
+
+// Selector de idioma: un toque abre/cierra la lista (en táctil no existe :hover) y el enlace "#" ya no manda la página arriba.
+const langBtn = document.getElementById("lang-display-btn");
+const langWrapper = langBtn ? langBtn.closest(".lang-dropdown-wrapper") : null;
+if (langBtn && langWrapper) {
+  langBtn.addEventListener("click", (e) => { e.preventDefault(); langWrapper.classList.toggle("open"); });
+  document.addEventListener("click", (e) => { if (!langWrapper.contains(e.target)) langWrapper.classList.remove("open"); });
+  langWrapper.addEventListener("click", (e) => { if (e.target.closest(".lang-opt")) langWrapper.classList.remove("open"); });
 }
 
 const galleryView = document.getElementById("gallery-view"), detailView = document.getElementById("detail-view"), giantLayer = document.getElementById("giant-layer"), closeBtnWrapper = document.getElementById("close-btn-wrapper"), mainHeader = document.getElementById("main-header"), contextText = document.getElementById("context-text"), footerLinks = document.getElementById("footer-links");
