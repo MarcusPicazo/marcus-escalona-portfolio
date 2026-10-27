@@ -27,7 +27,7 @@ const translations = {
   en: {
     role: "PRODUCT ENGINEER", aboutBtn: "About Me", aboutTitle: "About Me", techTitle: "Tech Stack", langTitle: "Languages & Communication",
     techCat1: "Frontend & Core", techCat2: "AI / LLM & Voice", techCat3: "Integrations & APIs", techCat4: "Cloud & Backend", techCat5: "3D & Performance", techCat6: "Tools & Workflow", expTitle: "Experience", eduTitle: "Education & Certifications",
-    contextText: "SELECTED WORK<br>EdTech · Real-time Systems<br>Interactive Web Products",
+    contextText: "SELECTED WORK<br>Full-Stack · AI & Voice<br>Real-time 3D · Interactive Products",
     aboutText: "I am a British-Mexican Product & Forward Deployed Engineer with 6+ years across product, systems and infrastructure engineering, and I have taken several products from zero to production. I own problems end to end: scoping with non-technical stakeholders, designing the architecture, building in React, TypeScript, Node.js and Python, integrating third-party APIs and shipping. My background in physics and music shapes how I work: I approach data and systems with scientific rigor, and interfaces with creativity and fluidity.<br><br>I lead engineering for a platform suite used by 200+ students and staff — from real-time multiplayer games to in-browser 3D learning environments — and I build independent products: Tezontle 3D, a real-time 3D sales platform for real-estate developers; Socio, a bilingual AI receptionist built on LLMs, speech-to-text and telephony/WhatsApp APIs; and Taylor, a safe-mobility platform for women that I co-founded. I am also developing Bodega Abierta, an open-source warehouse system for Mexican food banks.<br><br>I work AI-native, directing agentic tools like Claude Code to ship fast without trading off quality. I am open to hybrid (CDMX) or remote roles. This is the ecosystem I work with:",
     closeBtn: "CLOSE", explore: "EXPLORE", visitLink: "Visit Application", visitWebsite: "Visit Website", download: "Download", sourceCode: "GitHub Repo", backToCatalog: "BACK TO CATALOG", email: "Email", linkedin: "LinkedIn", github: "GitHub", resume: "Resume", resumeEs: "Resume (ES)",
     skills: { en: { name: "English", lvl: "Native" }, es: { name: "Spanish", lvl: "Native" }, it: { name: "Italian", lvl: "B2" }, ca: { name: "Catalan", lvl: "B2" } },
@@ -35,7 +35,7 @@ const translations = {
   es: {
     role: "PRODUCT ENGINEER", aboutBtn: "Sobre Mí", aboutTitle: "Sobre Mí", techTitle: "Tecnologías", langTitle: "Idiomas y Comunicación",
     techCat1: "Frontend y Core", techCat2: "IA / LLM y Voz", techCat3: "Integraciones y APIs", techCat4: "Nube y Backend", techCat5: "3D y Rendimiento", techCat6: "Herramientas y Flujo de trabajo", expTitle: "Experiencia", eduTitle: "Formación y Certificaciones",
-    contextText: "TRABAJO DESTACADO<br>EdTech · Sistemas en Tiempo Real<br>Productos Web Interactivos",
+    contextText: "TRABAJO DESTACADO<br>Full-Stack · IA y Voz<br>3D en Tiempo Real · Productos Interactivos",
     aboutText: "Soy un Product & Forward Deployed Engineer británico-mexicano con más de 6 años en ingeniería de producto, sistemas e infraestructura, y he llevado varios productos de cero a producción. Me hago cargo de los problemas de punta a punta: defino el alcance con personas no técnicas, diseño la arquitectura, desarrollo en React, TypeScript, Node.js y Python, integro APIs de terceros y lo pongo en producción. Mi formación en física y música marca mi forma de trabajar: abordo los datos y los sistemas con rigor científico, y las interfaces con creatividad y fluidez.<br><br>Dirijo la ingeniería de una suite de plataformas con más de 200 usuarios —desde juegos multijugador en tiempo real hasta entornos de aprendizaje 3D en el navegador— y construyo productos independientes: Tezontle 3D, una plataforma 3D en tiempo real para vender preventas inmobiliarias; Socio, una recepcionista bilingüe con IA construida sobre LLMs, voz a texto y APIs de telefonía y WhatsApp; y Taylor, una plataforma de movilidad segura para mujeres que cofundé. También desarrollo Bodega Abierta, un sistema de almacén de código abierto para bancos de alimentos en México.<br><br>Trabajo de forma AI-native, dirigiendo herramientas agénticas como Claude Code para entregar rápido sin sacrificar calidad. Estoy disponible para roles híbridos (CDMX) o remotos. Este es el ecosistema con el que trabajo:",
     closeBtn: "CERRAR", explore: "EXPLORAR", visitLink: "Visitar Aplicación", visitWebsite: "Visitar Sitio Web", download: "Descarga", sourceCode: "Repositorio GitHub", backToCatalog: "VOLVER AL CATÁLOGO", email: "Email", linkedin: "LinkedIn", github: "GitHub", resume: "Currículum", resumeEs: "Currículum (ES)",
     skills: { en: { name: "Inglés", lvl: "Nativo" }, es: { name: "Español", lvl: "Nativo" }, it: { name: "Italiano", lvl: "B2" }, ca: { name: "Catalán", lvl: "B2" } },
@@ -43,7 +43,7 @@ const translations = {
   it: {
     role: "PRODUCT ENGINEER", aboutBtn: "Su di Me", aboutTitle: "Su di Me", techTitle: "Tecnologie", langTitle: "Lingue e Comunicazione",
     techCat1: "Frontend e Core", techCat2: "IA / LLM e Voce", techCat3: "Integrazioni e API", techCat4: "Cloud e Backend", techCat5: "3D e Prestazioni", techCat6: "Strumenti e Flusso di lavoro", expTitle: "Esperienza", eduTitle: "Formazione e Certificazioni",
-    contextText: "LAVORI IN EVIDENZA<br>EdTech · Sistemi in Tempo Reale<br>Prodotti Web Interattivi",
+    contextText: "LAVORI IN EVIDENZA<br>Full-Stack · IA e Voce<br>3D in Tempo Reale · Prodotti Interattivi",
     aboutText: "Sono un Product & Forward Deployed Engineer britannico-messicano con oltre 6 anni di esperienza in ingegneria di prodotto, sistemi e infrastruttura, e ho portato diversi prodotti da zero alla produzione. Mi occupo dei problemi dall'inizio alla fine: definisco l'ambito con persone non tecniche, progetto l'architettura, sviluppo in React, TypeScript, Node.js e Python, integro API di terze parti e rilascio. La mia formazione in fisica e musica definisce il mio modo di lavorare: affronto dati e sistemi con rigore scientifico, e le interfacce con creatività e fluidità.<br><br>Guido l'ingegneria di una suite di piattaforme usata da oltre 200 persone — dai giochi multiplayer in tempo reale agli ambienti di apprendimento 3D nel browser — e costruisco prodotti indipendenti: Tezontle 3D, una piattaforma 3D in tempo reale per vendere immobili in prevendita; Socio, una receptionist bilingue con IA basata su LLM, riconoscimento vocale e API di telefonia e WhatsApp; e Taylor, una piattaforma di mobilità sicura per le donne che ho cofondato. Sto inoltre sviluppando Bodega Abierta, un sistema di magazzino open source per i banchi alimentari messicani.<br><br>Lavoro in modo AI-native, dirigendo strumenti agentici come Claude Code per consegnare in fretta senza sacrificare la qualità. Sono disponibile per ruoli ibridi (CDMX) o da remoto. Questo è l'ecosistema con cui lavoro:",
     closeBtn: "CHIUDI", explore: "ESPLORA", visitLink: "Visita l'App", visitWebsite: "Visita il Sito", download: "Scarica", sourceCode: "Repo GitHub", backToCatalog: "TORNA AL CATALOGO", email: "Email", linkedin: "LinkedIn", github: "GitHub", resume: "Curriculum", resumeEs: "Curriculum (ES)",
     skills: { en: { name: "Inglese", lvl: "Madrelingua" }, es: { name: "Spagnolo", lvl: "Madrelingua" }, it: { name: "Italiano", lvl: "B2" }, ca: { name: "Catalano", lvl: "B2" } },
@@ -51,7 +51,7 @@ const translations = {
   ca: {
     role: "PRODUCT ENGINEER", aboutBtn: "Sobre Mi", aboutTitle: "Sobre Mi", techTitle: "Tecnologies", langTitle: "Idiomes i Comunicació",
     techCat1: "Frontend i Core", techCat2: "IA / LLM i Veu", techCat3: "Integracions i APIs", techCat4: "Núvol i Backend", techCat5: "3D i Rendiment", techCat6: "Eines i Flux de treball", expTitle: "Experiència", eduTitle: "Formació i Certificacions",
-    contextText: "TREBALL DESTACAT<br>EdTech · Sistemes en Temps Real<br>Productes Web Interactius",
+    contextText: "TREBALL DESTACAT<br>Full-Stack · IA i Veu<br>3D en Temps Real · Productes Interactius",
     aboutText: "Sóc un Product & Forward Deployed Engineer britànic-mexicà amb més de 6 anys en enginyeria de producte, sistemes i infraestructura, i he portat diversos productes de zero a producció. M'encarrego dels problemes de punta a punta: defineixo l'abast amb persones no tècniques, dissenyo l'arquitectura, desenvolupo en React, TypeScript, Node.js i Python, integro APIs de tercers i ho poso en producció. La meva formació en física i música marca la meva manera de treballar: abordo les dades i els sistemes amb rigor científic, i les interfícies amb creativitat i fluïdesa.<br><br>Dirigeixo l'enginyeria d'una suite de plataformes amb més de 200 usuaris —des de jocs multijugador en temps real fins a entorns d'aprenentatge 3D al navegador— i construeixo productes independents: Tezontle 3D, una plataforma 3D en temps real per vendre immobles en preventa; Socio, una recepcionista bilingüe amb IA construïda sobre LLMs, veu a text i APIs de telefonia i WhatsApp; i Taylor, una plataforma de mobilitat segura per a dones que vaig cofundar. També desenvolupo Bodega Abierta, un sistema de magatzem de codi obert per a bancs d'aliments a Mèxic.<br><br>Treballo de manera AI-native, dirigint eines agèntiques com Claude Code per lliurar ràpid sense sacrificar la qualitat. Estic disponible per a rols híbrids (CDMX) o en remot. Aquest és l'ecosistema amb què treballo:",
     closeBtn: "TANCAR", explore: "EXPLORAR", visitLink: "Visitar Aplicació", visitWebsite: "Visitar Lloc Web", download: "Descarrega", sourceCode: "Repositori GitHub", backToCatalog: "TORNAR AL CATÀLEG", email: "Correu", linkedin: "LinkedIn", github: "GitHub", resume: "Currículum", resumeEs: "Currículum (ES)",
     skills: { en: { name: "Anglès", lvl: "Natiu" }, es: { name: "Espanyol", lvl: "Natiu" }, it: { name: "Italià", lvl: "B2" }, ca: { name: "Català", lvl: "B2" } },
@@ -469,6 +469,7 @@ const projectsData = [
       es: "Bodega Abierta es un sistema de gestión de almacén de código abierto para bancos de alimentos en México (RapiJazz A.C.). Es una PWA multi-cliente y offline-first, de modo que un banco de alimentos sigue trabajando aunque no tenga conexión.<br><br><strong>Características Clave:</strong><br>• Recepción de donativos con OCR y lectura de códigos de barras (Tesseract.js, jsQR).<br>• Alertas de caducidad FEFO: los productos más próximos a caducar salen primero.<br>• Control de entregas y portal de impacto para donantes.<br>• Reportes de sostenibilidad: kg rescatados, porcentaje de merma y CO₂e.<br>• Escribí la especificación de producto y la UX de unas 35 pantallas.<br><br><strong>Tecnologías:</strong><br>Next.js, TypeScript, PostgreSQL, Prisma, PWA offline-first, Tesseract.js, jsQR. Licencia Apache-2.0.<br><br><div class=\"demo-note\"><strong>Nota:</strong> Actualmente en desarrollo; todavía no hay demo pública.</div>",
       it: "Sistema di gestione del magazzino open source per i banchi alimentari messicani (RapiJazz A.C.): PWA multi-cliente e offline-first con OCR, codici a barre e avvisi di scadenza FEFO. In sviluppo.", ca: "Sistema de gestió de magatzem de codi obert per als bancs d'aliments de Mèxic (RapiJazz A.C.): PWA multiclient i offline-first amb OCR, codis de barres i alertes de caducitat FEFO. En desenvolupament."
     },
+    repo: "https://github.com/MarcusPicazo/bodega-abierta",
     mainImg: "assets/bodega-abierta/bodega-placeholder.svg",
     previewImg: "assets/bodega-abierta/bodega-placeholder.svg",
     detailImgs: ["assets/bodega-abierta/bodega-placeholder.svg"]
@@ -689,7 +690,6 @@ initGalleryScroll();
 let hoverIntentTimer;
 let pendingHoverItem = null, hoveredItem = null;
 const hoverStarters = new Map();
-const itemIndex = new Map([...items].map((el, i) => [el, i]));
 const prefetchedProjects = new Set();
 
 // Mientras el cursor está sobre una tarjeta se precargan las imágenes del detalle, para que al abrir el proyecto ya estén en caché.
@@ -699,16 +699,20 @@ function prefetchProject(data) {
   data.detailImgs.forEach((src) => { if (!/\.(mp4|webm)$/i.test(src)) { const img = new Image(); img.decoding = "async"; img.src = src; } });
 }
 
-// Al abrir una tarjeta las demás se encogen (12vw -> 7.2vw), así que las anteriores empujan a la abierta hacia la izquierda
-// (4.8vw por cada tarjeta previa) y se salía de debajo del cursor, abriendo la siguiente en cascada. Se compensa moviendo la pista
-// con un margen izquierdo animado con la misma curva, de modo que el borde izquierdo de la tarjeta abierta se queda donde estaba.
-function holdCardPosition(item) {
-  const idx = itemIndex.get(item);
+// Las tarjetas nunca cambian de lugar: cada una ocupa siempre su espacio fijo (12vw + 2vw de separación) y la tarjeta abierta se
+// ensancha sobre su vecindad con márgenes negativos. Su huella en la fila no cambia, así que no se recorren las demás tarjetas
+// ni la pista; solo se abre y se cierra. Si está cerca del borde de la pantalla se ensancha hacia el lado que tiene lugar.
+const CARD_SLOT_VW = 12, CARD_OPEN_VW = 36, CARD_GAP_VW = 2;
+let hoverZ = 5;
+function openCardBox(item) {
   const vw = window.innerWidth / 100;
-  const compNow = parseFloat(gsap.getProperty(track, "marginLeft")) || 0;
-  const gap = parseFloat(getComputedStyle(items[0]).marginRight) || 0;
-  const finalLeft = items[0].offsetLeft - compNow + idx * (7.2 * vw + gap);
-  gsap.to(track, { marginLeft: item.offsetLeft - finalLeft, duration: 0.8, ease: "power4.out", overwrite: "auto" });
+  const slotW = CARD_SLOT_VW * vw, extra = (CARD_OPEN_VW - CARD_SLOT_VW) * vw, edge = CARD_GAP_VW * vw;
+  const slotLeft = item.getBoundingClientRect().left - (parseFloat(gsap.getProperty(item, "marginLeft")) || 0);
+  let left = Math.min(extra / 2, Math.max(0, slotLeft - edge));
+  let right = extra - left;
+  const over = slotLeft + slotW + right - (window.innerWidth - edge);
+  if (over > 0) { right = Math.max(0, right - over); left = extra - right; }
+  return { left, right, width: slotW + extra, gap: edge };
 }
 
 function activateHover(item, data) {
@@ -731,8 +735,9 @@ function activateHover(item, data) {
     gsap.fromTo(titleContainer, { clipPath: "inset(0 50% 0 50%)", webkitClipPath: "inset(0 50% 0 50%)", opacity: 0 }, { clipPath: "inset(0 0% 0 0%)", webkitClipPath: "inset(0 0% 0 0%)", opacity: 1, duration: 0.8, ease: "power4.out", overwrite: "auto" });
   }
 
-  holdCardPosition(item);
-  gsap.to(items, { width: (i, el) => (el === item ? "36vw" : "7.2vw"), filter: (i, el) => el === item ? "grayscale(0%) brightness(1)" : "grayscale(100%) brightness(0.3)", duration: 0.8, ease: "power4.out", overwrite: "auto" });
+  const box = openCardBox(item);
+  item.style.zIndex = String(++hoverZ);
+  gsap.to(items, { width: (i, el) => (el === item ? `${box.width}px` : "12vw"), marginLeft: (i, el) => (el === item ? `${-box.left}px` : "0px"), marginRight: (i, el) => (el === item ? `${box.gap - box.right}px` : "2vw"), filter: (i, el) => el === item ? "grayscale(0%) brightness(1)" : "grayscale(100%) brightness(0.3)", duration: 0.8, ease: "power4.out", overwrite: "auto" });
 
   items.forEach((other) => {
     const imgWrap = other.querySelector(".img-wrapper");
@@ -810,8 +815,7 @@ function resetGalleryHover() {
 
   if(bgLayer) bgLayer.style.backgroundColor = "#141414";
   if(titleContainer) gsap.to(titleContainer, { clipPath: "inset(0 50% 0 50%)", webkitClipPath: "inset(0 50% 0 50%)", opacity: 0, duration: 0.4, ease: "power2.in", overwrite: "auto" });
-  gsap.to(items, { width: "12vw", filter: "grayscale(100%) brightness(0.6)", duration: 0.8, ease: "power4.out", overwrite: "auto" });
-  gsap.to(track, { marginLeft: 0, duration: 0.8, ease: "power4.out", overwrite: "auto" });
+  gsap.to(items, { width: "12vw", marginLeft: "0px", marginRight: "2vw", filter: "grayscale(100%) brightness(0.6)", duration: 0.8, ease: "power4.out", overwrite: "auto", onComplete: () => { items.forEach((el) => { el.style.zIndex = ""; }); hoverZ = 5; } });
 
   items.forEach((other) => {
     const imgWrap = other.querySelector(".img-wrapper");
@@ -838,11 +842,10 @@ if(track) {
 touchLayoutQuery.addEventListener("change", () => {
   floatTweens.forEach(t => t.kill()); floatTweens = [];
   clearTimeout(hoverIntentTimer); pendingHoverItem = null; hoveredItem = null;
-  gsap.set(items, { clearProps: "width,filter" });
+  gsap.set(items, { clearProps: "width,filter,marginLeft,marginRight,zIndex" });
   gsap.set(document.querySelectorAll(".img-wrapper, .item-info, .explore-indicator"), { clearProps: "all" });
   if (titleContainer) gsap.set(titleContainer, { opacity: 0 });
   lastTouchIdx = -1;
-  gsap.set(track, { clearProps: "marginLeft" });
   if (currentOpenProjectIndex === null) resetGalleryHover();
   ScrollTrigger.refresh();
 });

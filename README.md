@@ -3,9 +3,9 @@
 🔗 Live site: [marcusescalona.art](https://marcusescalona.art)
 📄 License: [MIT](LICENSE)
 
-Welcome to my interactive portfolio! I am a Product Engineer specializing in the intersection of EdTech and interactive web systems. 
+Welcome to my interactive portfolio! I am a Product & Forward Deployed Engineer working across full-stack, AI/LLM & voice AI, and real-time 3D. 
 
-This repository houses the source code for my digital portfolio, an immersive web experience designed to showcase my projects in EdTech, 3D web environments, and real-time interactive systems.
+This repository houses the source code for my digital portfolio, an immersive web experience designed to showcase my projects in real-time 3D, AI and voice products, and interactive web systems.
 
 ## 🚀 Technical Highlight
 This portfolio is built to reflect my development philosophy: reducing cognitive friction through immersive design while maintaining rigorous engineering standards.
@@ -43,9 +43,9 @@ To run this project locally and avoid CORS issues when interacting with local as
 🔗 Sitio en vivo: [marcusescalona.art](https://marcusescalona.art)
 📄 Licencia: [MIT](LICENSE)
 
-¡Bienvenido a mi portafolio interactivo! Soy un Product Engineer especializado en la intersección entre EdTech y sistemas web interactivos.
+¡Bienvenido a mi portafolio interactivo! Soy un Product & Forward Deployed Engineer que trabaja en full-stack, IA/LLM y voz con IA, y 3D en tiempo real.
 
-Este repositorio contiene el código fuente de mi portafolio digital, una experiencia web inmersiva diseñada para mostrar mis proyectos en EdTech, entornos web 3D y sistemas interactivos en tiempo real.
+Este repositorio contiene el código fuente de mi portafolio digital, una experiencia web inmersiva diseñada para mostrar mis proyectos en 3D en tiempo real, productos de IA y voz, y sistemas web interactivos.
 
 ## 🚀 Aspectos Técnicos Destacados
 Este portafolio está construido para reflejar mi filosofía de desarrollo: reducir la fricción cognitiva a través del diseño inmersivo manteniendo rigurosos estándares de ingeniería.

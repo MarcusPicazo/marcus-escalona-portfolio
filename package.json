@@ -1,7 +1,7 @@
 {
   "name": "marcus-escalona-portfolio",
   "version": "1.0.0",
-  "description": "Interactive 3D and EdTech portfolio for Marcus Escalona.",
+  "description": "Interactive portfolio of Marcus Escalona: full-stack, AI/LLM & voice AI, and real-time 3D.",
   "main": "main.js",
   "scripts": {
     "start": "serve",
@@ -9,7 +9,8 @@
   },
   "keywords": [
     "portfolio",
-    "edtech",
+    "ai",
+    "real-time-3d",
     "gsap",
     "lenis",
     "threejs",
