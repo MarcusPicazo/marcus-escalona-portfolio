@@ -62,6 +62,27 @@ const translations = {
 // Experiencia y formación del About (del CV). Los textos van por idioma; empresas y fechas numéricas no cambian.
 const experienceData = [
   {
+    "org": "Tezontle 3D · Taylor · Bodega Abierta",
+    "role": {
+      "en": "Independent Product & Backend Engineer",
+      "es": "Ingeniero de Producto y Backend Independiente",
+      "it": "Ingegnere di Prodotto e Backend Indipendente",
+      "ca": "Enginyer de Producte i Backend Independent"
+    },
+    "dates": {
+      "en": "Ongoing",
+      "es": "En curso",
+      "it": "In corso",
+      "ca": "En curs"
+    },
+    "desc": {
+      "en": "Built Tezontle 3D, a real-time 3D sales platform for real-estate developers (React Three Fiber, Supabase Realtime and RLS, a sales portal with a lightweight CRM) that cut a new client from about 6 weeks to 1–2. Co-founded Taylor, a safe-mobility platform for women with a live Android app and a desktop app for companies. Building C# / ASP.NET Core APIs with EF Core and SQL Server: the multi-tenant core of Bodega Abierta, an open-source system for food banks, and the CIT-Sync Rules API, with xUnit tests and CI.",
+      "es": "Construí Tezontle 3D, una plataforma 3D en tiempo real para vender preventas inmobiliarias (React Three Fiber, Supabase Realtime y RLS, portal comercial con CRM ligero) que bajó la puesta en marcha de un cliente nuevo de ~6 semanas a 1–2. Cofundé Taylor, una plataforma de movilidad segura para mujeres con app Android en producción y app de escritorio para empresas. Construyo APIs en C# / ASP.NET Core con EF Core y SQL Server: el núcleo multi-cliente de Bodega Abierta, un sistema de código abierto para bancos de alimentos, y la API de reglas de CIT-Sync, con pruebas xUnit y CI.",
+      "it": "Ho costruito Tezontle 3D, una piattaforma 3D in tempo reale per vendere immobili in prevendita (React Three Fiber, Supabase Realtime e RLS, portale commerciale con CRM leggero) che ha ridotto l'avvio di un nuovo cliente da circa 6 settimane a 1–2. Ho cofondato Taylor, una piattaforma di mobilità sicura per le donne con app Android attiva e app desktop per le aziende. Costruisco API in C# / ASP.NET Core con EF Core e SQL Server: il nucleo multi-cliente di Bodega Abierta, un sistema open source per i banchi alimentari, e la API di regole di CIT-Sync, con test xUnit e CI.",
+      "ca": "Vaig construir Tezontle 3D, una plataforma 3D en temps real per vendre immobles en preventa (React Three Fiber, Supabase Realtime i RLS, portal comercial amb CRM lleuger) que va reduir la posada en marxa d'un client nou d'unes 6 setmanes a 1–2. Vaig cofundar Taylor, una plataforma de mobilitat segura per a dones amb app Android en producció i app d'escriptori per a empreses. Construeixo APIs en C# / ASP.NET Core amb EF Core i SQL Server: el nucli multiclient de Bodega Abierta, un sistema de codi obert per a bancs d'aliments, i l'API de regles de CIT-Sync, amb proves xUnit i CI."
+    }
+  },
+  {
     "org": "Escuela Berta Von Glümer",
     "role": {
       "en": "Lead Product Engineer",
@@ -76,10 +97,10 @@ const experienceData = [
       "ca": "Oct 2023 – Actualitat"
     },
     "desc": {
-      "en": "Architected and shipped a suite of five React and TypeScript apps for 200+ students and staff, plus three interactive 3D learning environments in Three.js and WebGL. Led EBVG-Hoot, a real-time multiplayer platform, and built CIT-Sync, replacing manual spreadsheet workflows across departments.",
-      "es": "Diseñé y lancé una suite de cinco apps en React y TypeScript para más de 200 alumnos y personal, además de tres entornos de aprendizaje 3D interactivos en Three.js y WebGL. Lideré EBVG-Hoot, una plataforma multijugador en tiempo real, y creé CIT-Sync, que reemplazó flujos manuales en hojas de cálculo entre departamentos.",
-      "it": "Ho progettato e rilasciato una suite di cinque app in React e TypeScript per oltre 200 studenti e membri del personale, più tre ambienti di apprendimento 3D interattivi in Three.js e WebGL. Ho guidato EBVG-Hoot, una piattaforma multiplayer in tempo reale, e creato CIT-Sync, che ha sostituito i flussi manuali su fogli di calcolo tra i reparti.",
-      "ca": "Vaig dissenyar i llançar una suite de cinc apps en React i TypeScript per a més de 200 alumnes i personal, a més de tres entorns d'aprenentatge 3D interactius en Three.js i WebGL. Vaig liderar EBVG-Hoot, una plataforma multijugador en temps real, i vaig crear CIT-Sync, que va substituir fluxos manuals en fulls de càlcul entre departaments."
+      "en": "Architected and shipped a suite of five React and TypeScript apps for 200+ students and staff, plus three interactive 3D learning environments in Three.js and WebGL (a solar system explorer, a colour-mixing art studio and a parkour game with custom collision physics). Led EBVG-Hoot, a real-time multiplayer platform on Firestore, and built CIT-Sync, a real-time platform for room and equipment reservations with role-based approval, hardware inventory and software requests, replacing manual spreadsheet workflows.",
+      "es": "Diseñé y lancé una suite de cinco apps en React y TypeScript para más de 200 alumnos y personal, además de tres entornos de aprendizaje 3D interactivos en Three.js y WebGL (un explorador del sistema solar, un estudio de mezcla de colores y un juego de parkour con física de colisiones propia). Lideré EBVG-Hoot, una plataforma multijugador en tiempo real sobre Firestore, y construí CIT-Sync, una plataforma en tiempo real para reservar salones y equipo, con aprobación por roles, inventario de hardware y solicitudes de software, que reemplazó flujos manuales en hojas de cálculo.",
+      "it": "Ho progettato e rilasciato una suite di cinque app in React e TypeScript per oltre 200 studenti e membri del personale, più tre ambienti di apprendimento 3D interattivi in Three.js e WebGL (un esploratore del sistema solare, uno studio di mescolanza dei colori e un gioco di parkour con fisica delle collisioni personalizzata). Ho guidato EBVG-Hoot, una piattaforma multiplayer in tempo reale su Firestore, e costruito CIT-Sync, una piattaforma in tempo reale per prenotare aule e attrezzature, con approvazione per ruoli, inventario hardware e richieste software, che ha sostituito i flussi manuali su fogli di calcolo.",
+      "ca": "Vaig dissenyar i llançar una suite de cinc apps en React i TypeScript per a més de 200 alumnes i personal, a més de tres entorns d'aprenentatge 3D interactius en Three.js i WebGL (un explorador del sistema solar, un estudi de barreja de colors i un joc de parkour amb física de col·lisions pròpia). Vaig liderar EBVG-Hoot, una plataforma multijugador en temps real sobre Firestore, i vaig construir CIT-Sync, una plataforma en temps real per reservar aules i equips, amb aprovació per rols, inventari de maquinari i sol·licituds de programari, que va substituir fluxos manuals en fulls de càlcul."
     }
   },
   {
