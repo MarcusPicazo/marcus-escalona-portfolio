@@ -255,6 +255,12 @@ header .logo { justify-self: start; font-family: "Inter", sans-serif; font-weigh
 #det-repo .hover-layer { color: #000; clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%); }
 #det-repo:hover .base-layer { clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%); }
 #det-repo:hover .hover-layer { clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); }
+#det-repo2::before { content: ""; position: absolute; inset: 0; background: #fff; clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%); transition: clip-path 0.5s cubic-bezier(0.77, 0, 0.175, 1); z-index: 0; }
+#det-repo2:hover::before { clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); }
+#det-repo2 .base-layer { color: #fff; clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); }
+#det-repo2 .hover-layer { color: #000; clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%); }
+#det-repo2:hover .base-layer { clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%); }
+#det-repo2:hover .hover-layer { clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); }
 
 /* ESTILOS DE NOTA ELEGANTE */
 .demo-note {
