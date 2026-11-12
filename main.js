@@ -26,7 +26,7 @@ const allLangsConfig = [
 const translations = {
   en: {
     role: "PRODUCT ENGINEER", aboutBtn: "About Me", aboutTitle: "About Me", techTitle: "Tech Stack", langTitle: "Languages & Communication",
-    techCat1: "Frontend & Core", techCat2: "AI / LLM & Voice", techCat3: "Integrations & APIs", techCat4: "Cloud & Backend", techCat5: "3D & Performance", techCat6: "Tools & Workflow", techCat7: ".NET Backend", techCat8: "Testing & DevOps", expTitle: "Experience", eduTitle: "Education & Certifications",
+    techCat1: "Frontend & Core", techCat2: "AI / LLM & Voice", techCat3: "Integrations & APIs", techCat4: "Cloud & Backend", techCat5: "3D & Performance", techCat6: "Tools & Workflow", techCat7: ".NET Backend", techCat8: "Testing & DevOps", aboutHeadline: "Building products end to end — from the first conversation to production.", aboutMeta: ["Mexico City","Hybrid CDMX / Remote","EN · ES native"], aboutStats: ["Years of experience","Users on platforms I lead","Projects in this portfolio","Languages"], aboutNow: "What I build now", aboutHow: "How I work", expTitle: "Experience", eduTitle: "Education & Certifications",
     contextText: "SELECTED WORK<br>Full-Stack · AI & Voice<br>Real-time 3D · Interactive Products",
     aboutText: "I am a British-Mexican Product & Forward Deployed Engineer with 6+ years across product, systems and infrastructure engineering, and I have taken several products from zero to production. I own problems end to end: scoping with non-technical stakeholders, designing the architecture, building in React, TypeScript, Node.js and Python, integrating third-party APIs and shipping. My background in physics and music shapes how I work: I approach data and systems with scientific rigor, and interfaces with creativity and fluidity.<br><br>I lead engineering for a platform suite used by 500+ students and staff — from real-time multiplayer games to in-browser 3D learning environments — and I build independent products: Tezontle 3D, a real-time 3D sales platform for real-estate developers that I founded and run as CTO; and Taylor, a safe-mobility platform for women that I co-founded and run as CTO and developer. I am also developing Bodega Abierta, an open-source warehouse system for Mexican food banks.<br><br>On the backend side I build C# / ASP.NET Core APIs with EF Core and SQL Server — the multi-tenant core of Bodega Abierta and the CIT-Sync Rules API — covered by automated tests and CI. I work AI-native, directing agentic tools like Claude Code to ship fast without trading off quality. I am open to hybrid (CDMX) or remote roles. This is the ecosystem I work with:",
     closeBtn: "CLOSE", explore: "EXPLORE", visitLink: "Visit Application", visitWebsite: "Visit Website", download: "Download", sourceCode: "GitHub Repo", backToCatalog: "BACK TO CATALOG", email: "Email", linkedin: "LinkedIn", github: "GitHub", resume: "Resume", resumeEs: "Resume (ES)",
@@ -34,7 +34,7 @@ const translations = {
   },
   es: {
     role: "PRODUCT ENGINEER", aboutBtn: "Sobre Mí", aboutTitle: "Sobre Mí", techTitle: "Tecnologías", langTitle: "Idiomas y Comunicación",
-    techCat1: "Frontend y Core", techCat2: "IA / LLM y Voz", techCat3: "Integraciones y APIs", techCat4: "Nube y Backend", techCat5: "3D y Rendimiento", techCat6: "Herramientas y Flujo de trabajo", techCat7: "Backend .NET", techCat8: "Pruebas y DevOps", expTitle: "Experiencia", eduTitle: "Formación y Certificaciones",
+    techCat1: "Frontend y Core", techCat2: "IA / LLM y Voz", techCat3: "Integraciones y APIs", techCat4: "Nube y Backend", techCat5: "3D y Rendimiento", techCat6: "Herramientas y Flujo de trabajo", techCat7: "Backend .NET", techCat8: "Pruebas y DevOps", aboutHeadline: "Construyo productos de punta a punta: de la primera conversación a producción.", aboutMeta: ["Ciudad de México","Híbrido CDMX / Remoto","EN · ES nativo"], aboutStats: ["Años de experiencia","Usuarios en plataformas que dirijo","Proyectos en este portafolio","Idiomas"], aboutNow: "Lo que construyo hoy", aboutHow: "Cómo trabajo", expTitle: "Experiencia", eduTitle: "Formación y Certificaciones",
     contextText: "TRABAJO DESTACADO<br>Full-Stack · IA y Voz<br>3D en Tiempo Real · Productos Interactivos",
     aboutText: "Soy un Product & Forward Deployed Engineer británico-mexicano con más de 6 años en ingeniería de producto, sistemas e infraestructura, y he llevado varios productos de cero a producción. Me hago cargo de los problemas de punta a punta: defino el alcance con personas no técnicas, diseño la arquitectura, desarrollo en React, TypeScript, Node.js y Python, integro APIs de terceros y lo pongo en producción. Mi formación en física y música marca mi forma de trabajar: abordo los datos y los sistemas con rigor científico, y las interfaces con creatividad y fluidez.<br><br>Dirijo la ingeniería de una suite de plataformas con más de 500 usuarios —desde juegos multijugador en tiempo real hasta entornos de aprendizaje 3D en el navegador— y construyo productos independientes: Tezontle 3D, una plataforma 3D en tiempo real para vender preventas inmobiliarias que fundé y dirijo como CTO; y Taylor, una plataforma de movilidad segura para mujeres que cofundé y dirijo como CTO y desarrollador. También desarrollo Bodega Abierta, un sistema de almacén de código abierto para bancos de alimentos en México.<br><br>En backend construyo APIs en C# / ASP.NET Core con EF Core y SQL Server —el núcleo multi-cliente de Bodega Abierta y la API de reglas de CIT-Sync—, con pruebas automatizadas y CI. Trabajo de forma AI-native, dirigiendo herramientas agénticas como Claude Code para entregar rápido sin sacrificar calidad. Estoy disponible para roles híbridos (CDMX) o remotos. Este es el ecosistema con el que trabajo:",
     closeBtn: "CERRAR", explore: "EXPLORAR", visitLink: "Visitar Aplicación", visitWebsite: "Visitar Sitio Web", download: "Descarga", sourceCode: "Repositorio GitHub", backToCatalog: "VOLVER AL CATÁLOGO", email: "Email", linkedin: "LinkedIn", github: "GitHub", resume: "Currículum", resumeEs: "Currículum (ES)",
@@ -42,7 +42,7 @@ const translations = {
   },
   it: {
     role: "PRODUCT ENGINEER", aboutBtn: "Su di Me", aboutTitle: "Su di Me", techTitle: "Tecnologie", langTitle: "Lingue e Comunicazione",
-    techCat1: "Frontend e Core", techCat2: "IA / LLM e Voce", techCat3: "Integrazioni e API", techCat4: "Cloud e Backend", techCat5: "3D e Prestazioni", techCat6: "Strumenti e Flusso di lavoro", techCat7: "Backend .NET", techCat8: "Test e DevOps", expTitle: "Esperienza", eduTitle: "Formazione e Certificazioni",
+    techCat1: "Frontend e Core", techCat2: "IA / LLM e Voce", techCat3: "Integrazioni e API", techCat4: "Cloud e Backend", techCat5: "3D e Prestazioni", techCat6: "Strumenti e Flusso di lavoro", techCat7: "Backend .NET", techCat8: "Test e DevOps", aboutHeadline: "Costruisco prodotti dall'inizio alla fine: dalla prima conversazione alla produzione.", aboutMeta: ["Città del Messico","Ibrido CDMX / Remoto","EN · ES madrelingua"], aboutStats: ["Anni di esperienza","Utenti sulle piattaforme che guido","Progetti in questo portfolio","Lingue"], aboutNow: "Cosa costruisco oggi", aboutHow: "Come lavoro", expTitle: "Esperienza", eduTitle: "Formazione e Certificazioni",
     contextText: "LAVORI IN EVIDENZA<br>Full-Stack · IA e Voce<br>3D in Tempo Reale · Prodotti Interattivi",
     aboutText: "Sono un Product & Forward Deployed Engineer britannico-messicano con oltre 6 anni di esperienza in ingegneria di prodotto, sistemi e infrastruttura, e ho portato diversi prodotti da zero alla produzione. Mi occupo dei problemi dall'inizio alla fine: definisco l'ambito con persone non tecniche, progetto l'architettura, sviluppo in React, TypeScript, Node.js e Python, integro API di terze parti e rilascio. La mia formazione in fisica e musica definisce il mio modo di lavorare: affronto dati e sistemi con rigore scientifico, e le interfacce con creatività e fluidità.<br><br>Guido l'ingegneria di una suite di piattaforme usata da oltre 500 persone — dai giochi multiplayer in tempo reale agli ambienti di apprendimento 3D nel browser — e costruisco prodotti indipendenti: Tezontle 3D, una piattaforma 3D in tempo reale per vendere immobili in prevendita che ho fondato e dirigo come CTO; e Taylor, una piattaforma di mobilità sicura per le donne che ho cofondato e dirigo come CTO e sviluppatore. Sto inoltre sviluppando Bodega Abierta, un sistema di magazzino open source per i banchi alimentari messicani.<br><br>Lato backend costruisco API in C# / ASP.NET Core con EF Core e SQL Server — il nucleo multi-cliente di Bodega Abierta e la API di regole di CIT-Sync — con test automatici e CI. Lavoro in modo AI-native, dirigendo strumenti agentici come Claude Code per consegnare in fretta senza sacrificare la qualità. Sono disponibile per ruoli ibridi (CDMX) o da remoto. Questo è l'ecosistema con cui lavoro:",
     closeBtn: "CHIUDI", explore: "ESPLORA", visitLink: "Visita l'App", visitWebsite: "Visita il Sito", download: "Scarica", sourceCode: "Repo GitHub", backToCatalog: "TORNA AL CATALOGO", email: "Email", linkedin: "LinkedIn", github: "GitHub", resume: "Curriculum", resumeEs: "Curriculum (ES)",
@@ -50,7 +50,7 @@ const translations = {
   },
   ca: {
     role: "PRODUCT ENGINEER", aboutBtn: "Sobre Mi", aboutTitle: "Sobre Mi", techTitle: "Tecnologies", langTitle: "Idiomes i Comunicació",
-    techCat1: "Frontend i Core", techCat2: "IA / LLM i Veu", techCat3: "Integracions i APIs", techCat4: "Núvol i Backend", techCat5: "3D i Rendiment", techCat6: "Eines i Flux de treball", techCat7: "Backend .NET", techCat8: "Proves i DevOps", expTitle: "Experiència", eduTitle: "Formació i Certificacions",
+    techCat1: "Frontend i Core", techCat2: "IA / LLM i Veu", techCat3: "Integracions i APIs", techCat4: "Núvol i Backend", techCat5: "3D i Rendiment", techCat6: "Eines i Flux de treball", techCat7: "Backend .NET", techCat8: "Proves i DevOps", aboutHeadline: "Construeixo productes de punta a punta: de la primera conversa a producció.", aboutMeta: ["Ciutat de Mèxic","Híbrid CDMX / Remot","EN · ES natiu"], aboutStats: ["Anys d'experiència","Usuaris a plataformes que dirigeixo","Projectes en aquest portafoli","Idiomes"], aboutNow: "El que construeixo avui", aboutHow: "Com treballo", expTitle: "Experiència", eduTitle: "Formació i Certificacions",
     contextText: "TREBALL DESTACAT<br>Full-Stack · IA i Veu<br>3D en Temps Real · Productes Interactius",
     aboutText: "Sóc un Product & Forward Deployed Engineer britànic-mexicà amb més de 6 anys en enginyeria de producte, sistemes i infraestructura, i he portat diversos productes de zero a producció. M'encarrego dels problemes de punta a punta: defineixo l'abast amb persones no tècniques, dissenyo l'arquitectura, desenvolupo en React, TypeScript, Node.js i Python, integro APIs de tercers i ho poso en producció. La meva formació en física i música marca la meva manera de treballar: abordo les dades i els sistemes amb rigor científic, i les interfícies amb creativitat i fluïdesa.<br><br>Dirigeixo l'enginyeria d'una suite de plataformes amb més de 500 usuaris —des de jocs multijugador en temps real fins a entorns d'aprenentatge 3D al navegador— i construeixo productes independents: Tezontle 3D, una plataforma 3D en temps real per vendre immobles en preventa que vaig fundar i dirigeixo com a CTO; i Taylor, una plataforma de mobilitat segura per a dones que vaig cofundar i dirigeixo com a CTO i desenvolupador. També desenvolupo Bodega Abierta, un sistema de magatzem de codi obert per a bancs d'aliments a Mèxic.<br><br>Al backend construeixo APIs en C# / ASP.NET Core amb EF Core i SQL Server —el nucli multiclient de Bodega Abierta i l'API de regles de CIT-Sync—, amb proves automatitzades i CI. Treballo de manera AI-native, dirigint eines agèntiques com Claude Code per lliurar ràpid sense sacrificar la qualitat. Estic disponible per a rols híbrids (CDMX) o en remot. Aquest és l'ecosistema amb què treballo:",
     closeBtn: "TANCAR", explore: "EXPLORAR", visitLink: "Visitar Aplicació", visitWebsite: "Visitar Lloc Web", download: "Descarrega", sourceCode: "Repositori GitHub", backToCatalog: "TORNAR AL CATÀLEG", email: "Correu", linkedin: "LinkedIn", github: "GitHub", resume: "Currículum", resumeEs: "Currículum (ES)",
@@ -491,9 +491,26 @@ function renderLangOptions() {
   });
 }
 
+// Portada, cifras y tarjetas del About a partir de los textos del idioma activo (aboutText se divide en sus 3 párrafos).
+function renderAboutIntro() {
+  const t = translations[currentLang];
+  const parts = t.aboutText.split("<br><br>");
+  let how = (parts[2] || "").trim();
+  if (how.endsWith(":")) how = how.slice(0, how.lastIndexOf(". ") + 1);
+  const setEl = (id, val) => { const el = document.getElementById(id); if (el) el.innerHTML = val; };
+  setEl("about-headline", t.aboutHeadline);
+  setEl("about-lead", parts[0] || "");
+  setEl("about-now-title", t.aboutNow); setEl("about-now", parts[1] || "");
+  setEl("about-how-title", t.aboutHow); setEl("about-how", how);
+  setEl("about-title-tech", t.techTitle);
+  setEl("about-chips", t.aboutMeta.map((c) => `<span>${c}</span>`).join(""));
+  const stats = [{ v: 6, s: "+" }, { v: 500, s: "+" }, { v: projectsData.length, s: "" }, { v: 4, s: "" }];
+  setEl("about-stats", stats.map((st, i) => `<div class="about-stat"><div class="about-stat-num" data-val="${st.v}" data-suf="${st.s}">${st.v}${st.s}</div><div class="about-stat-label">${t.aboutStats[i]}</div></div>`).join(""));
+}
+
 function renderAboutLists() {
   const expList = document.getElementById("exp-list"), eduList = document.getElementById("edu-list");
-  if (expList) expList.innerHTML = experienceData.map((e) => `<div class="exp-item"><div class="exp-head"><span class="exp-role">${e.role[currentLang]}</span>${e.dates ? `<span class="exp-date">${e.dates[currentLang]}</span>` : ""}</div><div class="exp-org">${e.org}</div><p class="exp-desc">${e.desc[currentLang]}</p></div>`).join("");
+  if (expList) expList.innerHTML = experienceData.map((e) => `<div class="exp-item"><div class="exp-meta">${e.dates ? e.dates[currentLang] : ""}</div><div class="exp-body"><div class="exp-role">${e.role[currentLang]}</div><div class="exp-org">${e.org}</div><p class="exp-desc">${e.desc[currentLang]}</p></div></div>`).join("");
   if (eduList) eduList.innerHTML = educationData[currentLang].map(([label, text]) => `<div class="edu-item"><span class="edu-label">${label}</span><span class="edu-text">${text}</span></div>`).join("");
 }
 
@@ -504,7 +521,7 @@ function updateUI_Language() {
   setEl("tech-cat-1", t.techCat1); setEl("tech-cat-2", t.techCat2); setEl("tech-cat-3", t.techCat3);
   setEl("tech-cat-4", t.techCat4); setEl("tech-cat-5", t.techCat5); setEl("tech-cat-6", t.techCat6); setEl("tech-cat-7", t.techCat7); setEl("tech-cat-8", t.techCat8);
   setEl("about-title-exp", t.expTitle); setEl("about-title-edu", t.eduTitle); renderAboutLists();
-  setEl("about-title-lang", t.langTitle); setEl("about-text-container", t.aboutText); setEl("context-text", t.contextText);
+  setEl("about-title-lang", t.langTitle); renderAboutIntro(); setEl("context-text", t.contextText);
   setEl("skill-1-name", t.skills.en.name); setEl("skill-1-lvl", t.skills.en.lvl); setEl("skill-2-name", t.skills.es.name); setEl("skill-2-lvl", t.skills.es.lvl);
   setEl("skill-3-name", t.skills.it.name); setEl("skill-3-lvl", t.skills.it.lvl); setEl("skill-4-name", t.skills.ca.name); setEl("skill-4-lvl", t.skills.ca.lvl);
 
@@ -1062,35 +1079,63 @@ document.addEventListener("DOMContentLoaded", () => {
 const btnAbout = document.getElementById("open-about-btn"), modalAbout = document.getElementById("about-modal");
 let aboutScrollTriggers = [];
 
-if(btnAbout && modalAbout) {
-  btnAbout.addEventListener("click", (e) => {
-    e.preventDefault(); lenis.stop(); modalAbout.style.display = "block"; aboutParticlesActive = true;
-    gsap.fromTo(modalAbout, { opacity: 0 }, { opacity: 1, duration: 0.6, ease: "power4.out" });
-    
-    const aboutImg = modalAbout.querySelector(".about-img-box");
-    const aboutElements = modalAbout.querySelectorAll(".about-title, .about-subtitle, .about-text, .tech-category-header");
-    
-    gsap.fromTo(aboutImg, { y: 40, opacity: 0, scale: 0.95 }, { y: 0, opacity: 1, scale: 1, duration: 1.2, ease: "power4.out", delay: 0.1 });
-    gsap.fromTo(aboutElements, { y: 30, opacity: 0 }, { y: 0, opacity: 1, stagger: 0.05, duration: 1.2, ease: "power4.out", delay: 0.15 });
-    
-    aboutScrollTriggers.forEach((st) => st.kill()); aboutScrollTriggers = [];
-    
-    setTimeout(() => {
-      const techTags = document.querySelectorAll(".tech-tag"); gsap.set(techTags, { opacity: 0, y: 15 });
-      aboutScrollTriggers.push(ScrollTrigger.create({ trigger: ".tech-container", scroller: "#about-modal", start: "top 85%", onEnter: () => gsap.to(techTags, { opacity: 1, y: 0, duration: 1, stagger: 0.03, ease: "back.out(1.5)" }) }));
-      
-      const listItems = document.querySelectorAll(".exp-item, .edu-item"); gsap.set(listItems, { opacity: 0, y: 20 });
-      aboutScrollTriggers.push(...ScrollTrigger.batch(listItems, { scroller: "#about-modal", start: "top 92%", once: true, onEnter: (batch) => gsap.to(batch, { opacity: 1, y: 0, duration: 0.9, stagger: 0.08, ease: "power3.out", overwrite: true }) }));
+let aboutBusy = false;
+const aboutChrome = [contextText, footerLinks, giantLayer];
 
-      document.querySelectorAll(".skill-fill").forEach((fill) => {
-        const tWidth = fill.getAttribute("data-width"); 
-        const scaleVal = parseInt(tWidth) / 100;
-        gsap.set(fill, { scaleX: 0 });
-        aboutScrollTriggers.push(ScrollTrigger.create({ trigger: fill.closest(".skill-item"), scroller: "#about-modal", start: "top 95%", onEnter: () => gsap.to(fill, { scaleX: scaleVal, duration: 2, ease: "power4.out" }) }));
-      });
-    }, 150);
+// Al abrir el About toda la galería gira como una carta: las tarjetas se voltean una tras otra (de adentro hacia afuera) y, al
+// quedar de canto, el About gira desde el otro lado. Al cerrar el giro se hace en sentido inverso.
+function setupAboutReveals() {
+  aboutScrollTriggers.forEach((st) => st.kill()); aboutScrollTriggers = [];
+  const techTags = document.querySelectorAll(".tech-tag"); gsap.set(techTags, { opacity: 0, y: 15 });
+  aboutScrollTriggers.push(ScrollTrigger.create({ trigger: ".tech-container", scroller: "#about-modal", start: "top 90%", once: true, onEnter: () => gsap.to(techTags, { opacity: 1, y: 0, duration: 0.9, stagger: 0.02, ease: "back.out(1.5)" }) }));
+
+  const reveal = document.querySelectorAll(".exp-item, .edu-item, .about-card, .about-stat");
+  gsap.set(reveal, { opacity: 0, y: 24 });
+  aboutScrollTriggers.push(...ScrollTrigger.batch(reveal, { scroller: "#about-modal", start: "top 94%", once: true, onEnter: (batch) => gsap.to(batch, { opacity: 1, y: 0, duration: 0.8, stagger: 0.08, ease: "power3.out", overwrite: true }) }));
+
+  document.querySelectorAll(".about-stat-num").forEach((el) => {
+    const target = +el.dataset.val, suf = el.dataset.suf || "", o = { v: 0 }; el.textContent = "0" + suf;
+    aboutScrollTriggers.push(ScrollTrigger.create({ trigger: el, scroller: "#about-modal", start: "top 94%", once: true, onEnter: () => gsap.to(o, { v: target, duration: 1.4, ease: "power2.out", onUpdate: () => { el.textContent = Math.round(o.v) + suf; } }) }));
+  });
+
+  document.querySelectorAll(".skill-fill").forEach((fill) => {
+    const scaleVal = parseInt(fill.getAttribute("data-width")) / 100;
+    gsap.set(fill, { scaleX: 0 });
+    aboutScrollTriggers.push(ScrollTrigger.create({ trigger: fill.closest(".skill-item"), scroller: "#about-modal", start: "top 95%", once: true, onEnter: () => gsap.to(fill, { scaleX: scaleVal, duration: 2, ease: "power4.out" }) }));
+  });
+}
+
+if(btnAbout && modalAbout) {
+  const aboutWrapper = modalAbout.querySelector(".about-wrapper");
+  btnAbout.addEventListener("click", (e) => {
+    e.preventDefault(); if (aboutBusy) return; aboutBusy = true;
+    lenis.stop(); if (!isTouchLayout()) resetGalleryHover();
+    gsap.set(items, { transformPerspective: 1000 });
+    const tl = gsap.timeline({ onComplete: () => { aboutBusy = false; setupAboutReveals(); } });
+    tl.to(items, { rotationY: -90, duration: 0.45, ease: "power2.in", stagger: { amount: 0.3, from: "center" } }, 0)
+      .to(aboutChrome, { opacity: 0, duration: 0.35 }, 0)
+      .add(() => {
+        modalAbout.style.display = "block"; modalAbout.scrollTop = 0; aboutParticlesActive = true;
+        gsap.set(modalAbout, { opacity: 1 });
+        gsap.set(aboutWrapper, { transformPerspective: 1600, transformOrigin: "50% 40vh", rotationY: 90, opacity: 1 });
+      }, 0.7)
+      .to(aboutWrapper, { rotationY: 0, duration: 0.75, ease: "power3.out" }, 0.7);
   });
 }
 
 const cab = document.getElementById("close-about-btn");
-if(cab && modalAbout) { cab.addEventListener("click", () => { gsap.to(modalAbout, { opacity: 0, duration: 0.5, ease: "power4.inOut", onComplete: () => { modalAbout.style.display = "none"; aboutParticlesActive = false; lenis.start(); } }); }); }
+if(cab && modalAbout) {
+  cab.addEventListener("click", () => {
+    if (aboutBusy) return; aboutBusy = true;
+    aboutScrollTriggers.forEach((st) => st.kill()); aboutScrollTriggers = [];
+    const aboutWrapper = modalAbout.querySelector(".about-wrapper");
+    const tl = gsap.timeline({ onComplete: () => { aboutBusy = false; lenis.start(); gsap.set(items, { clearProps: "rotationY,transformPerspective" }); gsap.set(aboutWrapper, { clearProps: "all" }); } });
+    tl.to(aboutWrapper, { rotationY: 90, duration: 0.5, ease: "power2.in" }, 0)
+      .add(() => {
+        modalAbout.style.display = "none"; aboutParticlesActive = false; gsap.set(modalAbout, { opacity: 0 });
+        gsap.set(items, { transformPerspective: 1000, rotationY: -90 });
+      }, 0.5)
+      .to(items, { rotationY: 0, duration: 0.55, ease: "power3.out", stagger: { amount: 0.3, from: "edges" } }, 0.5)
+      .to(aboutChrome, { opacity: 1, duration: 0.5 }, 0.7);
+  });
+}
