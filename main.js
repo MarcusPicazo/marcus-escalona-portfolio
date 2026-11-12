@@ -669,23 +669,25 @@ const FX_REDUCED_MOTION = window.matchMedia("(prefers-reduced-motion: reduce)").
 const FX_REST_FILTER = "grayscale(100%) brightness(0.6)";
 let fxI = 0, fxActive = false, fxMin = 0;
 const fxWrappers = [...items].map((el) => el.querySelector(".img-wrapper"));
-const fxScale = fxWrappers.map((w) => gsap.quickSetter(w, "scaleY"));
-const fxTilt = fxWrappers.map((w) => gsap.quickSetter(w, "rotationY", "deg"));
 const fxLast = new Array(items.length).fill(-1);
-gsap.set(fxWrappers, { transformPerspective: 1100 });
+// El marco crece de verdad (alto + posición) en lugar de estirarse con scale: la imagen se recorta con object-fit y no se deforma.
+function fxSet(i, w) {
+  const st = fxWrappers[i].style;
+  if (w <= 0) { st.height = ""; st.top = ""; } else { st.height = (100 + 38 * w) + "%"; st.top = (-19 * w) + "%"; }
+}
 function updateScrollFx() {
   if (FX_REDUCED_MOTION || !track) return;
   if (hoveredItem) {
     if (trackSpeed > GALLERY_SETTLE_SPEED * 1.6) { resetGalleryHover(); gsap.killTweensOf(items, "filter"); gsap.killTweensOf(fxWrappers, "scale,scaleX,scaleY"); }
     else {
-      if (fxActive) { fxActive = false; fxI = 0; fxLast.fill(-1); gsap.to(fxWrappers, { scaleY: 1, rotationY: 0, duration: 0.5, ease: "power2.out", overwrite: "auto" }); }
+      if (fxActive) { fxActive = false; fxI = 0; fxLast.fill(-1); fxWrappers.forEach((_, i) => fxSet(i, 0)); }
       return;
     }
   }
   const target = Math.max(fxMin, Math.min(1, trackSpeed / 650));
   fxI += (target - fxI) * (target > fxI ? 0.22 : 0.05);
   if (fxI < 0.004) {
-    if (fxActive) { fxActive = false; fxI = 0; items.forEach((el, i) => { fxScale[i](1); fxTilt[i](0); el.style.filter = FX_REST_FILTER; fxLast[i] = -1; }); }
+    if (fxActive) { fxActive = false; fxI = 0; items.forEach((el, i) => { fxSet(i, 0); el.style.filter = FX_REST_FILTER; fxLast[i] = -1; }); }
     return;
   }
   fxActive = true;
@@ -694,12 +696,11 @@ function updateScrollFx() {
   for (let i = 0; i < items.length; i++) {
     const d = (padL + i * step + 6 * vw + x - mid) / step;
     if (Math.abs(d) > 4.5) {
-      if (fxLast[i] !== 0) { fxScale[i](1); fxTilt[i](0); items[i].style.filter = FX_REST_FILTER; fxLast[i] = 0; }
+      if (fxLast[i] !== 0) { fxSet(i, 0); items[i].style.filter = FX_REST_FILTER; fxLast[i] = 0; }
       continue;
     }
     const w = Math.exp(-(d / 1.5) * (d / 1.5)) * fxI;
-    fxScale[i](1 + 0.38 * w);
-    fxTilt[i](-d * Math.exp(-(d / 1.9) * (d / 1.9)) * 7 * fxI);
+    fxSet(i, w);
     const c = Math.round(w * 50) / 50;
     if (c !== fxLast[i]) { fxLast[i] = c; items[i].style.filter = `grayscale(${100 - c * 100}%) brightness(${0.6 + 0.4 * c})`; }
   }
