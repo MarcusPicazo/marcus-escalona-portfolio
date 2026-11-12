@@ -652,15 +652,17 @@ gsap.ticker.lagSmoothing(0, 0);
 // más de un segundo después de soltar la rueda, pero a velocidades bajas ya no cambia de tarjeta bajo el cursor:
 // se considera "en movimiento" solo por encima de GALLERY_SETTLE_SPEED, así el hover abre en cuanto desacelera.
 const GALLERY_SETTLE_SPEED = 260;
+let trackFastAt = 0;
 let trackLastX = 0, trackLastT = performance.now(), trackSpeed = 0;
 gsap.ticker.add(() => {
   if (!track) return;
   const now = performance.now(), x = gsap.getProperty(track, "x"), dt = now - trackLastT;
   if (dt > 0) trackSpeed += (Math.abs(x - trackLastX) / dt * 1000 - trackSpeed) * 0.4;
   trackLastX = x; trackLastT = now;
+  if (trackSpeed > GALLERY_SETTLE_SPEED) trackFastAt = now;
   if (isTouchLayout()) syncTouchColor(); else updateScrollFx();
 });
-const galleryIsMoving = () => trackSpeed > GALLERY_SETTLE_SPEED;
+const galleryIsMoving = () => trackSpeed > GALLERY_SETTLE_SPEED || performance.now() - trackFastAt < 220;
 
 // Efecto de lente al hacer scroll: mientras la galería se mueve, las tarjetas que pasan por el centro de la pantalla crecen en
 // altura, se inclinan un poco y recuperan el color; al detenerse todo se relaja a la fila plana en gris. La intensidad sigue la
@@ -766,9 +768,17 @@ function openCardOffset(item) {
   return offset;
 }
 
+// El nombre (.item-info) y el botón EXPLORE se animan con retraso al abrir; si el cursor sale antes de que arranque esa animación,
+// el "overwrite" de GSAP no la cancela y el nombre reaparecía debajo de una tarjeta ya cerrada. Se matan antes de crear las nuevas.
+function killCardLabelTweens() {
+  items.forEach((el) => gsap.killTweensOf([el.querySelector(".item-info"), el.querySelector(".explore-indicator")]));
+}
+
 function activateHover(item, data) {
   if (isTouchLayout()) return;
   hoveredItem = item;
+  killCardLabelTweens();
+  if (fxActive) { fxActive = false; fxI = 0; fxLast.fill(-1); fxWrappers.forEach((_, i) => fxSet(i, 0)); items.forEach((el) => { el.style.filter = FX_REST_FILTER; }); }
   stopFloatingAndAlign();
   prefetchProject(data);
 
@@ -862,6 +872,7 @@ function resetGalleryHover() {
   clearTimeout(hoverIntentTimer); pendingHoverItem = null; hoveredItem = null;
   if (isTouchLayout()) { lastTouchIdx = -1; syncTouchColor(); return; }
   startFloating();
+  killCardLabelTweens();
 
   if(bgLayer) bgLayer.style.backgroundColor = "#141414";
   if(titleContainer) gsap.to(titleContainer, { clipPath: "inset(0 50% 0 50%)", webkitClipPath: "inset(0 50% 0 50%)", opacity: 0, duration: 0.4, ease: "power2.in", overwrite: "auto" });
