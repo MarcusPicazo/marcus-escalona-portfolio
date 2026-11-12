@@ -658,9 +658,52 @@ gsap.ticker.add(() => {
   const now = performance.now(), x = gsap.getProperty(track, "x"), dt = now - trackLastT;
   if (dt > 0) trackSpeed += (Math.abs(x - trackLastX) / dt * 1000 - trackSpeed) * 0.4;
   trackLastX = x; trackLastT = now;
-  if (isTouchLayout()) syncTouchColor();
+  if (isTouchLayout()) syncTouchColor(); else updateScrollFx();
 });
 const galleryIsMoving = () => trackSpeed > GALLERY_SETTLE_SPEED;
+
+// Efecto de lente al hacer scroll: mientras la galería se mueve, las tarjetas que pasan por el centro de la pantalla crecen en
+// altura, se inclinan un poco y recuperan el color; al detenerse todo se relaja a la fila plana en gris. La intensidad sigue la
+// velocidad de la pista. Con una tarjeta abierta (hover) manda el hover; si se empieza a hacer scroll, esa tarjeta se cierra.
+const FX_REDUCED_MOTION = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const FX_REST_FILTER = "grayscale(100%) brightness(0.6)";
+let fxI = 0, fxActive = false, fxMin = 0;
+const fxWrappers = [...items].map((el) => el.querySelector(".img-wrapper"));
+const fxScale = fxWrappers.map((w) => gsap.quickSetter(w, "scaleY"));
+const fxTilt = fxWrappers.map((w) => gsap.quickSetter(w, "rotationY", "deg"));
+const fxLast = new Array(items.length).fill(-1);
+gsap.set(fxWrappers, { transformPerspective: 1100 });
+function updateScrollFx() {
+  if (FX_REDUCED_MOTION || !track) return;
+  if (hoveredItem) {
+    if (trackSpeed > GALLERY_SETTLE_SPEED * 1.6) { resetGalleryHover(); gsap.killTweensOf(items, "filter"); gsap.killTweensOf(fxWrappers, "scale,scaleX,scaleY"); }
+    else {
+      if (fxActive) { fxActive = false; fxI = 0; fxLast.fill(-1); gsap.to(fxWrappers, { scaleY: 1, rotationY: 0, duration: 0.5, ease: "power2.out", overwrite: "auto" }); }
+      return;
+    }
+  }
+  const target = Math.max(fxMin, Math.min(1, trackSpeed / 650));
+  fxI += (target - fxI) * (target > fxI ? 0.22 : 0.05);
+  if (fxI < 0.004) {
+    if (fxActive) { fxActive = false; fxI = 0; items.forEach((el, i) => { fxScale[i](1); fxTilt[i](0); el.style.filter = FX_REST_FILTER; fxLast[i] = -1; }); }
+    return;
+  }
+  fxActive = true;
+  const vw = window.innerWidth / 100, step = 14 * vw, padL = 5 * vw, mid = window.innerWidth / 2;
+  const x = gsap.getProperty(track, "x") || 0;
+  for (let i = 0; i < items.length; i++) {
+    const d = (padL + i * step + 6 * vw + x - mid) / step;
+    if (Math.abs(d) > 4.5) {
+      if (fxLast[i] !== 0) { fxScale[i](1); fxTilt[i](0); items[i].style.filter = FX_REST_FILTER; fxLast[i] = 0; }
+      continue;
+    }
+    const w = Math.exp(-(d / 1.5) * (d / 1.5)) * fxI;
+    fxScale[i](1 + 0.38 * w);
+    fxTilt[i](-d * Math.exp(-(d / 1.9) * (d / 1.9)) * 7 * fxI);
+    const c = Math.round(w * 50) / 50;
+    if (c !== fxLast[i]) { fxLast[i] = c; items[i].style.filter = `grayscale(${100 - c * 100}%) brightness(${0.6 + 0.4 * c})`; }
+  }
+}
 
 // En modo táctil el fondo toma el color de la tarjeta que está más cerca del centro de la pantalla.
 let lastTouchIdx = -1;
